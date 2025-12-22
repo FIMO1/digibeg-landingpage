@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>digibeg – Dein Alltagsassistent</title>
+
+  <style>
+    :root {
+      --bg-main: #0b1220;
+      --bg-card: #121b2e;
+      --bg-elevated: #16213a;
+
+      --text-main: #e8ecf3;
+      --text-muted: #a6b0c3;
+
+      --brand: #f59e0b;
+      --brand-soft: #ffb733;
+
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Ubuntu, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* ================= HERO BANNER ================= */
+
+    .hero-banner {
+      position: relative;
+      margin: 2rem 1.5rem;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(
+          rgba(11, 18, 32, 0.88),
+          rgba(11, 18, 32, 0.96)
+        ),
+        url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .brand {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* CTA BUTTON */
+
+    .cta {
+      display: inline-block;
+      padding: 1rem 2.6rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #1a1a1a;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.45);
+    }
+
+    /* TRUST */
+
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .trust div {
+      background: var(--bg-elevated);
+      border: 1px solid #223055;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* FEATURES */
+
+    .section-title {
+      text-align: center;
+      margin: 5rem 0 2rem;
+      font-size: 2rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--radius);
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    .feature p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* STEPS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* CLOSING */
+
+    .closing {
+      text-align: center;
+      margin: 6rem 0 3rem;
+    }
+
+    .closing p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 2rem 1rem;
+      border-top: 1px solid #1e2a44;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero-banner">
+    <div class="hero container">
+      <h1>Willkommen bei <span class="brand">digibeg</span></h1>
+      <p>
+        Ihr digitaler Assistent für den Alltag.<br />
+        Einfach. Verständlich. In Ihrer Sprache.
+      </p>
+      <a href="#" class="cta">Jetzt starten</a>
+
+      <div class="trust">
+        <div>🔒 Datenschutzfreundlich</div>
+        <div>🌍 Mehrsprachig & verständlich</div>
+        <div>🗣 Lesen, hören oder sprechen</div>
+        <div>🤝 Unterstützung, wenn du willst</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="container">
+    <h2 class="section-title">Was digibeg für dich macht</h2>
+
+    <div class="features">
+      <div class="feature">
+        <h3>Briefe & Texte verstehen</h3>
+        <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Übersetzen & erklären</h3>
+        <p>Fremdsprache? Inhalte werden übersetzt und verständlich erklärt.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Termine & Erinnerungen</h3>
+        <p>digibeg merkt sich Termine und erinnert dich rechtzeitig.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Medikamente im Blick</h3>
+        <p>Medikamentenpläne mit zuverlässiger Erinnerung.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Bedienung, die sich anpasst</h3>
+        <p>Lesen, vorlesen lassen oder sprechen.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Teilen, wenn du willst</h3>
+        <p>Inhalte freiwillig mit vertrauten Personen teilen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="container">
+    <h2 class="section-title">So einfach geht’s</h2>
+
+    <div class="steps">
+      <div class="step">1️⃣ Brief oder Text fotografieren</div>
+      <div class="step">2️⃣ Erklärung erhalten</div>
+      <div class="step">3️⃣ Erinnerung bekommen – wenn nötig</div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing container">
+    <p>
+      digibeg ist kein Tool.<br />
+      digibeg ist Unterstützung im richtigen Moment.
+    </p>
+    <a href="#" class="cta">digibeg ausprobieren</a>
+  </section>
+
+  <footer>
+    © digibeg – Verständigung im Alltag
+  </footer>
+
+</body>
+</html>
