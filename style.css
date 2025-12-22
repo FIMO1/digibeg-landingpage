@@ -41,10 +41,8 @@ body {
   border-radius: var(--radius);
 
   background:
-    linear-gradient(
-      rgba(11, 18, 32, 0.88),
-      rgba(11, 18, 32, 0.96)
-    ),
+    linear-gradient(rgba(11, 18, 32, 0.88),
+      rgba(11, 18, 32, 0.96)),
     url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600&h=800&dpr=2");
 
   background-size: cover;
