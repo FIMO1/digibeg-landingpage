@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>digibeg – Dein Alltagsassistent</title>
 
   <style>
@@ -112,6 +115,11 @@
       color: #1a1a1a;
       box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+      touch-action: manipulation;
     }
 
     .cta:hover {
