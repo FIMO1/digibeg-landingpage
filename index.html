@@ -197,6 +197,9 @@
     .closing {
       text-align: center;
       margin: 3rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .closing p {
@@ -211,6 +214,15 @@
       color: var(--text-muted);
       padding: 2rem 1rem;
       border-top: 1px solid #1e2a44;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    footer img {
+      width: 50px;
+      height: auto;
     }
 
     /* ================= MOBILE OPTIMIERUNG ================= */
@@ -358,7 +370,8 @@
   </section>
 
   <footer>
-    © digibeg – Verständigung im Alltag
+    <img src="logo.png" alt="digibeg Logo" />
+    <span>© digibeg – Verständigung im Alltag</span>
   </footer>
 
 </body>
