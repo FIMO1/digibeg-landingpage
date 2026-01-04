@@ -1,0 +1,41 @@
+Datenschutzerklärung
+Stand: Dezember 2025
+1. Verantwortlicher
+Verantwortlich für die Datenverarbeitung innerhalb dieser App ist der Betreiber von Digibeg. Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren.
+2. Erhobene Daten
+Digibeg erhebt und verarbeitet folgende Daten zur Bereitstellung der App-Funktionen:
+• Spracheingaben: Werden zur Verarbeitung an OpenAI übermittelt und nicht dauerhaft gespeichert
+• Texteingaben: Chat-Nachrichten werden zur KI-Verarbeitung an OpenAI gesendet
+• Kalendereinträge: Werden lokal auf Ihrem Gerät gespeichert
+• Dokumente und Bilder: Werden lokal gespeichert, zur Analyse temporär an OpenAI übermittelt
+• Spracheinstellungen: Werden lokal auf Ihrem Gerät gespeichert
+3. Zweck der Datenverarbeitung
+Die Datenverarbeitung erfolgt ausschließlich zur Bereitstellung der App-Funktionen:
+• Übersetzung in 12 Sprachen
+• KI-gestützter Assistent für Fragen und Hilfestellungen
+• Termin- und Erinnerungsverwaltung
+• Dokumentenanalyse und -erklärung
+4. Datenweitergabe an Dritte
+Zur Bereitstellung der KI-Funktionen werden Daten an OpenAI (USA) übermittelt. OpenAI verarbeitet diese Daten gemäß ihrer Datenschutzrichtlinie. Die Übermittlung erfolgt auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO (Einwilligung) bzw. Art. 49 Abs. 1 lit. b DSGVO (Vertragserfüllung).
+OpenAI speichert übermittelte Daten gemäß ihrer Richtlinien für maximal 30 Tage und verwendet diese nicht zum Training ihrer Modelle, wenn die API genutzt wird.
+5. Speicherdauer
+Lokal gespeicherte Daten (Kalender, Dokumente, Einstellungen) verbleiben auf Ihrem Gerät, bis Sie diese löschen oder die App deinstallieren. An OpenAI übermittelte Daten werden dort gemäß deren Richtlinien verarbeitet und gelöscht.
+6. Ihre Rechte
+Sie haben gemäß DSGVO folgende Rechte:
+• Recht auf Auskunft (Art. 15 DSGVO)
+• Recht auf Berichtigung (Art. 16 DSGVO)
+• Recht auf Löschung (Art. 17 DSGVO)
+• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)
+• Recht auf Datenübertragbarkeit (Art. 20 DSGVO)
+• Widerspruchsrecht (Art. 21 DSGVO)
+Sie können Ihre lokal gespeicherten Daten jederzeit durch Deinstallation der App löschen.
+7. Berechtigungen
+Die App benötigt folgende Berechtigungen:
+• Mikrofon: Für Spracheingabe und Sprachsteuerung
+• Kamera: Zum Fotografieren von Dokumenten
+• Speicher: Zum Speichern von Dokumenten und Einstellungen
+Alle Berechtigungen können Sie jederzeit in den Systemeinstellungen Ihres Geräts widerrufen.
+8. Datensicherheit
+Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten zu schützen. Die Kommunikation mit externen Diensten erfolgt verschlüsselt über HTTPS.
+9. Änderungen
+Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an geänderte rechtliche Anforderungen oder App-Funktionen anzupassen.

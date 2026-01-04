@@ -1,0 +1,33 @@
+Datenschutzerklärung
+Stand: Januar 2026
+1. Verantwortlicher im Sinne der DSGVO
+[Dein voller Name/Firma]
+[Adresse]
+[E-Mail: kontakt@digibeg.de]
+[Telefon: +49 ...]
+Bei Fragen zum Datenschutz kontaktieren Sie uns gerne unter der oben genannten E-Mail.
+2. Erhobene Daten
+Zur Bereitstellung der App-Funktionen erheben und verarbeiten wir folgende Daten:
+Spracheingaben und Texteingaben (Chat, Assistent): Temporär zur Verarbeitung an OpenAI und Microsoft Azure.
+Dokumente/Bilder: Lokal gespeichert, temporär zur Analyse an OpenAI/Azure übermittelt.
+Kalendereinträge und Erinnerungen: Lokal auf Ihrem Gerät.
+Spracheinstellungen und App-Nutzung: Lokal gespeichert.
+3. Zweck und Rechtsgrundlage der Verarbeitung
+Die Verarbeitung erfolgt ausschließlich zur Erbringung der App-Funktionen (Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung) sowie auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) für KI-Funktionen.
+4. Datenweitergabe an Dritte
+OpenAI LLC (USA): Für LLM-Analyse und Übersetzung.
+Microsoft Azure (EU-Region bevorzugt): Für Speech-to-Text/Text-to-Speech.
+Übermittlung in Drittland (USA) auf Basis Standardvertragsklauseln (SCC) und Transfer Impact Assessment. OpenAI speichert API-Daten max. 30 Tage und nutzt sie nicht zum Training (bei API-Nutzung). Details: OpenAI DPA (https://openai.com/policies/data-processing-addendum).
+5. Speicherdauer
+Lokal: Bis Sie löschen oder App deinstallieren.
+Bei OpenAI/Azure: Gemäß deren Richtlinien (max. 30 Tage für API-Daten).
+6. Ihre Rechte
+Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch (Art. 15–21 DSGVO).
+Einwilligung jederzeit widerrufbar (z. B. per E-Mail) mit Wirkung für die Zukunft.
+Beschwerderecht bei Aufsichtsbehörde (z. B. Landesdatenschutzbeauftragter).
+7. Berechtigungen
+Mikrofon, Kamera, Speicher – jederzeit in Systemeinstellungen widerrufbar.
+8. Datensicherheit
+HTTPS-Verschlüsselung, technische Maßnahmen zum Schutz.
+9. Änderungen
+Wir passen die Erklärung bei Bedarf an – aktuelle Version in der App und auf digibeg.de.
