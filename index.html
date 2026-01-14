@@ -1,396 +1,417 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>digibeg – Dein Alltagsassistent</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>digibeg – Dein Alltagsassistent</title>
 
-  <style>
-    :root {
-      --bg-main: #0b1220;
-      --bg-card: #121b2e;
-      --bg-elevated: #16213a;
+    <style>
+      :root {
+        --bg-main: #0b1220;
+        --bg-card: #121b2e;
+        --bg-elevated: #16213a;
 
-      --text-main: #e8ecf3;
-      --text-muted: #a6b0c3;
+        --text-main: #e8ecf3;
+        --text-muted: #a6b0c3;
 
-      --brand: #FB923C;
-      --brand-soft: #FCA458;
+        --brand: #fb923c;
+        --brand-soft: #fca458;
 
-      --radius: 18px;
-    }
+        --radius: 18px;
+      }
 
-    * {
-      box-sizing: border-box;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Ubuntu, sans-serif;
-      background: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem;
-    }
-
-    /* ================= HERO BANNER ================= */
-
-    .hero-banner {
-      position: relative;
-      margin: 2rem 1.5rem;
-      border-radius: var(--radius);
-      background:
-        linear-gradient(
-          rgba(11, 18, 32, 0.80),
-          rgba(11, 18, 32, 0.90)
-        ),
-        url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-    }
-
-
-    .hero {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 4rem 1rem 3rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      margin-bottom: 1rem;
-    }
-
-    .brand {
-      color: var(--brand);
-      font-weight: 700;
-    }
-
-    .hero-brand {
-      display: block;
-      font-size: 1.3em;
-      margin-top: 0.2rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 2.5rem;
-    }
-
-    /* CTA BUTTON */
-
-    .cta {
-      display: inline-block;
-      padding: 1rem 2.6rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 999px;
-      background: var(--brand);
-      color: #1a1a1a;
-      box-shadow: 0 8px 24px rgba(251, 146, 60, 0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      position: relative;
-      z-index: 10;
-      cursor: pointer;
-      -webkit-tap-highlight-color: rgba(0,0,0,0.1);
-      touch-action: manipulation;
-    }
-
-    .cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
-    }
-
-    /* TRUST */
-
-    .trust {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .trust div {
-      background: var(--bg-elevated);
-      border: 1px solid #223055;
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      text-align: center;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    /* FEATURES */
-
-    .section-title {
-      text-align: center;
-      margin: 3rem 0 1.5rem;
-      font-size: 2rem;
-    }
-
-    .features-section {
-      padding-top: 1rem;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .feature {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: var(--radius);
-    }
-
-    .feature h3 {
-      margin-top: 0;
-      margin-bottom: 0.6rem;
-      font-size: 1.25rem;
-      color: var(--brand);
-      font-weight: 600;
-    }
-
-    .feature p {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
-
-    /* STEPS */
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .step {
-      background: var(--bg-card);
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      text-align: center;
-      font-weight: 500;
-    }
-
-    /* CLOSING */
-
-    .closing {
-      text-align: center;
-      margin: 3rem auto 2rem;
-      padding: 2rem 1rem;
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .closing p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      text-align: center;
-      width: 100%;
-    }
-
-    footer {
-      text-align: center;
-      background: #0f172a;
-      color: #94a3b8;
-      padding: 2rem 1rem;
-      border-top: 1px solid #334155;
-    }
-
-    footer .footer-links {
-      font-size: 14px;
-      margin-bottom: 0.5rem;
-    }
-
-    footer .footer-links a {
-      color: #fb923c;
-      margin: 0 0.5rem;
-    }
-
-    footer .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    footer .footer-copy {
-      font-size: 12px;
-      color: #64748b;
-    }
-
-    /* ================= MOBILE OPTIMIERUNG ================= */
-
-    @media (max-width: 600px) {
-      .hero-banner {
+      body {
         margin: 0;
-        border-radius: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Ubuntu,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-main);
+        line-height: 1.6;
       }
 
-      .hero {
-        padding: 2rem 1rem 1.5rem;
-      }
-
-      .hero h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .cta {
-        padding: 0.85rem 2rem;
-        font-size: 1rem;
-      }
-
-      .trust {
-        gap: 0.75rem;
-        margin-top: 1.5rem;
-      }
-
-      .trust div {
-        padding: 1rem;
-        font-size: 0.9rem;
+      a {
+        color: inherit;
+        text-decoration: none;
       }
 
       .container {
-        padding: 1.5rem 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem;
       }
 
+      /* ================= HERO BANNER ================= */
+
+      .hero-banner {
+        position: relative;
+        margin: 2rem 1.5rem;
+        border-radius: var(--radius);
+        background:
+          linear-gradient(rgba(11, 18, 32, 0.8), rgba(11, 18, 32, 0.9)),
+          url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      }
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 4rem 1rem 3rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        margin-bottom: 1rem;
+      }
+
+      .brand {
+        color: var(--brand);
+        font-weight: 700;
+      }
+
+      .hero-brand {
+        display: block;
+        font-size: 1.3em;
+        margin-top: 0.2rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+      }
+
+      /* CTA BUTTON */
+
+      .cta {
+        display: inline-block;
+        padding: 1rem 2.6rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #1a1a1a;
+        box-shadow: 0 8px 24px rgba(251, 146, 60, 0.35);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        touch-action: manipulation;
+      }
+
+      .cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
+      }
+
+      /* TRUST */
+
+      .trust {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .trust div {
+        background: var(--bg-elevated);
+        border: 1px solid #223055;
+        padding: 1.5rem;
+        border-radius: var(--radius);
+        text-align: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      /* FEATURES */
+
       .section-title {
-        margin: 1.5rem 0 1rem;
-        font-size: 1.5rem;
+        text-align: center;
+        margin: 3rem 0 1.5rem;
+        font-size: 2rem;
+      }
+
+      .features-section {
+        padding-top: 1rem;
       }
 
       .features {
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
       }
 
       .feature {
-        padding: 1.25rem;
-        text-align: center;
+        background: var(--bg-card);
+        padding: 2rem;
+        border-radius: var(--radius);
       }
 
       .feature h3 {
-        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 0.6rem;
+        font-size: 1.25rem;
+        color: var(--brand);
+        font-weight: 600;
       }
 
       .feature p {
-        font-size: 0.95rem;
+        color: var(--text-muted);
+        font-size: 1rem;
       }
 
+      /* STEPS */
+
       .steps {
-        gap: 0.75rem;
-        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
       }
 
       .step {
-        padding: 1rem;
-        font-size: 0.95rem;
+        background: var(--bg-card);
+        padding: 1.5rem;
+        border-radius: var(--radius);
+        text-align: center;
+        font-weight: 500;
       }
 
+      /* CLOSING */
+
       .closing {
-        margin: 3rem 0 2rem;
+        text-align: center;
+        margin: 3rem auto 2rem;
+        padding: 2rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       .closing p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+        text-align: center;
+        width: 100%;
       }
-    }
-  </style>
-</head>
 
-<body>
+      footer {
+        text-align: center;
+        background: #0f172a;
+        color: #94a3b8;
+        padding: 2rem 1rem;
+        border-top: 1px solid #334155;
+      }
 
-  <!-- HERO -->
-  <section class="hero-banner">
-    <div class="hero container">
-      <h1><span class="brand hero-brand">digibeg</span></h1>
+      footer .footer-links {
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+
+      footer .footer-links a {
+        color: #fb923c;
+        margin: 0 0.5rem;
+      }
+
+      footer .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      footer .footer-copy {
+        font-size: 12px;
+        color: #64748b;
+      }
+
+      /* ================= MOBILE OPTIMIERUNG ================= */
+
+      @media (max-width: 600px) {
+        .hero-banner {
+          margin: 0;
+          border-radius: 0;
+        }
+
+        .hero {
+          padding: 2rem 1rem 1.5rem;
+        }
+
+        .hero h1 {
+          font-size: 1.8rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .cta {
+          padding: 0.85rem 2rem;
+          font-size: 1rem;
+        }
+
+        .trust {
+          gap: 0.75rem;
+          margin-top: 1.5rem;
+        }
+
+        .trust div {
+          padding: 1rem;
+          font-size: 0.9rem;
+        }
+
+        .container {
+          padding: 1.5rem 1rem;
+        }
+
+        .section-title {
+          margin: 1.5rem 0 1rem;
+          font-size: 1.5rem;
+        }
+
+        .features {
+          gap: 1rem;
+        }
+
+        .feature {
+          padding: 1.25rem;
+          text-align: center;
+        }
+
+        .feature h3 {
+          font-size: 1.1rem;
+        }
+
+        .feature p {
+          font-size: 0.95rem;
+        }
+
+        .steps {
+          gap: 0.75rem;
+          margin-top: 1.5rem;
+        }
+
+        .step {
+          padding: 1rem;
+          font-size: 0.95rem;
+        }
+
+        .closing {
+          margin: 3rem 0 2rem;
+        }
+
+        .closing p {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <section class="hero-banner">
+      <div class="hero container">
+        <h1><span class="brand hero-brand">digibeg</span></h1>
+        <p>
+          Ihr digitaler Begleiter für den Alltag.<br />
+          Einfach. Verständlich. In Ihrer Sprache.
+        </p>
+        <a
+          href="https://digibeg.replit.app/"
+          class="cta"
+          target="_blank"
+          rel="noopener"
+          >Jetzt starten</a
+        >
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="container features-section">
+      <div class="features">
+        <div class="feature">
+          <h3>Briefe & Texte verstehen</h3>
+          <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Übersetzen & erklären</h3>
+          <p>
+            Fremdsprache? Inhalte werden übersetzt und verständlich erklärt.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Termine & Erinnerungen</h3>
+          <p>digibeg merkt sich Termine und erinnert dich rechtzeitig.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Medikamente im Blick</h3>
+          <p>Medikamentenpläne mit zuverlässiger Erinnerung.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Bedienung, die sich anpasst</h3>
+          <p>Lesen, vorlesen lassen oder sprechen.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Teilen, wenn du willst</h3>
+          <p>Inhalte freiwillig mit vertrauten Personen teilen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing">
       <p>
-        Ihr digitaler Assistent für den Alltag.<br />
-        Einfach. Verständlich. In Ihrer Sprache.
+        digibeg ist nicht nur ein Tool.<br />
+        digibeg ist Unterstützung im richtigen Moment.
       </p>
-      <a href="https://digibeg.replit.app/" class="cta" target="_blank" rel="noopener">Jetzt starten</a>
-    </div>
-  </section>
+      <a
+        href="https://digibeg.replit.app/"
+        class="cta"
+        target="_blank"
+        rel="noopener"
+        >digibeg ausprobieren</a
+      >
+    </section>
 
-  <!-- FEATURES -->
-  <section class="container features-section">
-    <div class="features">
-      <div class="feature">
-        <h3>Briefe & Texte verstehen</h3>
-        <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach.</p>
+    <footer>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
-
-      <div class="feature">
-        <h3>Übersetzen & erklären</h3>
-        <p>Fremdsprache? Inhalte werden übersetzt und verständlich erklärt.</p>
+      <div class="footer-copy">
+        © 2026 digibeg – Digital begleitet verbunden mit 🧡
       </div>
-
-      <div class="feature">
-        <h3>Termine & Erinnerungen</h3>
-        <p>digibeg merkt sich Termine und erinnert dich rechtzeitig.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Medikamente im Blick</h3>
-        <p>Medikamentenpläne mit zuverlässiger Erinnerung.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Bedienung, die sich anpasst</h3>
-        <p>Lesen, vorlesen lassen oder sprechen.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Teilen, wenn du willst</h3>
-        <p>Inhalte freiwillig mit vertrauten Personen teilen.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CLOSING -->
-  <section class="closing">
-    <p>
-      digibeg ist kein Tool.<br />
-      digibeg ist Unterstützung im richtigen Moment.
-    </p>
-    <a href="https://digibeg.replit.app/" class="cta" target="_blank" rel="noopener">digibeg ausprobieren</a>
-  </section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
-    </div>
-    <div class="footer-copy">© 2026 digibeg – Ihr digitaler Alltags-Assistent</div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
