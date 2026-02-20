@@ -91,9 +91,30 @@
       color: var(--brand);
       margin: 0 0.5rem;
     }
+
+    .lang-switch {
+      text-align: right;
+      padding: 0.75rem 1.5rem;
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      color: #94a3b8;
+      margin-left: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .lang-switch a:hover { color: #fb923c; }
+    .lang-switch a.active { color: #fb923c; font-weight: 600; }
   </style>
 </head>
 <body>
+
+  <div class="lang-switch">
+    <a href="impressum.html" class="active">DE</a>
+    <a href="impressum-en.html">EN</a>
+  </div>
 
   <header>
     <h1>Impressum</h1>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
     />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>digibeg – Dein Alltagsassistent</title>
+    <title>digibeg – Your everyday assistant</title>
 
     <style>
       :root {
@@ -50,17 +50,38 @@
         text-decoration: none;
       }
 
+      .lang-switch {
+        text-align: right;
+        padding: 0.75rem 1.5rem;
+        font-size: 14px;
+      }
+
+      .lang-switch a {
+        color: #94a3b8;
+        margin-left: 0.5rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
+        transition: color 0.15s;
+      }
+
+      .lang-switch a:hover {
+        color: #fb923c;
+      }
+
+      .lang-switch a.active {
+        color: #fb923c;
+        font-weight: 600;
+      }
+
       .container {
         max-width: 1100px;
         margin: 0 auto;
         padding: 2.5rem 1.5rem;
       }
 
-      /* ================= HERO BANNER ================= */
-
       .hero-banner {
         position: relative;
-        margin: 2rem 1.5rem;
+        margin: 0 1.5rem 0;
         border-radius: var(--radius);
         background:
           linear-gradient(rgba(11, 18, 32, 0.8), rgba(11, 18, 32, 0.9)),
@@ -100,8 +121,6 @@
         margin: 0 auto 2.5rem;
       }
 
-      /* CTA BUTTON */
-
       .cta {
         display: inline-block;
         padding: 1rem 2.6rem;
@@ -124,33 +143,6 @@
       .cta:hover {
         transform: translateY(-1px);
         box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
-      }
-
-      /* TRUST */
-
-      .trust {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-      }
-
-      .trust div {
-        background: var(--bg-elevated);
-        border: 1px solid #223055;
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        text-align: center;
-        font-size: 0.95rem;
-        font-weight: 500;
-      }
-
-      /* FEATURES */
-
-      .section-title {
-        text-align: center;
-        margin: 3rem 0 1.5rem;
-        font-size: 2rem;
       }
 
       .features-section {
@@ -181,25 +173,6 @@
         color: var(--text-muted);
         font-size: 1rem;
       }
-
-      /* STEPS */
-
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-      }
-
-      .step {
-        background: var(--bg-card);
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        text-align: center;
-        font-weight: 500;
-      }
-
-      /* CLOSING */
 
       .closing {
         text-align: center;
@@ -248,31 +221,6 @@
         color: #64748b;
       }
 
-      .lang-switch {
-        text-align: right;
-        padding: 0.75rem 1.5rem;
-        font-size: 14px;
-      }
-
-      .lang-switch a {
-        color: #94a3b8;
-        margin-left: 0.5rem;
-        padding: 0.3rem 0.6rem;
-        border-radius: 6px;
-        transition: color 0.15s;
-      }
-
-      .lang-switch a:hover {
-        color: #fb923c;
-      }
-
-      .lang-switch a.active {
-        color: #fb923c;
-        font-weight: 600;
-      }
-
-      /* ================= MOBILE OPTIMIERUNG ================= */
-
       @media (max-width: 600px) {
         .hero-banner {
           margin: 0;
@@ -298,23 +246,8 @@
           font-size: 1rem;
         }
 
-        .trust {
-          gap: 0.75rem;
-          margin-top: 1.5rem;
-        }
-
-        .trust div {
-          padding: 1rem;
-          font-size: 0.9rem;
-        }
-
         .container {
           padding: 1.5rem 1rem;
-        }
-
-        .section-title {
-          margin: 1.5rem 0 1rem;
-          font-size: 1.5rem;
         }
 
         .features {
@@ -334,16 +267,6 @@
           font-size: 0.95rem;
         }
 
-        .steps {
-          gap: 0.75rem;
-          margin-top: 1.5rem;
-        }
-
-        .step {
-          padding: 1rem;
-          font-size: 0.95rem;
-        }
-
         .closing {
           margin: 3rem 0 2rem;
         }
@@ -358,87 +281,82 @@
 
   <body>
     <div class="lang-switch">
-      <a href="index.html" class="active">DE</a>
-      <a href="index-en.html">EN</a>
+      <a href="index.html">DE</a>
+      <a href="index-en.html" class="active">EN</a>
     </div>
 
-    <!-- HERO -->
     <section class="hero-banner">
       <div class="hero container">
         <h1><span class="brand hero-brand">digibeg</span></h1>
         <p>
-          Ihr digitaler Begleiter für den Alltag.<br />
-          Einfach. Verständlich. In Ihrer Sprache.
+          Your digital companion for everyday life.<br />
+          Simple. Clear. In your language.
         </p>
         <a
           href="https://app.digibeg.de/"
           class="cta"
           target="_blank"
           rel="noopener"
-          >Jetzt starten</a
+          >Get started</a
         >
       </div>
     </section>
 
-    <!-- FEATURES -->
     <section class="container features-section">
       <div class="features">
         <div class="feature">
-          <h3>Briefe & Texte verstehen</h3>
-          <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach.</p>
+          <h3>Understand letters & texts</h3>
+          <p>Take a photo of a letter – digibeg explains it to you simply.</p>
         </div>
 
         <div class="feature">
-          <h3>Übersetzen & erklären</h3>
-          <p>
-            Fremdsprache? Inhalte werden übersetzt und verständlich erklärt.
-          </p>
+          <h3>Translate & explain</h3>
+          <p>Foreign language? Content is translated and explained clearly.</p>
         </div>
 
         <div class="feature">
-          <h3>Termine & Erinnerungen</h3>
-          <p>digibeg merkt sich Termine und erinnert dich rechtzeitig.</p>
+          <h3>Appointments & reminders</h3>
+          <p>digibeg remembers your appointments and reminds you on time.</p>
         </div>
 
         <div class="feature">
-          <h3>Medikamente im Blick</h3>
-          <p>Medikamentenpläne mit zuverlässiger Erinnerung.</p>
+          <h3>Medication tracking</h3>
+          <p>Medication plans with reliable reminders.</p>
         </div>
 
         <div class="feature">
-          <h3>Bedienung, die sich anpasst</h3>
-          <p>Lesen, vorlesen lassen oder sprechen.</p>
+          <h3>Adapts to you</h3>
+          <p>Read, listen, or speak – your choice.</p>
         </div>
 
         <div class="feature">
-          <h3>Teilen, wenn du willst</h3>
-          <p>Inhalte freiwillig mit vertrauten Personen teilen.</p>
+          <h3>Share if you want</h3>
+          <p>Voluntarily share content with trusted people.</p>
         </div>
       </div>
     </section>
 
-    <!-- CLOSING -->
     <section class="closing">
       <p>
-        digibeg ist nicht nur ein Tool.<br />
-        digibeg ist Unterstützung im richtigen Moment.
+        digibeg is not just a tool.<br />
+        digibeg is support at the right moment.
       </p>
       <a
         href="https://app.digibeg.de/"
         class="cta"
         target="_blank"
         rel="noopener"
-        >digibeg ausprobieren</a
+        >Try digibeg</a
       >
     </section>
 
     <footer>
       <div class="footer-links">
-        <a href="impressum.html">Impressum</a> |
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum-en.html">Legal Notice</a> |
+        <a href="datenschutz-en.html">Privacy Policy</a>
       </div>
       <div class="footer-copy">
-        © 2026 digibeg – Digital begleitet verbunden mit 🧡
+        © 2026 digibeg – Digitally accompanied, connected with 🧡
       </div>
     </footer>
   </body>
