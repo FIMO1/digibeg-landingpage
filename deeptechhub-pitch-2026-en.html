@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>digibeg – Pitch Deck 2026</title>
+  <style>
+    :root {
+      --bg-main: #0b1220;
+      --bg-card: #121b2e;
+      --bg-elevated: #16213a;
+      --text-main: #e8ecf3;
+      --text-muted: #a6b0c3;
+      --brand: #fb923c;
+      --brand-soft: #fca458;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .lang-switch {
+      position: fixed;
+      top: 0.75rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      gap: 0.25rem;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.35rem 0.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      color: #94a3b8;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .lang-switch a:hover { color: #fb923c; text-decoration: none; }
+    .lang-switch a.active { color: #fb923c; font-weight: 600; background: rgba(251, 146, 60, 0.1); }
+
+    .hero-banner {
+      position: relative;
+      margin: 0 1.5rem;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(251, 146, 60, 0.15), rgba(11, 18, 32, 0.95));
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      margin-top: 3rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 0.5rem;
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.2rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #1a1a1a;
+      box-shadow: 0 8px 24px rgba(251, 146, 60, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+      touch-action: manipulation;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
+      text-decoration: none;
+    }
+
+    .download-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section h2 {
+      color: var(--brand);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section p, .section li {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .section ul {
+      padding-left: 1.5rem;
+    }
+
+    .section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid #1e2d4a;
+    }
+
+    .card h3 {
+      color: var(--brand);
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .highlight-box {
+      background: var(--bg-card);
+      border: 1px solid #1e2d4a;
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      color: var(--brand);
+      font-size: 1.3rem;
+      margin: 0 0 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    .tag {
+      background: var(--bg-elevated);
+      color: var(--text-muted);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      border: 1px solid #223055;
+    }
+
+    .founder-box {
+      background: var(--bg-card);
+      border: 1px solid #1e2d4a;
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .founder-box .name {
+      color: var(--text-main);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .founder-box .role {
+      color: var(--brand);
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .founder-box .contact {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .closing-section {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .closing-section p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 2rem 1rem;
+      border-top: 1px solid #334155;
+    }
+
+    footer .footer-links {
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-links a {
+      color: #fb923c;
+      margin: 0 0.5rem;
+    }
+
+    footer .footer-copy {
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    @media (max-width: 600px) {
+      .hero-banner {
+        margin: 2.5rem 0 0;
+        border-radius: 0;
+      }
+
+      .hero {
+        padding: 2.5rem 1rem 2rem;
+      }
+
+      .hero h1 { font-size: 1.8rem; }
+      .hero .subtitle { font-size: 1rem; }
+      .hero .tagline { font-size: 1rem; }
+
+      .download-btn {
+        padding: 0.85rem 1.8rem;
+        font-size: 0.95rem;
+      }
+
+      .container { padding: 1.5rem 1rem; }
+
+      .section h2 { font-size: 1.2rem; }
+
+      .card { padding: 1.25rem; }
+      .card h3 { font-size: 1rem; }
+
+      .highlight-box { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <a href="deeptechhub-pitch-2026.html">DE</a>
+    <a href="deeptechhub-pitch-2026-en.html" class="active">EN</a>
+  </div>
+
+  <section class="hero-banner">
+    <div class="hero">
+      <h1>digibeg</h1>
+      <p class="subtitle">Digital Infrastructure for Social Care</p>
+      <p class="tagline">More safety and dignity in everyday life – simple, inclusive, empowering.</p>
+      <a href="digibeg-pitch-2026-en.pdf" class="download-btn" download>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 18h16"/></svg>
+        Download Pitch Deck (PDF)
+      </a>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>The Problem</h2>
+      <ul>
+        <li>Language barriers consume operational time in social care institutions every day</li>
+        <li>Communication runs through unstructured channels (WhatsApp, paper, phone calls)</li>
+        <li>There is no specialized digital infrastructure for multilingual care environments</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>The Solution</h2>
+      <p>digibeg is a digital coordination and connection layer that brings together everyone involved in care and daily support – regardless of role or background.</p>
+      <p>The platform connects clients, relatives, and care providers through:</p>
+      <div class="card-grid" style="margin-top: 1rem;">
+        <div class="card">
+          <h3>Live Translation</h3>
+          <p>For real care conversations</p>
+        </div>
+        <div class="card">
+          <h3>Emotional Analysis</h3>
+          <p>To support sensitive interactions</p>
+        </div>
+        <div class="card">
+          <h3>Structured Dashboard</h3>
+          <p>For coordination and documentation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Target Groups</h2>
+      <div class="tags">
+        <span class="tag">Municipalities & Institutions</span>
+        <span class="tag">Care Providers & Welfare Orgs</span>
+        <span class="tag">Families & Relatives</span>
+        <span class="tag">Seniors</span>
+        <span class="tag">People with Migration Backgrounds</span>
+        <span class="tag">Volunteers & Community Helpers</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Strategic Value</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Efficiency</h3>
+          <p>Operational transparency + structural efficiency</p>
+        </div>
+        <div class="card">
+          <h3>Cost Savings</h3>
+          <p>Time savings + reduced coordination costs + higher service quality</p>
+        </div>
+        <div class="card">
+          <h3>Relief</h3>
+          <p>Reduced overload + improved reliability of informal care networks</p>
+        </div>
+        <div class="card">
+          <h3>Autonomy</h3>
+          <p>Higher autonomy + safer daily routines</p>
+        </div>
+        <div class="card">
+          <h3>Inclusion</h3>
+          <p>Increased inclusion + reduced miscommunication risk</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Roadmap</h2>
+      <ul>
+        <li>App Store submission in preparation</li>
+        <li>Pilot phase with welfare organizations in Mannheim (e.g., DRK / City of Mannheim / Jobcenter)</li>
+        <li>Roll-out to additional institutions, including training & support</li>
+        <li>Expansion of the partner network (municipalities, care services, integration offices)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Business Model</h2>
+      <ul>
+        <li>SaaS license per institution</li>
+        <li>Target range: €5,000–€10,000 annual license per location</li>
+        <li>Monthly subscription system for users and relatives</li>
+        <li>Scalable via cloud-based infrastructure</li>
+        <li>Access to funding programs or public institutions</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Currently Open: Pre-Seed Round</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Seeking:</p>
+      <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+        <li>Co-Founder Tech & Data – Full-stack / AI background, cloud scalability</li>
+        <li>Co-Founder Care Operations & Product – Care processes, multi-location rollout</li>
+        <li>Angel investors with network in impact, care, or municipal sectors</li>
+        <li>Strategic sparring partners in SaaS / infrastructure</li>
+      </ul>
+    </div>
+
+    <div class="founder-box">
+      <div class="name">René Gäng</div>
+      <div class="role">Founder & Product Lead</div>
+      <div class="contact">
+        <a href="mailto:info@digibeg.de">info@digibeg.de</a><br>
+        <a href="https://www.digibeg.de" target="_blank" rel="noopener">www.digibeg.de</a><br>
+        Mannheim
+      </div>
+    </div>
+
+  </div>
+
+  <section class="closing-section">
+    <p>Download the full pitch deck as PDF:</p>
+    <a href="digibeg-pitch-2026-en.pdf" class="download-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 18h16"/></svg>
+      Download PDF
+    </a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index-en.html">Homepage</a> |
+      <a href="impressum-en.html">Legal Notice</a> |
+      <a href="datenschutz-en.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">
+      © 2026 digibeg – Digitally accompanied, connected with 🧡
+    </div>
+  </footer>
+
+</body>
+</html>

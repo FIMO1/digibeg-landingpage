@@ -10,6 +10,10 @@ A bilingual (German/English) landing page for "digibeg" - a digital assistant ap
 - `impressum-en.html` - Legal Notice (English)
 - `datenschutz.html` - Datenschutzerklärung (German privacy policy)
 - `datenschutz-en.html` - Privacy Policy (English)
+- `deeptechhub-pitch-2026.html` - Pitch Deck page (German)
+- `deeptechhub-pitch-2026-en.html` - Pitch Deck page (English)
+- `digibeg-pitch-2026-de.pdf` - Pitch Deck PDF download (German)
+- `digibeg-pitch-2026-en.pdf` - Pitch Deck PDF download (English)
 - `style.css` - Additional CSS styles (not currently linked)
 - `app.js` - JavaScript for smooth scrolling functionality
 
@@ -40,4 +44,5 @@ The website is served using `npx serve -l 5000` on port 5000.
 ## Deployment
 - Development: Served via Replit on port 5000
 - Production: Manual FTP upload to IONOS hosting
-- All 6 HTML files must be uploaded to IONOS for full deployment
+- All 8 HTML files + 2 PDF files must be uploaded to IONOS for full deployment
+- Pitch page accessible at: digibeg.de/deeptechhub-pitch-2026.html (DE) and deeptechhub-pitch-2026-en.html (EN)
