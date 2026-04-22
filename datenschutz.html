@@ -67,7 +67,7 @@
       color: var(--text-muted);
     }
 
-    ul {
+    ul, ol {
       padding-left: 1.5rem;
     }
 
@@ -140,7 +140,7 @@
 
   <header>
     <h1>Datenschutzerklärung</h1>
-    <p>Stand: Januar 2026</p>
+    <p>Stand: April 2026</p>
   </header>
 
   <div class="container">
@@ -152,79 +152,103 @@
       68753 Waghäusel<br>
       Deutschland
     </p>
-    <p>
-      E-Mail: <a href="mailto:info@digibeg.de">info@digibeg.de</a>
-    </p>
-    <p>Bei Fragen zum Datenschutz kontaktieren Sie uns gerne unter der oben genannten E-Mail.</p>
+    <p>E-Mail: <a href="mailto:info@combany.de">info@combany.de</a></p>
 
-    <h2>2. Erhobene Daten</h2>
-    <p>Zur Bereitstellung der App-Funktionen erheben und verarbeiten wir folgende Daten:</p>
+    <h2>2. Erhobene und verarbeitete Daten</h2>
+
+    <h2>2.1 Kontodaten (serverseitig gespeichert)</h2>
+    <p>E-Mail-Adresse, verschlüsseltes Passwort, gewählte Sprache, Rolle (Nutzer / Begleiter), Abonnement-Plan und Guthaben (Coins).</p>
+
+    <h2>2.2 Sprach- und Texteingaben</h2>
+    <p>Ihre Spracheingaben werden zunächst lokal aufgezeichnet, dann zur Transkription an Microsoft Azure übermittelt. Der resultierende Text wird zur KI-Verarbeitung an OpenAI weitergeleitet. Eingaben werden nicht dauerhaft bei Drittanbietern gespeichert (max. 30 Tage gemäß deren API-Richtlinien).</p>
+
+    <h2>2.3 Gesprächsverlauf und Assistenten-Kontext</h2>
+    <p>Konversationsverläufe sowie dauerhaft gespeicherte Kontextinformationen (z. B. von Ihnen erwähnte Personen, Gewohnheiten, Präferenzen) werden auf unseren Servern gespeichert. Diese Informationen werden verwendet, um den KI-Assistenten bei jedem Gespräch mit personalisiertem Kontext zu versorgen.</p>
+
+    <h2>2.4 Kalendereinträge, Erinnerungen und Kommentare (serverseitig gespeichert)</h2>
+    <p>Termine, Erinnerungsvorlagen, tägliche Erinnerungseinträge sowie Kommentare zu Kalendertagen werden auf unseren Servern gespeichert. Eine Deinstallation der App löscht diese Daten nicht automatisch — eine vollständige Löschung erfolgt nur auf explizite Anfrage (siehe Abschnitt 7).</p>
+    <p>Kommentare sind für verknüpfte Begleiter sichtbar (siehe Abschnitt 2.7).</p>
+
+    <h2>2.5 Dokumente und Bilder</h2>
+    <p>Hochgeladene Dokumente und Fotos werden auf unseren Servern gespeichert. Zur KI-Analyse (OCR, Zusammenfassung) werden Inhalte temporär an OpenAI übermittelt. Das Analyseergebnis wird dauerhaft mit dem Dokument auf unseren Servern gespeichert.</p>
+
+    <h2>2.6 Abonnement- und Zahlungsdaten</h2>
+    <p>Zahlungsabwicklung erfolgt über:</p>
     <ul>
-      <li><strong>Spracheingaben und Texteingaben</strong> (Chat, Assistent): Temporär zur Verarbeitung an OpenAI und Microsoft Azure.</li>
-      <li><strong>Dokumente/Bilder:</strong> Lokal gespeichert, temporär zur Analyse an OpenAI/Azure übermittelt.</li>
-      <li><strong>Kalendereinträge und Erinnerungen:</strong> Lokal auf Ihrem Gerät.</li>
-      <li><strong>Spracheinstellungen und App-Nutzung:</strong> Lokal gespeichert.</li>
+      <li><strong>Stripe Inc. (Web):</strong> Stripe verarbeitet Zahlungsdaten gemäß eigener Datenschutzerklärung. Wir erhalten ausschließlich eine Bestätigung des Abonnementstatus.</li>
+      <li><strong>RevenueCat Inc. (iOS/Android):</strong> In-App-Käufe werden über Apple App Store bzw. Google Play Store abgewickelt. RevenueCat synchronisiert den Plan-Status mit unserem Backend.</li>
     </ul>
+    <p>Vollständige Zahlungsdaten (Kartennummern etc.) werden von uns nicht gespeichert.</p>
 
-    <h2>3. Zweck und Rechtsgrundlage der Verarbeitung</h2>
-    <p>
-      Die Verarbeitung erfolgt ausschließlich zur Erbringung der App-Funktionen (Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung) 
-      sowie auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) für KI-Funktionen.
-    </p>
+    <h2>2.7 Begleiter-Funktionalität</h2>
+    <p>Wenn Sie als Nutzer einen Begleiter einladen, erhält diese Person lesenden Zugriff auf Ihre Erinnerungen und Kalenderkommentare sowie die Möglichkeit, Erinnerungen in Ihrem Namen als erledigt zu markieren. Dieser Zugriff besteht bis zur Trennung der Verknüpfung. Sie können die Verknüpfung jederzeit in der App trennen.</p>
+
+    <h2>2.8 Technische Daten</h2>
+    <p>Authentifizierungs-Tokens (JWT) werden lokal auf Ihrem Gerät gespeichert und bei jedem API-Aufruf übermittelt. IP-Adresse und grundlegende Geräteinformationen werden im Rahmen normaler Server-Logs verarbeitet.</p>
+
+    <h2>3. Zweck und Rechtsgrundlage</h2>
+    <ul>
+      <li><strong>Vertragserfüllung</strong> (Art. 6 Abs. 1 lit. b DSGVO): Kontoverwaltung, Kalender, Erinnerungen, Dokumentenspeicherung.</li>
+      <li><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): KI-Funktionen, Sprachverarbeitung, Beziehungsgedächtnis des Assistenten.</li>
+      <li><strong>Berechtigte Interessen</strong> (Art. 6 Abs. 1 lit. f DSGVO): Sicherheit, Missbrauchsprävention, technischer Betrieb.</li>
+    </ul>
 
     <h2>4. Datenweitergabe an Dritte</h2>
+    <p>Wir geben Daten ausschließlich an folgende Anbieter weiter:</p>
     <ul>
-      <li><strong>OpenAI LLC (USA):</strong> Für LLM-Analyse und Übersetzung.</li>
-      <li><strong>Microsoft Azure (EU-Region bevorzugt):</strong> Für Speech-to-Text/Text-to-Speech.</li>
+      <li><strong>OpenAI LLC (USA):</strong> Verarbeitung von Text- und Spracheingaben, Dokumentenanalyse. Übermittlung auf Basis von Standardvertragsklauseln (SCC). API-Daten werden max. 30 Tage gespeichert und nicht zum Modelltraining verwendet.</li>
+      <li><strong>Microsoft Azure (bevorzugt EU-Region):</strong> Spracherkennung (STT) und Sprachausgabe (TTS). Übermittlung auf Basis von SCC.</li>
+      <li><strong>Stripe Inc. (USA):</strong> Zahlungsabwicklung für Web-Abonnements. SCC-Basis.</li>
+      <li><strong>RevenueCat Inc. (USA):</strong> Abonnement-Verwaltung für iOS/Android. SCC-Basis.</li>
     </ul>
-    <p>
-      Übermittlung in Drittland (USA) auf Basis Standardvertragsklauseln (SCC) und Transfer Impact Assessment (TIA). 
-      OpenAI speichert API-Daten max. 30 Tage und nutzt sie nicht zum Training (bei API-Nutzung). 
-      Details: <a href="https://openai.com/policies/data-processing-addendum" target="_blank" rel="noopener">OpenAI DPA</a>.
-    </p>
+    <p>Alle Drittanbieter sind vertraglich zur Einhaltung des DSGVO-Schutzniveaus verpflichtet.</p>
 
     <h2>5. Speicherdauer</h2>
     <ul>
-      <li><strong>Lokal:</strong> Bis Sie löschen oder die App deinstallieren.</li>
-      <li><strong>Bei OpenAI/Azure:</strong> Gemäß deren Richtlinien (max. 30 Tage für API-Daten).</li>
+      <li><strong>Kontodaten:</strong> Bis zur Kontolöschung.</li>
+      <li><strong>Gesprächsverlauf und Kontext:</strong> Bis zur Kontolöschung oder auf Anfrage.</li>
+      <li><strong>Kalendereinträge, Erinnerungen, Kommentare:</strong> Bis zur Kontolöschung oder auf explizite Anfrage.</li>
+      <li><strong>Dokumente:</strong> Bis zur manuellen Löschung in der App oder Kontolöschung.</li>
+      <li><strong>Zahlungsdaten:</strong> Gemäß gesetzlicher Aufbewahrungspflichten (§ 147 AO: 10 Jahre für steuerrelevante Daten).</li>
+      <li><strong>Bei OpenAI/Azure:</strong> Max. 30 Tage für API-Verarbeitungsdaten.</li>
     </ul>
 
-    <h2>6. Ihre Rechte</h2>
-    <p>Sie haben gemäß DSGVO folgende Rechte:</p>
+    <h2>6. Ihre Rechte (DSGVO Art. 15–21)</h2>
+    <p>Sie haben das Recht auf:</p>
     <ul>
-      <li>Auskunft (Art. 15 DSGVO)</li>
-      <li>Berichtigung (Art. 16 DSGVO)</li>
-      <li>Löschung (Art. 17 DSGVO)</li>
-      <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-      <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-      <li>Widerspruch (Art. 21 DSGVO)</li>
+      <li>Auskunft (Art. 15)</li>
+      <li>Berichtigung (Art. 16)</li>
+      <li>Löschung (Art. 17)</li>
+      <li>Einschränkung der Verarbeitung (Art. 18)</li>
+      <li>Datenübertragbarkeit (Art. 20)</li>
+      <li>Widerspruch (Art. 21)</li>
+      <li>Widerruf einer Einwilligung mit Wirkung für die Zukunft</li>
     </ul>
-    <p>
-      Einwilligung jederzeit widerrufbar (z. B. per E-Mail an <a href="mailto:info@digibeg.de">info@digibeg.de</a>) mit Wirkung für die Zukunft.
-    </p>
-    <p>
-      Beschwerderecht bei der zuständigen Aufsichtsbehörde (z. B. Landesbeauftragter für Datenschutz und Informationsfreiheit Baden-Württemberg).
-    </p>
+    <p>Beschwerderecht bei: Landesbeauftragter für Datenschutz und Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
 
-    <h2>7. Berechtigungen</h2>
-    <p>Die App benötigt folgende Berechtigungen:</p>
+    <h2>7. Datenlöschung und Kontolöschung</h2>
+    <p>Zur vollständigen Löschung Ihres Kontos und aller gespeicherten Daten:</p>
+    <ol>
+      <li>In der App: <strong>Einstellungen → Konto → Konto löschen</strong></li>
+      <li>Per E-Mail an <a href="mailto:info@combany.de">info@combany.de</a> mit dem Betreff „Datenlöschung – [Ihre E-Mail-Adresse]"</li>
+    </ol>
+    <p>Wir bestätigen die Löschung innerhalb von 30 Tagen. Steuerrelevante Daten werden gemäß gesetzlicher Aufbewahrungspflicht aufbewahrt und danach gelöscht.</p>
+    <p><strong>Hinweis:</strong> Eine Deinstallation der App allein löscht keine serverseitig gespeicherten Daten (Termine, Erinnerungen, Kommentare, Dokumente, Gesprächsverlauf).</p>
+
+    <h2>8. Berechtigungen</h2>
     <ul>
-      <li><strong>Mikrofon:</strong> Für Spracheingabe und Sprachsteuerung</li>
-      <li><strong>Kamera:</strong> Zum Fotografieren von Dokumenten</li>
-      <li><strong>Speicher:</strong> Zum Speichern von Dokumenten und Einstellungen</li>
+      <li><strong>Mikrofon:</strong> Für Spracheingabe (Easy Mode, Chat, Kalender). Nur bei aktiver Nutzung.</li>
+      <li><strong>Kamera:</strong> Zum Fotografieren von Dokumenten.</li>
+      <li><strong>Speicher/Mediathek:</strong> Zum Speichern und Laden von Dokumenten.</li>
+      <li><strong>Push-Benachrichtigungen:</strong> Für Terminerinnerungen (lokal generiert, kein externer Push-Server).</li>
     </ul>
-    <p>Alle Berechtigungen können Sie jederzeit in den Systemeinstellungen Ihres Geräts widerrufen.</p>
+    <p>Alle Berechtigungen können jederzeit in den Systemeinstellungen widerrufen werden.</p>
 
-    <h2>8. Datensicherheit</h2>
-    <p>
-      Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten zu schützen. 
-      Die Kommunikation mit externen Diensten erfolgt verschlüsselt über HTTPS.
-    </p>
+    <h2>9. Datensicherheit</h2>
+    <p>Alle Datenübertragungen erfolgen verschlüsselt über HTTPS/TLS. Authentifizierung erfolgt über kurzlebige JWT Access Tokens in Kombination mit Refresh Tokens.</p>
 
-    <h2>9. Änderungen</h2>
-    <p>
-      Wir passen die Erklärung bei Bedarf an – die aktuelle Version finden Sie in der App und auf digibeg.de.
-    </p>
+    <h2>10. Änderungen dieser Erklärung</h2>
+    <p>Bei wesentlichen Änderungen informieren wir Sie per E-Mail oder In-App-Hinweis. Die aktuelle Version ist stets in der App und unter <a href="https://combany.de/datenschutz" target="_blank" rel="noopener">combany.de/datenschutz</a> abrufbar.</p>
 
     <a href="index.html" class="back-link">← Zurück zur Startseite</a>
 

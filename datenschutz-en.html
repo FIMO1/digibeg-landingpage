@@ -60,7 +60,7 @@
 
     h2 { color: var(--brand); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.8rem; }
     p, li { color: var(--text-muted); }
-    ul { padding-left: 1.5rem; }
+    ul, ol { padding-left: 1.5rem; }
     li { margin-bottom: 0.5rem; }
 
     .back-link {
@@ -96,7 +96,7 @@
 
   <header>
     <h1>Privacy Policy</h1>
-    <p>Last updated: January 2026</p>
+    <p>Last updated: April 2026</p>
   </header>
 
   <div class="container">
@@ -108,79 +108,103 @@
       68753 Waghäusel<br>
       Germany
     </p>
-    <p>
-      Email: <a href="mailto:info@digibeg.de">info@digibeg.de</a>
-    </p>
-    <p>For any questions regarding data protection, please contact us at the email address above.</p>
+    <p>Email: <a href="mailto:info@combany.de">info@combany.de</a></p>
 
-    <h2>2. Data collected</h2>
-    <p>To provide the app's features, we collect and process the following data:</p>
+    <h2>2. Data Collected and Processed</h2>
+
+    <h2>2.1 Account Data (stored server-side)</h2>
+    <p>Email address, encrypted password, selected language, role (user / companion), subscription plan and credit balance (coins).</p>
+
+    <h2>2.2 Voice and Text Input</h2>
+    <p>Your voice input is first recorded locally, then transmitted to Microsoft Azure for transcription. The resulting text is forwarded to OpenAI for AI processing. Inputs are not permanently stored by third-party providers (max. 30 days as per their API policies).</p>
+
+    <h2>2.3 Conversation History and Assistant Context</h2>
+    <p>Conversation histories and permanently stored context information (e.g. people you have mentioned, habits, preferences) are stored on our servers. This information is used to provide the AI assistant with personalised context in each conversation.</p>
+
+    <h2>2.4 Calendar Entries, Reminders and Comments (stored server-side)</h2>
+    <p>Appointments, reminder templates, daily reminder entries and comments on calendar days are stored on our servers. Uninstalling the app does not automatically delete this data — complete deletion only occurs upon explicit request (see Section 7).</p>
+    <p>Comments are visible to linked companions (see Section 2.7).</p>
+
+    <h2>2.5 Documents and Images</h2>
+    <p>Uploaded documents and photos are stored on our servers. For AI analysis (OCR, summarisation), content is temporarily transmitted to OpenAI. The analysis result is permanently stored alongside the document on our servers.</p>
+
+    <h2>2.6 Subscription and Payment Data</h2>
+    <p>Payment processing is handled by:</p>
     <ul>
-      <li><strong>Voice and text input</strong> (chat, assistant): Temporarily transmitted to OpenAI and Microsoft Azure for processing.</li>
-      <li><strong>Documents/images:</strong> Stored locally, temporarily transmitted to OpenAI/Azure for analysis.</li>
-      <li><strong>Calendar entries and reminders:</strong> Stored locally on your device.</li>
-      <li><strong>Language settings and app usage:</strong> Stored locally.</li>
+      <li><strong>Stripe Inc. (Web):</strong> Stripe processes payment data in accordance with its own privacy policy. We only receive confirmation of subscription status.</li>
+      <li><strong>RevenueCat Inc. (iOS/Android):</strong> In-app purchases are processed via the Apple App Store or Google Play Store. RevenueCat synchronises the plan status with our backend.</li>
+    </ul>
+    <p>Full payment details (card numbers etc.) are not stored by us.</p>
+
+    <h2>2.7 Companion Functionality</h2>
+    <p>When you as a user invite a companion, that person is granted read access to your reminders and calendar comments, as well as the ability to mark reminders as completed on your behalf. This access remains until the connection is removed. You can disconnect the companion at any time within the app.</p>
+
+    <h2>2.8 Technical Data</h2>
+    <p>Authentication tokens (JWT) are stored locally on your device and transmitted with every API call. IP address and basic device information are processed as part of normal server logs.</p>
+
+    <h2>3. Purpose and Legal Basis</h2>
+    <ul>
+      <li><strong>Performance of contract</strong> (Art. 6(1)(b) GDPR): Account management, calendar, reminders, document storage.</li>
+      <li><strong>Consent</strong> (Art. 6(1)(a) GDPR): AI features, voice processing, assistant relationship memory.</li>
+      <li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR): Security, abuse prevention, technical operation.</li>
     </ul>
 
-    <h2>3. Purpose and legal basis</h2>
-    <p>
-      Processing is carried out exclusively for the provision of app features (Art. 6(1)(b) GDPR – performance of contract) 
-      and on the basis of your consent (Art. 6(1)(a) GDPR) for AI features.
-    </p>
-
-    <h2>4. Data sharing with third parties</h2>
+    <h2>4. Data Sharing with Third Parties</h2>
+    <p>We only share data with the following providers:</p>
     <ul>
-      <li><strong>OpenAI LLC (USA):</strong> For LLM analysis and translation.</li>
-      <li><strong>Microsoft Azure (EU region preferred):</strong> For speech-to-text/text-to-speech.</li>
+      <li><strong>OpenAI LLC (USA):</strong> Processing of text and voice input, document analysis. Transfer based on Standard Contractual Clauses (SCC). API data is stored for a maximum of 30 days and is not used for model training.</li>
+      <li><strong>Microsoft Azure (EU region preferred):</strong> Speech-to-text (STT) and text-to-speech (TTS). Transfer based on SCC.</li>
+      <li><strong>Stripe Inc. (USA):</strong> Payment processing for web subscriptions. SCC basis.</li>
+      <li><strong>RevenueCat Inc. (USA):</strong> Subscription management for iOS/Android. SCC basis.</li>
     </ul>
-    <p>
-      Transfer to third countries (USA) is based on Standard Contractual Clauses (SCC) and Transfer Impact Assessment (TIA). 
-      OpenAI stores API data for a maximum of 30 days and does not use it for model training (when using the API). 
-      Details: <a href="https://openai.com/policies/data-processing-addendum" target="_blank" rel="noopener">OpenAI DPA</a>.
-    </p>
+    <p>All third-party providers are contractually obligated to maintain GDPR-equivalent protection standards.</p>
 
-    <h2>5. Data retention</h2>
+    <h2>5. Data Retention</h2>
     <ul>
-      <li><strong>Locally:</strong> Until you delete or uninstall the app.</li>
-      <li><strong>At OpenAI/Azure:</strong> According to their policies (max. 30 days for API data).</li>
+      <li><strong>Account data:</strong> Until account deletion.</li>
+      <li><strong>Conversation history and context:</strong> Until account deletion or upon request.</li>
+      <li><strong>Calendar entries, reminders, comments:</strong> Until account deletion or upon explicit request.</li>
+      <li><strong>Documents:</strong> Until manually deleted in the app or account deletion.</li>
+      <li><strong>Payment data:</strong> In accordance with statutory retention obligations (§ 147 AO: 10 years for tax-relevant data).</li>
+      <li><strong>At OpenAI/Azure:</strong> Max. 30 days for API processing data.</li>
     </ul>
 
-    <h2>6. Your rights</h2>
-    <p>Under the GDPR, you have the following rights:</p>
+    <h2>6. Your Rights (GDPR Art. 15–21)</h2>
+    <p>You have the right to:</p>
     <ul>
-      <li>Right of access (Art. 15 GDPR)</li>
-      <li>Right to rectification (Art. 16 GDPR)</li>
-      <li>Right to erasure (Art. 17 GDPR)</li>
-      <li>Right to restriction of processing (Art. 18 GDPR)</li>
-      <li>Right to data portability (Art. 20 GDPR)</li>
-      <li>Right to object (Art. 21 GDPR)</li>
+      <li>Access (Art. 15)</li>
+      <li>Rectification (Art. 16)</li>
+      <li>Erasure (Art. 17)</li>
+      <li>Restriction of processing (Art. 18)</li>
+      <li>Data portability (Art. 20)</li>
+      <li>Object (Art. 21)</li>
+      <li>Withdraw consent with effect for the future</li>
     </ul>
-    <p>
-      Consent can be withdrawn at any time (e.g. by email to <a href="mailto:info@digibeg.de">info@digibeg.de</a>) with effect for the future.
-    </p>
-    <p>
-      You have the right to lodge a complaint with the competent supervisory authority (e.g. State Commissioner for Data Protection and Freedom of Information, Baden-Württemberg).
-    </p>
+    <p>Right to lodge a complaint with: State Commissioner for Data Protection and Freedom of Information Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
 
-    <h2>7. Permissions</h2>
-    <p>The app requires the following permissions:</p>
+    <h2>7. Data Deletion and Account Deletion</h2>
+    <p>To fully delete your account and all stored data:</p>
+    <ol>
+      <li>In the app: <strong>Settings → Account → Delete Account</strong></li>
+      <li>By email to <a href="mailto:info@combany.de">info@combany.de</a> with the subject line "Data Deletion – [your email address]"</li>
+    </ol>
+    <p>We will confirm the deletion within 30 days. Tax-relevant data will be retained in accordance with statutory retention obligations and then deleted.</p>
+    <p><strong>Note:</strong> Uninstalling the app alone does not delete any server-side stored data (appointments, reminders, comments, documents, conversation history).</p>
+
+    <h2>8. Permissions</h2>
     <ul>
-      <li><strong>Microphone:</strong> For voice input and voice control</li>
-      <li><strong>Camera:</strong> For photographing documents</li>
-      <li><strong>Storage:</strong> For saving documents and settings</li>
+      <li><strong>Microphone:</strong> For voice input (Easy Mode, chat, calendar). Only during active use.</li>
+      <li><strong>Camera:</strong> For photographing documents.</li>
+      <li><strong>Storage / Media Library:</strong> For saving and loading documents.</li>
+      <li><strong>Push Notifications:</strong> For appointment reminders (generated locally, no external push server).</li>
     </ul>
     <p>All permissions can be revoked at any time in your device's system settings.</p>
 
-    <h2>8. Data security</h2>
-    <p>
-      We implement technical and organizational measures to protect your data. 
-      Communication with external services is encrypted via HTTPS.
-    </p>
+    <h2>9. Data Security</h2>
+    <p>All data transmissions are encrypted via HTTPS/TLS. Authentication is handled via short-lived JWT access tokens in combination with refresh tokens.</p>
 
-    <h2>9. Changes</h2>
-    <p>
-      We update this policy as needed – the current version is available in the app and at digibeg.de.
-    </p>
+    <h2>10. Changes to This Policy</h2>
+    <p>For material changes, we will notify you by email or in-app notice. The current version is always available in the app and at <a href="https://combany.de/datenschutz" target="_blank" rel="noopener">combany.de/datenschutz</a>.</p>
 
     <a href="index-en.html" class="back-link">← Back to homepage</a>
 
