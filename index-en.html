@@ -346,6 +346,60 @@
       </div>
     </section>
 
+    <!-- DEMO -->
+    <section class="container demo-section">
+      <h2 class="section-title">digibeg in Action</h2>
+      <div class="demo-row">
+
+        <!-- Phone mockup -->
+        <div class="demo-col">
+          <p class="demo-label">Mobile App</p>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="slideshow" id="mobile-slides">
+                <div class="slide slide-placeholder active">Screenshot 1</div>
+                <div class="slide slide-placeholder">Screenshot 2</div>
+                <div class="slide slide-placeholder">Screenshot 3</div>
+              </div>
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <div class="slide-dots" id="mobile-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Browser mockup -->
+        <div class="demo-col">
+          <p class="demo-label">Web Version</p>
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-url">app.digibeg.de</div>
+            </div>
+            <div class="browser-screen">
+              <div class="slideshow" id="web-slides">
+                <div class="slide slide-placeholder active">Screenshot 1</div>
+                <div class="slide slide-placeholder">Screenshot 2</div>
+                <div class="slide slide-placeholder">Screenshot 3</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-dots" id="web-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="closing">
       <p>
         digibeg is not just a tool.<br />
@@ -369,5 +423,30 @@
         © 2026 digibeg – Digitally accompanied, connected with 🧡
       </div>
     </footer>
+
+    <script>
+      function initSlideshow(slidesId, dotsId, interval) {
+        const slides = document.querySelectorAll('#' + slidesId + ' .slide');
+        const dots = document.querySelectorAll('#' + dotsId + ' span');
+        if (!slides.length) return;
+        let current = 0;
+
+        function goTo(n) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = (n + slides.length) % slides.length;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+        }
+
+        dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetTimer(); }));
+
+        let timer = setInterval(() => goTo(current + 1), interval);
+        function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), interval); }
+      }
+
+      initSlideshow('mobile-slides', 'mobile-dots', 3000);
+      initSlideshow('web-slides', 'web-dots', 4000);
+    </script>
   </body>
 </html>
