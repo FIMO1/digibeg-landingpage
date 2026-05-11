@@ -244,28 +244,45 @@
         font-size: 2rem;
       }
 
-      .demo-row {
+      .demo-toggle {
         display: flex;
-        gap: 3rem;
-        align-items: flex-start;
+        gap: 0.5rem;
         justify-content: center;
-        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
       }
 
-      .demo-col {
-        display: flex;
+      .demo-toggle button {
+        padding: 0.55rem 1.6rem;
+        border-radius: 999px;
+        border: 2px solid #2a3a5c;
+        background: transparent;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .demo-toggle button:hover {
+        border-color: var(--brand);
+        color: var(--brand);
+      }
+
+      .demo-toggle button.active {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #1a1a1a;
+      }
+
+      .demo-panel {
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
 
-      .demo-label {
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--brand);
-        margin: 0;
+      .demo-panel.active {
+        display: flex;
       }
 
       .phone-frame {
@@ -548,71 +565,58 @@
     <!-- DEMO -->
     <section class="container demo-section">
       <h2 class="section-title">digibeg in Action</h2>
-      <div class="demo-row">
 
-        <!-- Phone mockup -->
-        <div class="demo-col">
-          <p class="demo-label">Mobile App</p>
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="slideshow" id="mobile-slides">
-                <div class="slide active"><img src="screenshots/mobile-1.jpg" alt="Choose language" /></div>
-                <div class="slide"><img src="screenshots/mobile-2.jpg" alt="Choose role" /></div>
-                <div class="slide"><img src="screenshots/mobile-3.jpg" alt="Home" /></div>
-                <div class="slide"><img src="screenshots/mobile-4.jpg" alt="Reminders" /></div>
-                <div class="slide"><img src="screenshots/mobile-5.jpg" alt="Easy Mode" /></div>
-                <div class="slide"><img src="screenshots/mobile-6.jpg" alt="Calendar" /></div>
-                <div class="slide"><img src="screenshots/mobile-7.jpg" alt="Documents" /></div>
-              </div>
-            </div>
-            <div class="phone-home"></div>
-          </div>
-          <div class="slide-dots" id="mobile-dots">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <!-- Browser mockup -->
-        <div class="demo-col">
-          <p class="demo-label">Web Version</p>
-          <div class="browser-frame">
-            <div class="browser-bar">
-              <div class="browser-dots">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="browser-url">app.digibeg.de</div>
-            </div>
-            <div class="browser-screen">
-              <div class="slideshow" id="web-slides">
-                <div class="slide active"><img src="screenshots/web-1.jpg" alt="Easy Mode" /></div>
-                <div class="slide"><img src="screenshots/web-2.jpg" alt="Home" /></div>
-                <div class="slide"><img src="screenshots/web-3.jpg" alt="Assistant" /></div>
-                <div class="slide"><img src="screenshots/web-4.jpg" alt="Calendar" /></div>
-                <div class="slide"><img src="screenshots/web-5.jpg" alt="Documents" /></div>
-                <div class="slide"><img src="screenshots/web-6.jpg" alt="Document Analysis" /></div>
-                <div class="slide"><img src="screenshots/web-7.jpg" alt="Dashboard" /></div>
-              </div>
-            </div>
-          </div>
-          <div class="slide-dots" id="web-dots">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
+      <div class="demo-toggle">
+        <button id="btn-mobile" class="active" onclick="showDemo('mobile')">📱 Mobile</button>
+        <button id="btn-web" onclick="showDemo('web')">🖥️ Web</button>
       </div>
+
+      <!-- Phone mockup -->
+      <div class="demo-panel active" id="panel-mobile">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="slideshow" id="mobile-slides">
+              <div class="slide active"><img src="screenshots/mobile-1.jpg" alt="Choose language" /></div>
+              <div class="slide"><img src="screenshots/mobile-2.jpg" alt="Choose role" /></div>
+              <div class="slide"><img src="screenshots/mobile-3.jpg" alt="Home" /></div>
+              <div class="slide"><img src="screenshots/mobile-4.jpg" alt="Reminders" /></div>
+              <div class="slide"><img src="screenshots/mobile-5.jpg" alt="Easy Mode" /></div>
+              <div class="slide"><img src="screenshots/mobile-6.jpg" alt="Calendar" /></div>
+              <div class="slide"><img src="screenshots/mobile-7.jpg" alt="Documents" /></div>
+            </div>
+          </div>
+          <div class="phone-home"></div>
+        </div>
+        <div class="slide-dots" id="mobile-dots">
+          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Browser mockup -->
+      <div class="demo-panel" id="panel-web">
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">app.digibeg.de</div>
+          </div>
+          <div class="browser-screen">
+            <div class="slideshow" id="web-slides">
+              <div class="slide active"><img src="screenshots/web-1.jpg" alt="Easy Mode" /></div>
+              <div class="slide"><img src="screenshots/web-2.jpg" alt="Home" /></div>
+              <div class="slide"><img src="screenshots/web-3.jpg" alt="Assistant" /></div>
+              <div class="slide"><img src="screenshots/web-4.jpg" alt="Calendar" /></div>
+              <div class="slide"><img src="screenshots/web-5.jpg" alt="Documents" /></div>
+              <div class="slide"><img src="screenshots/web-6.jpg" alt="Document Analysis" /></div>
+              <div class="slide"><img src="screenshots/web-7.jpg" alt="Dashboard" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-dots" id="web-dots">
+          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
     </section>
 
     <section class="closing">
@@ -662,6 +666,13 @@
 
       initSlideshow('mobile-slides', 'mobile-dots', 3000);
       initSlideshow('web-slides', 'web-dots', 4000);
+
+      function showDemo(which) {
+        document.getElementById('panel-mobile').classList.toggle('active', which === 'mobile');
+        document.getElementById('panel-web').classList.toggle('active', which === 'web');
+        document.getElementById('btn-mobile').classList.toggle('active', which === 'mobile');
+        document.getElementById('btn-web').classList.toggle('active', which === 'web');
+      }
     </script>
   </body>
 </html>
