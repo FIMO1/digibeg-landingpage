@@ -119,13 +119,60 @@
 
     .lang-switch a:hover { color: #fb923c; }
     .lang-switch a.active { color: #fb923c; font-weight: 600; background: rgba(251, 146, 60, 0.1); }
+
+    /* ===== LIGHT MODE ===== */
+
+    [data-theme="light"] {
+      --bg-main: #f4f6fb;
+      --bg-card: #ffffff;
+      --text-main: #1a2744;
+      --text-muted: #5a6a85;
+    }
+
+    [data-theme="light"] header { border-bottom-color: #d8dff0; }
+
+    [data-theme="light"] footer {
+      border-top-color: #d8dff0;
+      color: #5a6a85;
+    }
+
+    [data-theme="light"] .lang-switch {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(210, 220, 240, 0.8);
+    }
+
+    [data-theme="light"] .lang-switch a { color: #5a6a85; }
+    [data-theme="light"] .lang-switch a.active { color: #fb923c; background: rgba(251, 146, 60, 0.08); }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      border-left: 1px solid rgba(51, 65, 85, 0.4);
+      margin-left: 0.15rem;
+      padding: 0.3rem 0 0.3rem 0.55rem;
+      cursor: pointer;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .theme-toggle:hover { color: #fb923c; }
+
+    [data-theme="light"] .theme-toggle {
+      border-left-color: rgba(200, 210, 230, 0.6);
+      color: #5a6a85;
+    }
   </style>
+  <script>(function(){var t=localStorage.getItem('digibeg-theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
 
   <div class="lang-switch">
     <a href="impressum.html" class="active">DE</a>
     <a href="impressum-en.html">EN</a>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle-btn"></button>
   </div>
 
   <header>
@@ -187,5 +234,24 @@
     © 2026 digibeg – Ihr digitaler Alltags-Assistent
   </footer>
 
+  <script>
+    var sunSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>';
+    var moonSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    function updateThemeIcon() {
+      var btn = document.getElementById('theme-toggle-btn');
+      if (!btn) return;
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = isDark ? sunSVG : moonSVG;
+      btn.title = isDark ? 'Helles Design' : 'Dunkles Design';
+    }
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('digibeg-theme', next);
+      updateThemeIcon();
+    }
+    updateThemeIcon();
+  </script>
 </body>
 </html>
