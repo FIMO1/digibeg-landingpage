@@ -526,13 +526,108 @@
           margin-bottom: 1.5rem;
         }
       }
+
+      /* ===== LIGHT MODE ===== */
+
+      [data-theme="light"] {
+        --bg-main: #f4f6fb;
+        --bg-card: #ffffff;
+        --bg-elevated: #edf0f7;
+        --text-main: #1a2744;
+        --text-muted: #5a6a85;
+      }
+
+      [data-theme="light"] .hero-banner {
+        background:
+          linear-gradient(rgba(244, 246, 251, 0.92), rgba(244, 246, 251, 0.96)),
+          url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
+        background-size: cover;
+        background-position: center 20%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      [data-theme="light"] .trust div {
+        border-color: #d8dff0;
+      }
+
+      [data-theme="light"] .feature {
+        border: 1px solid #e4e9f5;
+      }
+
+      [data-theme="light"] .step {
+        border: 1px solid #e4e9f5;
+      }
+
+      [data-theme="light"] .demo-toggle button {
+        border-color: #d8dff0;
+      }
+
+      [data-theme="light"] .browser-bar {
+        background: #e4e9f5;
+        border-bottom-color: #d0d8ec;
+      }
+
+      [data-theme="light"] .browser-url {
+        background: #f4f6fb;
+        border-color: #d0d8ec;
+        color: #8899bb;
+      }
+
+      [data-theme="light"] footer {
+        background: #edf0f7;
+        border-top-color: #d8dff0;
+        color: #5a6a85;
+      }
+
+      [data-theme="light"] footer .footer-copy {
+        color: #8899bb;
+      }
+
+      [data-theme="light"] .lang-switch {
+        background: rgba(255, 255, 255, 0.92);
+        border-color: rgba(210, 220, 240, 0.8);
+      }
+
+      [data-theme="light"] .lang-switch a {
+        color: #5a6a85;
+      }
+
+      [data-theme="light"] .lang-switch a.active {
+        color: #fb923c;
+        background: rgba(251, 146, 60, 0.08);
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        border-left: 1px solid rgba(51, 65, 85, 0.4);
+        margin-left: 0.15rem;
+        padding: 0.3rem 0 0.3rem 0.55rem;
+        cursor: pointer;
+        color: #94a3b8;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        transition: color 0.15s;
+      }
+
+      .theme-toggle:hover {
+        color: #fb923c;
+      }
+
+      [data-theme="light"] .theme-toggle {
+        border-left-color: rgba(200, 210, 230, 0.6);
+        color: #5a6a85;
+      }
     </style>
+  <script>(function(){var t=localStorage.getItem('digibeg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
   </head>
 
   <body>
     <div class="lang-switch">
       <a href="index.html">DE</a>
       <a href="index-en.html" class="active">EN</a>
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle-btn"></button>
     </div>
 
     <section class="hero-banner">
@@ -719,6 +814,27 @@
         document.getElementById('btn-mobile').classList.toggle('active', which === 'mobile');
         document.getElementById('btn-web').classList.toggle('active', which === 'web');
       }
+
+      var sunSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>';
+      var moonSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+      function updateThemeIcon() {
+        var btn = document.getElementById('theme-toggle-btn');
+        if (!btn) return;
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        btn.innerHTML = isDark ? sunSVG : moonSVG;
+        btn.title = isDark ? 'Light theme' : 'Dark theme';
+      }
+
+      function toggleTheme() {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('digibeg-theme', next);
+        updateThemeIcon();
+      }
+
+      updateThemeIcon();
     </script>
   </body>
 </html>
