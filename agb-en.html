@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Terms and Conditions – digibeg</title>
+  <style>
+    :root {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --brand: #fb923c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    header h1 { color: var(--brand); margin-bottom: 0.25rem; }
+    header p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+
+    h2 {
+      color: var(--brand);
+      font-size: 1.15rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    p, li { color: var(--text-muted); margin-bottom: 0.8rem; }
+
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      color: var(--text-main);
+      border-bottom: 2px solid #334155;
+    }
+
+    td {
+      padding: 0.5rem 0.75rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .widerruf {
+      background: var(--bg-card);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .widerruf p { margin-bottom: 0.6rem; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--brand);
+      color: #1a1a1a;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .back-link:hover { text-decoration: none; opacity: 0.9; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 12px;
+      border-top: 1px solid #334155;
+      margin-top: 3rem;
+    }
+
+    footer a { color: var(--brand); margin: 0 0.5rem; }
+
+    .lang-switch {
+      position: fixed;
+      top: 0.75rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      gap: 0.25rem;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.35rem 0.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      color: #94a3b8;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .lang-switch a:hover { color: #fb923c; }
+    .lang-switch a.active { color: #fb923c; font-weight: 600; background: rgba(251, 146, 60, 0.1); }
+
+    /* ===== LIGHT MODE ===== */
+
+    [data-theme="light"] {
+      --bg-main: #f4f6fb;
+      --bg-card: #ffffff;
+      --text-main: #1a2744;
+      --text-muted: #5a6a85;
+    }
+
+    [data-theme="light"] header { border-bottom-color: #d8dff0; }
+
+    [data-theme="light"] h2 { border-bottom-color: #e4e9f5; }
+
+    [data-theme="light"] th { border-bottom-color: #d8dff0; }
+    [data-theme="light"] td { border-bottom-color: #edf0f7; }
+
+    [data-theme="light"] .widerruf {
+      border-color: #d8dff0;
+    }
+
+    [data-theme="light"] footer {
+      border-top-color: #d8dff0;
+      color: #5a6a85;
+    }
+
+    [data-theme="light"] .lang-switch {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(210, 220, 240, 0.8);
+    }
+
+    [data-theme="light"] .lang-switch a { color: #5a6a85; }
+    [data-theme="light"] .lang-switch a.active { color: #fb923c; background: rgba(251, 146, 60, 0.08); }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      border-left: 1px solid rgba(51, 65, 85, 0.4);
+      margin-left: 0.15rem;
+      padding: 0.3rem 0 0.3rem 0.55rem;
+      cursor: pointer;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .theme-toggle:hover { color: #fb923c; }
+
+    [data-theme="light"] .theme-toggle {
+      border-left-color: rgba(200, 210, 230, 0.6);
+      color: #5a6a85;
+    }
+  </style>
+  <script>(function(){var t=localStorage.getItem('digibeg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <a href="agb.html">DE</a>
+    <a href="agb-en.html" class="active">EN</a>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle-btn"></button>
+  </div>
+
+  <header>
+    <h1>Terms and Conditions</h1>
+    <p>digibeg &nbsp;·&nbsp; As of: May 2026</p>
+  </header>
+
+  <div class="container">
+
+    <h2>§ 1 Scope</h2>
+    <p>(1) These Terms and Conditions apply to all contracts between</p>
+    <p>
+      René Gäng<br>
+      Kolpingstraße 62<br>
+      68753 Waghäusel<br>
+      Germany<br>
+      Email: <a href="mailto:info@digibeg.de">info@digibeg.de</a>
+    </p>
+    <p>(hereinafter "Provider") and users of the digibeg app (hereinafter "User").</p>
+    <p>(2) Any deviating terms of the User shall not be recognised unless the Provider expressly agrees to their validity in writing.</p>
+
+    <h2>§ 2 Description of Services</h2>
+    <p>(1) digibeg is an AI-powered digital everyday assistant operable via voice and text. The app enables, among other things:</p>
+    <ul>
+      <li>Creating and managing appointments and reminders</li>
+      <li>Analysing and explaining documents</li>
+      <li>AI-powered conversation and everyday support</li>
+      <li>Voice output of responses</li>
+      <li>Management by linked companions (companion feature)</li>
+    </ul>
+    <p>(2) The app is available for:</p>
+    <ul>
+      <li>iOS (Apple App Store)</li>
+      <li>Android (Google Play Store)</li>
+      <li>Web (app.digibeg.de)</li>
+    </ul>
+    <p>(3) The Provider reserves the right to further develop, modify, or discontinue individual features of the app. Material changes will be communicated to the User in a timely manner.</p>
+
+    <h2>§ 3 Conclusion of Contract</h2>
+    <p>(1) The contract is concluded when the User registers in the app and confirms the registration.</p>
+    <p>(2) Prerequisites for use are:</p>
+    <ul>
+      <li>Completion of the 16th year of age</li>
+      <li>Consent to these Terms and Conditions and the Privacy Policy</li>
+      <li>A valid email address</li>
+    </ul>
+    <p>(3) Minors under the age of 16 may only use the app with the express consent of a parent or legal guardian.</p>
+
+    <h2>§ 4 Free and Paid Services</h2>
+    <p>(1) digibeg offers a free basic access (FREE) as well as paid subscriptions (PRO, PREMIUM, CARE, FAMILY).</p>
+    <p>(2) In the free tier, the User receives a one-time allocation of 25 Coins. No monthly renewal takes place.</p>
+    <p>(3) Paid subscriptions include:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Price</th>
+          <th>Coins/Month</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>FREE</td><td>free</td><td>25 (one-time)</td></tr>
+        <tr><td>PRO</td><td>€ 4.99 / month</td><td>400</td></tr>
+        <tr><td>PREMIUM</td><td>€ 9.99 / month</td><td>900</td></tr>
+        <tr><td>CARE</td><td>€ 3.99 / month</td><td>300</td></tr>
+        <tr><td>FAMILY</td><td>on request</td><td>2,000 (shared)</td></tr>
+      </tbody>
+    </table>
+    <p>(4) Coins are an internal currency for premium AI features. Unused Coins expire at the end of the respective billing period. Coins have no monetary value and cannot be paid out.</p>
+    <p>(5) Additional Coins can be purchased as a one-time add-on (PLUS_200: 200 Coins for € 2.99). One-time purchased Coins are consumed first.</p>
+    <p>(6) All prices include statutory VAT.</p>
+
+    <h2>§ 5 Payment Terms</h2>
+    <p>(1) Payment processing is handled via:</p>
+    <ul>
+      <li>Stripe Inc. (web browser)</li>
+      <li>Apple App Store (iOS)</li>
+      <li>Google Play Store (Android)</li>
+    </ul>
+    <p>(2) Subscriptions are billed monthly in advance and renew automatically unless cancelled in time.</p>
+    <p>(3) In the event of payment default, the Provider reserves the right to block access to paid features until the outstanding amount is settled.</p>
+
+    <h2>§ 6 Right of Withdrawal</h2>
+    <div class="widerruf">
+      <p><strong>CANCELLATION POLICY</strong></p>
+      <p><strong>Right of withdrawal:</strong><br>
+      You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period is 14 days from the date of conclusion of the contract.</p>
+      <p>To exercise your right of withdrawal, you must inform us (René Gäng, Kolpingstraße 62, 68753 Waghäusel, Germany, Email: <a href="mailto:info@digibeg.de">info@digibeg.de</a>) by means of a clear statement (e.g. by email) of your decision to withdraw from this contract.</p>
+      <p><strong>Consequences of withdrawal:</strong><br>
+      If you withdraw from this contract, we shall reimburse all payments received from you without undue delay and no later than 14 days from the day on which we received notice of your withdrawal.</p>
+      <p><strong>Expiry of the right of withdrawal:</strong><br>
+      The right of withdrawal expires in the case of a contract for the supply of digital content if the Provider has begun performance of the contract after the User expressly agreed that the Provider may begin performance before the expiry of the withdrawal period and confirmed knowledge that the right of withdrawal is lost upon giving such consent.</p>
+    </div>
+
+    <h2>§ 7 Term and Termination</h2>
+    <p>(1) Subscriptions run for an indefinite period and may be cancelled at any time effective at the end of the current billing period.</p>
+    <p>(2) Cancellation is made via:</p>
+    <ul>
+      <li>iOS: via Apple ID settings</li>
+      <li>Android: via Google Play Store</li>
+      <li>Web: via Settings → Manage subscription in the app</li>
+    </ul>
+    <p>(3) After cancellation, access remains active until the end of the paid period.</p>
+    <p>(4) The Provider may terminate the contractual relationship for good cause with immediate effect, in particular in the event of:</p>
+    <ul>
+      <li>Violation of these Terms and Conditions</li>
+      <li>Misuse of the app or AI features</li>
+      <li>Attempts to circumvent the Coin system</li>
+    </ul>
+
+    <h2>§ 8 Liability and AI Notice</h2>
+    <p>(1) The AI responses provided by digibeg are intended solely for general information and everyday support.</p>
+    <p>(2) digibeg expressly does <strong>NOT</strong> replace:</p>
+    <ul>
+      <li>Medical advice or diagnosis</li>
+      <li>Legal advice or legal information</li>
+      <li>Tax advice</li>
+      <li>Psychological or therapeutic support</li>
+    </ul>
+    <p>(3) AI-generated content may contain errors. Users are advised to have important information verified by qualified professionals.</p>
+    <p>(4) The Provider's liability is limited to intent and gross negligence to the extent permitted by law.</p>
+    <p>(5) The Provider assumes no liability for the failure of third-party services (OpenAI, Microsoft Azure, Anthropic, Google, ElevenLabs, Stripe, RevenueCat).</p>
+
+    <h2>§ 9 Usage Restrictions</h2>
+    <p>The User agrees:</p>
+    <ol>
+      <li>Not to use the app for illegal purposes.</li>
+      <li>Not to deploy automated queries or bots.</li>
+      <li>Not to circumvent or manipulate the Coin system.</li>
+      <li>Not to submit content that injures, insults, or discriminates against third parties.</li>
+      <li>Not to resell or use the app commercially without authorisation.</li>
+    </ol>
+
+    <h2>§ 10 Data Protection</h2>
+    <p>The processing of personal data is carried out in accordance with our <a href="datenschutz-en.html">Privacy Policy</a>.</p>
+
+    <h2>§ 11 Amendments to the Terms</h2>
+    <p>(1) The Provider reserves the right to amend these Terms and Conditions.</p>
+    <p>(2) Amendments will be communicated to the User at least 30 days before they take effect via email or in-app notice.</p>
+    <p>(3) If the User does not object to the amended Terms within 30 days of notification, the new Terms shall be deemed accepted.</p>
+    <p>(4) The notification will specifically draw attention to the right to object and the consequences of silence.</p>
+
+    <h2>§ 12 Final Provisions</h2>
+    <p>(1) The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods.</p>
+    <p>(2) The place of jurisdiction for merchants and legal entities is Karlsruhe, Germany.</p>
+    <p>(3) Should individual provisions of these Terms and Conditions be invalid, the validity of the remaining provisions shall remain unaffected.</p>
+    <p>(4) The European Commission no longer operates an online dispute resolution platform (discontinued July 2025). The Provider is neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+    <a href="index-en.html" class="back-link">← Back to homepage</a>
+
+  </div>
+
+  <footer>
+    <a href="impressum-en.html">Legal Notice</a> |
+    <a href="datenschutz-en.html">Privacy Policy</a> |
+    <a href="agb-en.html">Terms</a><br>
+    © 2026 digibeg – Your digital everyday assistant
+  </footer>
+
+  <script>
+    var sunSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>';
+    var moonSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    function updateThemeIcon() {
+      var btn = document.getElementById('theme-toggle-btn');
+      if (!btn) return;
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = isDark ? sunSVG : moonSVG;
+      btn.title = isDark ? 'Light theme' : 'Dark theme';
+    }
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme') || 'dark';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('digibeg-theme', next);
+      updateThemeIcon();
+    }
+    updateThemeIcon();
+  </script>
+</body>
+</html>
