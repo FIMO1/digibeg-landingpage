@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>AGB – digibeg</title>
+  <style>
+    :root {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --brand: #fb923c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    header h1 { color: var(--brand); margin-bottom: 0.25rem; }
+    header p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+
+    h2 {
+      color: var(--brand);
+      font-size: 1.15rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    p, li { color: var(--text-muted); margin-bottom: 0.8rem; }
+
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      color: var(--text-main);
+      border-bottom: 2px solid #334155;
+    }
+
+    td {
+      padding: 0.5rem 0.75rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .widerruf {
+      background: var(--bg-card);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .widerruf p { margin-bottom: 0.6rem; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--brand);
+      color: #1a1a1a;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .back-link:hover { text-decoration: none; opacity: 0.9; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 12px;
+      border-top: 1px solid #334155;
+      margin-top: 3rem;
+    }
+
+    footer a { color: var(--brand); margin: 0 0.5rem; }
+
+    .lang-switch {
+      position: fixed;
+      top: 0.75rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      gap: 0.25rem;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.35rem 0.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      font-size: 14px;
+    }
+
+    .lang-switch a {
+      color: #94a3b8;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .lang-switch a:hover { color: #fb923c; }
+    .lang-switch a.active { color: #fb923c; font-weight: 600; background: rgba(251, 146, 60, 0.1); }
+
+    /* ===== LIGHT MODE ===== */
+
+    [data-theme="light"] {
+      --bg-main: #f4f6fb;
+      --bg-card: #ffffff;
+      --text-main: #1a2744;
+      --text-muted: #5a6a85;
+    }
+
+    [data-theme="light"] header { border-bottom-color: #d8dff0; }
+
+    [data-theme="light"] h2 { border-bottom-color: #e4e9f5; }
+
+    [data-theme="light"] th { border-bottom-color: #d8dff0; }
+    [data-theme="light"] td { border-bottom-color: #edf0f7; }
+
+    [data-theme="light"] .widerruf {
+      border-color: #d8dff0;
+    }
+
+    [data-theme="light"] footer {
+      border-top-color: #d8dff0;
+      color: #5a6a85;
+    }
+
+    [data-theme="light"] .lang-switch {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(210, 220, 240, 0.8);
+    }
+
+    [data-theme="light"] .lang-switch a { color: #5a6a85; }
+    [data-theme="light"] .lang-switch a.active { color: #fb923c; background: rgba(251, 146, 60, 0.08); }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      border-left: 1px solid rgba(51, 65, 85, 0.4);
+      margin-left: 0.15rem;
+      padding: 0.3rem 0 0.3rem 0.55rem;
+      cursor: pointer;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .theme-toggle:hover { color: #fb923c; }
+
+    [data-theme="light"] .theme-toggle {
+      border-left-color: rgba(200, 210, 230, 0.6);
+      color: #5a6a85;
+    }
+  </style>
+  <script>(function(){var t=localStorage.getItem('digibeg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <a href="agb.html" class="active">DE</a>
+    <a href="agb-en.html">EN</a>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle-btn"></button>
+  </div>
+
+  <header>
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p>digibeg &nbsp;·&nbsp; Stand: Mai 2026</p>
+  </header>
+
+  <div class="container">
+
+    <h2>§ 1 Geltungsbereich</h2>
+    <p>(1) Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen</p>
+    <p>
+      René Gäng<br>
+      Kolpingstraße 62<br>
+      68753 Waghäusel<br>
+      E-Mail: <a href="mailto:info@digibeg.de">info@digibeg.de</a>
+    </p>
+    <p>(nachfolgend „Anbieter") und den Nutzern der App digibeg (nachfolgend „Nutzer").</p>
+    <p>(2) Abweichende Bedingungen des Nutzers werden nicht anerkannt, es sei denn, der Anbieter stimmt ihrer Geltung ausdrücklich schriftlich zu.</p>
+
+    <h2>§ 2 Leistungsbeschreibung</h2>
+    <p>(1) digibeg ist ein KI-gestützter digitaler Alltagsassistent, der über Sprache und Text bedienbar ist. Die App ermöglicht u.a.:</p>
+    <ul>
+      <li>Erstellung und Verwaltung von Terminen und Erinnerungen</li>
+      <li>Analyse und Erklärung von Dokumenten</li>
+      <li>KI-gestützte Konversation und Alltagsunterstützung</li>
+      <li>Sprachausgabe von Antworten</li>
+      <li>Verwaltung durch verknüpfte Begleitpersonen (Begleiter-Funktion)</li>
+    </ul>
+    <p>(2) Die App ist verfügbar für:</p>
+    <ul>
+      <li>iOS (Apple App Store)</li>
+      <li>Android (Google Play Store)</li>
+      <li>Web (app.digibeg.de)</li>
+    </ul>
+    <p>(3) Der Anbieter behält sich vor, den Funktionsumfang der App weiterzuentwickeln, zu ändern oder einzelne Funktionen einzustellen. Wesentliche Änderungen werden dem Nutzer rechtzeitig mitgeteilt.</p>
+
+    <h2>§ 3 Vertragsschluss</h2>
+    <p>(1) Der Vertrag kommt zustande, wenn der Nutzer sich in der App registriert und die Registrierung bestätigt.</p>
+    <p>(2) Voraussetzung für die Nutzung ist:</p>
+    <ul>
+      <li>Vollendung des 16. Lebensjahres</li>
+      <li>Zustimmung zu diesen AGB und der Datenschutzerklärung</li>
+      <li>Eine gültige E-Mail-Adresse</li>
+    </ul>
+    <p>(3) Minderjährige unter 16 Jahren dürfen die App nur mit ausdrücklicher Einwilligung eines Erziehungsberechtigten nutzen.</p>
+
+    <h2>§ 4 Kostenlose und kostenpflichtige Leistungen</h2>
+    <p>(1) digibeg bietet einen kostenlosen Grundzugang (FREE) sowie kostenpflichtige Abonnements (PRO, PREMIUM, CARE, FAMILY).</p>
+    <p>(2) Im kostenlosen Tarif stehen dem Nutzer einmalig 25 Coins zur Verfügung. Eine monatliche Erneuerung findet nicht statt.</p>
+    <p>(3) Kostenpflichtige Abonnements umfassen:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Preis</th>
+          <th>Coins/Monat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>FREE</td><td>kostenlos</td><td>25 (einmalig)</td></tr>
+        <tr><td>PRO</td><td>€ 4,99 / Monat</td><td>400</td></tr>
+        <tr><td>PREMIUM</td><td>€ 9,99 / Monat</td><td>900</td></tr>
+        <tr><td>CARE</td><td>€ 3,99 / Monat</td><td>300</td></tr>
+        <tr><td>FAMILY</td><td>auf Anfrage</td><td>2.000 (geteilt)</td></tr>
+      </tbody>
+    </table>
+    <p>(4) Coins sind eine interne Währung für Premium-KI-Funktionen. Nicht verbrauchte Coins verfallen am Ende des jeweiligen Abrechnungszeitraums. Coins haben keinen Geldwert und können nicht ausgezahlt werden.</p>
+    <p>(5) Zusätzliche Coins können einmalig erworben werden (PLUS_200: 200 Coins für € 2,99). Einmalig erworbene Coins werden zuerst verbraucht.</p>
+    <p>(6) Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer.</p>
+
+    <h2>§ 5 Zahlungsbedingungen</h2>
+    <p>(1) Die Zahlungsabwicklung erfolgt über:</p>
+    <ul>
+      <li>Stripe Inc. (Web-Browser)</li>
+      <li>Apple App Store (iOS)</li>
+      <li>Google Play Store (Android)</li>
+    </ul>
+    <p>(2) Abonnements werden monatlich im Voraus abgerechnet und verlängern sich automatisch, sofern sie nicht rechtzeitig gekündigt werden.</p>
+    <p>(3) Bei Zahlungsverzug behält sich der Anbieter vor, den Zugang zu kostenpflichtigen Funktionen bis zum Ausgleich der offenen Forderung zu sperren.</p>
+
+    <h2>§ 6 Widerrufsrecht</h2>
+    <div class="widerruf">
+      <p><strong>WIDERRUFSBELEHRUNG</strong></p>
+      <p><strong>Widerrufsrecht:</strong><br>
+      Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsabschlusses.</p>
+      <p>Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (René Gäng, Kolpingstraße 62, 68753 Waghäusel, E-Mail: <a href="mailto:info@digibeg.de">info@digibeg.de</a>) mittels einer eindeutigen Erklärung (z.B. per E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.</p>
+      <p><strong>Folgen des Widerrufs:</strong><br>
+      Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, unverzüglich und spätestens binnen 14 Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf eingegangen ist.</p>
+      <p><strong>Erlöschen des Widerrufsrechts:</strong><br>
+      Das Widerrufsrecht erlischt bei einem Vertrag über die Lieferung von digitalen Inhalten, wenn der Anbieter mit der Ausführung des Vertrags begonnen hat, nachdem der Nutzer ausdrücklich zugestimmt hat, dass der Anbieter mit der Ausführung vor Ablauf der Widerrufsfrist beginnt, und der Nutzer seine Kenntnis davon bestätigt hat, dass er durch seine Zustimmung sein Widerrufsrecht verliert.</p>
+    </div>
+
+    <h2>§ 7 Laufzeit und Kündigung</h2>
+    <p>(1) Abonnements laufen auf unbestimmte Zeit und können jederzeit zum Ende des laufenden Abrechnungszeitraums gekündigt werden.</p>
+    <p>(2) Die Kündigung erfolgt:</p>
+    <ul>
+      <li>iOS: über die Apple ID Einstellungen</li>
+      <li>Android: über den Google Play Store</li>
+      <li>Web: über Einstellungen → Abonnement verwalten in der App</li>
+    </ul>
+    <p>(3) Nach der Kündigung bleibt der Zugang bis zum Ende des bezahlten Zeitraums bestehen.</p>
+    <p>(4) Der Anbieter kann das Nutzungsverhältnis aus wichtigem Grund fristlos kündigen, insbesondere bei:</p>
+    <ul>
+      <li>Verstoß gegen diese AGB</li>
+      <li>Missbrauch der App oder der KI-Funktionen</li>
+      <li>Versuch der Umgehung des Coin-Systems</li>
+    </ul>
+
+    <h2>§ 8 Haftung und KI-Hinweis</h2>
+    <p>(1) Die von digibeg bereitgestellten KI-Antworten dienen ausschließlich der allgemeinen Information und Alltagsunterstützung.</p>
+    <p>(2) digibeg ersetzt ausdrücklich <strong>NICHT</strong>:</p>
+    <ul>
+      <li>Ärztliche Beratung oder Diagnose</li>
+      <li>Rechtsberatung oder Rechtsauskunft</li>
+      <li>Steuerberatung</li>
+      <li>Psychologische oder therapeutische Begleitung</li>
+    </ul>
+    <p>(3) KI-generierte Inhalte können Fehler enthalten. Der Nutzer ist angehalten, wichtige Informationen durch qualifizierte Fachkräfte prüfen zu lassen.</p>
+    <p>(4) Die Haftung des Anbieters ist auf Vorsatz und grobe Fahrlässigkeit beschränkt, soweit gesetzlich zulässig.</p>
+    <p>(5) Für den Ausfall von Drittanbietern (OpenAI, Microsoft Azure, Anthropic, Google, ElevenLabs, Stripe, RevenueCat) übernimmt der Anbieter keine Haftung.</p>
+
+    <h2>§ 9 Nutzungsbeschränkungen</h2>
+    <p>Der Nutzer verpflichtet sich:</p>
+    <ol>
+      <li>Die App nicht für illegale Zwecke zu nutzen.</li>
+      <li>Keine automatisierten Abfragen oder Bots einzusetzen.</li>
+      <li>Das Coin-System nicht zu umgehen oder zu manipulieren.</li>
+      <li>Keine Inhalte einzugeben, die Dritte verletzen, beleidigen oder diskriminieren.</li>
+      <li>Die App nicht weiterzuverkaufen oder gewerblich ohne Genehmigung zu nutzen.</li>
+    </ol>
+
+    <h2>§ 10 Datenschutz</h2>
+    <p>Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+    <h2>§ 11 Änderungen der AGB</h2>
+    <p>(1) Der Anbieter behält sich vor, diese AGB zu ändern.</p>
+    <p>(2) Änderungen werden dem Nutzer mindestens 30 Tage vor Inkrafttreten per E-Mail oder In-App-Hinweis mitgeteilt.</p>
+    <p>(3) Widerspricht der Nutzer den geänderten AGB nicht innerhalb von 30 Tagen nach Bekanntgabe, gelten die neuen AGB als angenommen.</p>
+    <p>(4) Auf das Widerspruchsrecht und die Folgen des Schweigens wird in der Mitteilung gesondert hingewiesen.</p>
+
+    <h2>§ 12 Schlussbestimmungen</h2>
+    <p>(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>
+    <p>(2) Gerichtsstand für Kaufleute und juristische Personen ist Karlsruhe.</p>
+    <p>(3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+    <p>(4) Die Europäische Kommission stellt keine Online-Streitbeilegungsplattform mehr zur Verfügung (eingestellt Juli 2025). Der Anbieter ist nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+
+  </div>
+
+  <footer>
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a> |
+    <a href="agb.html">AGB</a><br>
+    © 2026 digibeg – Ihr digitaler Alltags-Assistent
+  </footer>
+
+  <script>
+    var sunSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>';
+    var moonSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    function updateThemeIcon() {
+      var btn = document.getElementById('theme-toggle-btn');
+      if (!btn) return;
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = isDark ? sunSVG : moonSVG;
+      btn.title = isDark ? 'Helles Design' : 'Dunkles Design';
+    }
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme') || 'dark';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('digibeg-theme', next);
+      updateThemeIcon();
+    }
+    updateThemeIcon();
+  </script>
+</body>
+</html>
