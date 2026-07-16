@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>AGB – digibeg</title>
+  <style>
+    :root {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --brand: #fb923c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    header h1 { color: var(--brand); margin-bottom: 0.5rem; }
+    header p { color: var(--text-muted); margin: 0; font-size: 0.9rem; }
+
+    h2 {
+      color: var(--brand);
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p { color: var(--text-muted); margin-bottom: 1rem; }
+
+    ul {
+      color: var(--text-muted);
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li { margin-bottom: 0.3rem; }
+
+    .sub-list {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .sub-list li::before { content: "– "; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--brand);
+      color: #1a1a1a;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .back-link:hover { text-decoration: none; opacity: 0.9; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 12px;
+      border-top: 1px solid #334155;
+      margin-top: 3rem;
+    }
+
+    footer a { color: var(--brand); margin: 0 0.5rem; }
+
+    .lang-switch {
+      position: fixed;
+      top: 0.75rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      gap: 0.25rem;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.35rem 0.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      font-size: 14px;
+    }
+
+    .lang-switch a { color: #94a3b8; padding: 0.3rem 0.6rem; border-radius: 6px; transition: color 0.15s, background 0.15s; }
+    .lang-switch a:hover { color: #fb923c; }
+    .lang-switch a.active { color: #fb923c; font-weight: 600; background: rgba(251, 146, 60, 0.1); }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <a href="agb.html" class="active">DE</a>
+  </div>
+
+  <header>
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p>Stand: 16. Juli 2026</p>
+  </header>
+
+  <div class="container">
+
+    <h2>§ 1 Geltungsbereich</h2>
+    <p>(1) Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der App und der Dienste von digibeg (im Folgenden „App"), die von René Gäng, Kolpingstraße 62, 68753 Waghäusel (im Folgenden „Anbieter") betrieben wird.</p>
+    <p>(2) Mit der Nutzung der App erklärt der Nutzer sein Einverständnis mit diesen AGB. Abweichende Bedingungen des Nutzers werden nicht anerkannt, es sei denn, der Anbieter stimmt ihrer Geltung ausdrücklich schriftlich zu.</p>
+    <p>(3) Diese AGB gelten für Verbraucher und Unternehmer gleichermaßen, sofern nicht ausdrücklich anders angegeben.</p>
+
+    <h2>§ 2 Leistungsbeschreibung</h2>
+    <p>(1) digibeg ist eine digitale Assistenz-App, die Nutzern bei der Bewältigung alltäglicher Aufgaben hilft, insbesondere durch Texterkennung, Übersetzung, Terminverwaltung, Dokumentenanalyse und Sprachinteraktion.</p>
+    <p>(1a) digibeg nutzt Künstliche Intelligenz zur Erzeugung von Antworten, Erklärungen und Sprachausgaben. Der Nutzer wird darauf hingewiesen, dass er mit einem KI-System interagiert und dass Ausgaben der App KI-generiert sind.</p>
+    <p>(2) Der Anbieter behält sich das Recht vor, den Funktionsumfang der App jederzeit zu ändern, zu erweitern oder einzuschränken, soweit dies dem Nutzer zumutbar ist.</p>
+    <p>(3) Die App ist nicht als medizinisches Hilfsmittel, Rechtsberatung oder professionelles Beratungsinstrument konzipiert. Die Inhalte der App ersetzen keine professionelle Beratung.</p>
+
+    <h2>§ 3 Registrierung und Nutzerkonto</h2>
+    <p>(1) Für die Nutzung bestimmter Funktionen der App ist eine Registrierung erforderlich. Der Nutzer verpflichtet sich, bei der Registrierung wahrheitsgemäße Angaben zu machen und diese aktuell zu halten.</p>
+    <p>(2) Der Nutzer ist verpflichtet, sein Zugangsdaten vertraulich zu behandeln und vor dem Zugriff Dritter zu schützen. Bei Verdacht auf unbefugte Nutzung ist der Anbieter unverzüglich zu informieren.</p>
+    <p>(3) Ein Anspruch auf Registrierung besteht nicht. Der Anbieter kann die Registrierung ohne Angabe von Gründen ablehnen.</p>
+
+    <h2>§ 4 Nutzungsrechte</h2>
+    <p>(1) Der Anbieter räumt dem Nutzer ein einfaches, nicht übertragbares, widerrufliches Recht zur Nutzung der App für private, nicht-kommerzielle Zwecke ein.</p>
+    <p>(2) Dem Nutzer ist es untersagt, die App zu vervielfältigen, zu verbreiten, zu dekompilieren, zu disassemblieren oder auf sonstige Weise rückzuentwickeln.</p>
+    <p>(3) Eine kommerzielle Nutzung der App bedarf der vorherigen schriftlichen Zustimmung des Anbieters.</p>
+
+    <h2>§ 5 Zahlungsbedingungen</h2>
+    <p>(1) Die App bietet sowohl kostenlose als auch kostenpflichtige Funktionen an. Die jeweils gültigen Preise werden in der App angezeigt.</p>
+    <p>(1a) Für Käufe über den Apple App Store erfolgt die Zahlungsabwicklung ausschließlich durch Apple gemäß dessen eigenen Zahlungsbedingungen. Die Zahlungsdaten des Nutzers werden hierbei ausschließlich von Apple verarbeitet.</p>
+    <p>(2) Abonnements verlängern sich automatisch, sofern sie nicht fristgerecht gekündigt werden. Die Kündigungsfristen richten sich nach den Bedingungen des jeweiligen App-Stores oder Zahlungsdienstleisters.</p>
+    <p>(3) Preisänderungen werden dem Nutzer rechtzeitig vor Inkrafttreten mitgeteilt. Widerspricht der Nutzer der Preisänderung nicht innerhalb von vier Wochen, gilt die Änderung als akzeptiert.</p>
+
+    <h2>§ 6 Widerrufsrecht</h2>
+    <p>(1) Verbrauchern steht grundsätzlich ein gesetzliches Widerrufsrecht zu. Das Widerrufsrecht erlischt bei digitalen Inhalten, wenn der Anbieter mit der Ausführung des Vertrags begonnen hat und der Nutzer ausdrücklich zugestimmt hat, dass der Anbieter vor Ablauf der Widerrufsfrist mit der Ausführung beginnt, und seine Kenntnis davon bestätigt hat, dass er durch seine Zustimmung mit Beginn der Ausführung sein Widerrufsrecht verliert.</p>
+    <p>(2) Das Widerrufsrecht besteht nicht bei Verträgen über die Lieferung von digitalen Inhalten, die nicht auf einem körperlichen Datenträger geliefert werden, wenn der Unternehmer mit der Vertragserfüllung begonnen hat und der Verbraucher dem zugestimmt hat.</p>
+    <p>Besonderheit bei Käufen über den Apple App Store: Für Käufe, die über den Apple App Store getätigt wurden, wickelt Apple Rückerstattungsanfragen im Rahmen seiner eigenen Richtlinien ab. Der Nutzer kann eine Rückerstattung direkt bei Apple unter <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> beantragen. Die vorstehenden Regelungen zum Widerrufsrecht gelten ergänzend, soweit sie nicht im Widerspruch zu Apples Rückerstattungsprozess stehen.</p>
+
+    <h2>§ 7 Pflichten des Nutzers</h2>
+    <p>(1) Der Nutzer verpflichtet sich, die App ausschließlich im Rahmen der geltenden Gesetze und dieser AGB zu nutzen.</p>
+    <p>(2) Der Nutzer darf keine Inhalte verbreiten, die rechtswidrig, beleidigend, diskriminierend oder in sonstiger Weise anstößig sind.</p>
+    <p>(3) Der Nutzer ist verpflichtet, den Anbieter unverzüglich zu informieren, wenn er Kenntnis von einer missbräuchlichen Nutzung der App erlangt.</p>
+    <p>(4) Der Nutzer stellt den Anbieter von sämtlichen Ansprüchen Dritter frei, die aus einer rechtswidrigen Nutzung der App durch den Nutzer entstehen.</p>
+
+    <h2>§ 8 Haftung</h2>
+    <p>(1) Der Anbieter haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen.</p>
+    <p>(2) Bei einfacher Fahrlässigkeit haftet der Anbieter nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten). In diesem Fall ist die Haftung auf den vertragstypisch vorhersehbaren Schaden begrenzt.</p>
+    <p>(3) Die Haftung für mittelbare Schäden, insbesondere entgangenen Gewinn oder Datenverlust, ist ausgeschlossen, soweit gesetzlich zulässig.</p>
+    <p>(4) Der Anbieter übernimmt keine Garantie für die ununterbrochene Verfügbarkeit der App. Wartungsarbeiten und technische Störungen können zu vorübergehenden Einschränkungen führen.</p>
+    <p>(5) Für den Ausfall von Drittanbietern übernimmt der Anbieter keine Haftung. Der Anbieter setzt hierbei folgende Drittanbieter ein:</p>
+    <p><strong style="color: var(--text-main);">KI-Verarbeitung:</strong></p>
+    <ul class="sub-list">
+      <li>OpenRouter, Inc. (USA) – KI-Gateway, Routing der Anfragen</li>
+      <li>Anthropic (USA) – Chat-Verarbeitung</li>
+      <li>Google (USA) – Dokument-/Bildanalyse (OCR/Vision)</li>
+      <li>OpenAI (USA) – Dokument-Textanalyse, Sprachtranskription</li>
+      <li>Perplexity (USA) – Websuche-Anfragen</li>
+    </ul>
+    <p><strong style="color: var(--text-main);">Sprachausgabe:</strong></p>
+    <ul class="sub-list">
+      <li>Microsoft Azure (Deutschland, Region Germany West Central) – Text-to-Speech</li>
+    </ul>
+    <p><strong style="color: var(--text-main);">Zahlungen:</strong></p>
+    <ul class="sub-list">
+      <li>Stripe (USA/EU) – Web-Zahlungen</li>
+      <li>RevenueCat (USA) – App-Store-/Play-Abo-Verwaltung</li>
+    </ul>
+    <p><strong style="color: var(--text-main);">Betrieb/Infrastruktur:</strong></p>
+    <ul class="sub-list">
+      <li>Hetzner Online GmbH (Deutschland) – Hosting/Server</li>
+      <li>IONOS SE (Deutschland) – E-Mail-Versand (SMTP) und DNS</li>
+      <li>Sentry (Functional Software Inc.) – Fehler-/Crash-Monitoring</li>
+      <li>Expo (650 Industries, Inc.) (USA) – Push-Benachrichtigungen</li>
+    </ul>
+    <p>Nähere Informationen zur Datenverarbeitung durch diese Anbieter finden sich in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+    <h2>§ 9 Datenschutz</h2>
+    <p>(1) Der Anbieter verarbeitet personenbezogene Daten des Nutzers ausschließlich im Rahmen der geltenden Datenschutzgesetze, insbesondere der DSGVO.</p>
+    <p>(2) Einzelheiten zur Datenverarbeitung sind der <a href="datenschutz.html">Datenschutzerklärung</a> zu entnehmen, die Bestandteil dieser AGB ist.</p>
+
+    <h2>§ 10 Änderungen der AGB</h2>
+    <p>(1) Der Anbieter behält sich das Recht vor, diese AGB jederzeit zu ändern. Änderungen werden dem Nutzer per E-Mail oder durch eine Mitteilung in der App bekannt gegeben.</p>
+    <p>(2) Widerspricht der Nutzer den geänderten AGB nicht innerhalb von vier Wochen nach Bekanntgabe, gelten die Änderungen als akzeptiert. Auf diese Folge wird der Nutzer bei der Bekanntgabe ausdrücklich hingewiesen.</p>
+
+    <h2>§ 11 Kündigung</h2>
+    <p>(1) Kostenlose Nutzerkonten können vom Nutzer jederzeit ohne Einhaltung einer Frist gelöscht werden.</p>
+    <p>(2) Kostenpflichtige Abonnements können gemäß den im jeweiligen App-Store oder auf der Website angezeigten Bedingungen gekündigt werden.</p>
+    <p>(3) Der Anbieter ist berechtigt, Nutzerkonten zu sperren oder zu kündigen, wenn der Nutzer gegen diese AGB verstößt.</p>
+
+    <h2>§ 12 Schlussbestimmungen</h2>
+    <p>(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>
+    <p>(2) Ist der Nutzer Verbraucher mit Wohnsitz in der EU, gelten zusätzlich die zwingenden Verbraucherschutzvorschriften des Staates, in dem der Nutzer seinen gewöhnlichen Aufenthalt hat.</p>
+    <p>(3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An die Stelle der unwirksamen Bestimmung tritt die gesetzliche Regelung.</p>
+    <p>(4) Gerichtsstand für Kaufleute und juristische Personen des öffentlichen Rechts ist der Sitz des Anbieters.</p>
+
+    <h2>§ 13 Besondere Bestimmungen für Nutzer im Apple App Store</h2>
+    <p>(1) Dieser Abschnitt gilt zusätzlich zu den vorstehenden Bestimmungen für Nutzer, die die App über den Apple App Store beziehen. Bei Widersprüchen zwischen diesem Abschnitt und den vorstehenden Bestimmungen geht dieser Abschnitt für iOS-Nutzer vor.</p>
+    <p>(2) Dieser Vertrag besteht ausschließlich zwischen dem Nutzer und dem Anbieter (René Gäng). Apple Inc. bzw. Apple Distribution International Ltd. ("Apple") ist nicht Vertragspartei und trägt keine Verantwortung für die App oder deren Inhalte.</p>
+    <p>(3) Die dem Nutzer eingeräumte Lizenz beschränkt sich auf das Recht, die App auf Apple-Geräten zu nutzen, die der Nutzer besitzt oder kontrolliert, gemäß den in den Nutzungsbedingungen des App Store festgelegten Nutzungsregeln.</p>
+    <p>(4) Der Anbieter, nicht Apple, ist allein verantwortlich für die App und deren Inhalte sowie für Wartung, Support, Gewährleistung und Produkthaftung im Zusammenhang mit der App, soweit gesetzlich nichts anderes vorgeschrieben ist.</p>
+    <p>(5) Im Falle einer Nichterfüllung einer anwendbaren Gewährleistung durch die App kann sich der Nutzer an Apple wenden; Apple erstattet in diesem Fall gegebenenfalls den Kaufpreis der App. Apple hat, soweit gesetzlich zulässig, keine weiteren Gewährleistungspflichten bezüglich der App.</p>
+    <p>(6) Ansprüche Dritter im Zusammenhang mit der App oder deren Nutzung durch den Nutzer — einschließlich Ansprüchen wegen Produkthaftung, wegen Nichteinhaltung gesetzlicher oder behördlicher Vorschriften sowie aus Verbraucherschutzrecht — richten sich ausschließlich gegen den Anbieter, nicht gegen Apple.</p>
+    <p>(7) Im Falle eines Anspruchs Dritter, die App oder der Besitz und die Nutzung der App durch den Nutzer verletze Rechte am geistigen Eigentum Dritter, ist allein der Anbieter für die Untersuchung, Verteidigung und Ausräumung eines solchen Anspruchs verantwortlich, soweit dieser Abschnitt nichts anderes vorsieht.</p>
+    <p>(8) Der Nutzer sichert zu, sich nicht in einem Land zu befinden, das einem Embargo der US-Regierung unterliegt oder von der US-Regierung als "terrorismusunterstützendes Land" eingestuft wurde, und nicht auf einer Liste der US-Regierung mit verbotenen oder eingeschränkten Parteien zu stehen.</p>
+    <p>(9) Nutzt der Nutzer innerhalb der App Funktionen oder Dienste eines Drittanbieters, verpflichtet sich der Nutzer zur Einhaltung der jeweiligen Nutzungsbedingungen dieses Drittanbieters.</p>
+    <p>(10) Apple und die Tochtergesellschaften von Apple sind Drittbegünstigte dieser Bestimmungen. Mit Annahme dieser AGB räumt der Nutzer Apple das Recht ein, diese Bestimmungen gegenüber dem Nutzer als Drittbegünstigten durchzusetzen.</p>
+
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+
+  </div>
+
+  <footer>
+    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="agb.html">AGB</a><br>
+    © 2026 digibeg – Ihr digitaler Alltags-Assistent
+  </footer>
+
+</body>
+</html>
