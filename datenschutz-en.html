@@ -165,7 +165,7 @@
     <p>Email address, encrypted password, selected language, role (user / companion), subscription plan and credit balance (coins).</p>
 
     <h2>2.2 Voice and Text Input</h2>
-    <p>Your voice input is first recorded locally, then transmitted to Microsoft Azure for transcription. The resulting text is forwarded to OpenAI for AI processing. Inputs are not permanently stored by third-party providers (max. 30 days as per their API policies).</p>
+    <p>Your voice input is first recorded locally, then transmitted to OpenAI (Whisper) for transcription. The resulting text – like all chat requests – is forwarded via the AI gateway OpenRouter to Anthropic (Claude) for processing. Web search queries are processed via Perplexity. Microsoft Azure is used exclusively for voice output (text-to-speech). Inputs are not permanently stored by third-party providers (max. 30 days as per their API policies).</p>
 
     <h2>2.3 Conversation History and Assistant Context</h2>
     <p>Conversation histories and permanently stored context information (e.g. people you have mentioned, habits, preferences) are stored on our servers. This information is used to provide the AI assistant with personalised context in each conversation.</p>
@@ -175,7 +175,7 @@
     <p>Comments are visible to linked companions (see Section 2.7).</p>
 
     <h2>2.5 Documents and Images</h2>
-    <p>Uploaded documents and photos are stored on our servers. For AI analysis (OCR, summarisation), content is temporarily transmitted to OpenAI. The analysis result is permanently stored alongside the document on our servers.</p>
+    <p>Uploaded documents and photos are stored on our servers. For AI analysis, content is temporarily transmitted to third-party providers: document/image recognition (OCR, vision) is performed via Google (Gemini), while text analysis and summarisation are performed via OpenAI (GPT-4o). The analysis result is permanently stored alongside the document on our servers.</p>
 
     <h2>2.6 Subscription and Payment Data</h2>
     <p>Payment processing is handled by:</p>
@@ -233,7 +233,7 @@
       <li><strong>Calendar entries, reminders, comments:</strong> Until account deletion or upon explicit request.</li>
       <li><strong>Documents:</strong> Until manually deleted in the app or account deletion.</li>
       <li><strong>Payment data:</strong> In accordance with statutory retention obligations (§ 147 AO: 10 years for tax-relevant data).</li>
-      <li><strong>At OpenAI/Azure:</strong> Max. 30 days for API processing data.</li>
+      <li><strong>At AI providers (OpenAI, OpenRouter, Anthropic, Google, Perplexity, Azure):</strong> Max. 30 days for API processing data.</li>
     </ul>
 
     <h2>6. Your Rights (GDPR Art. 15–21)</h2>

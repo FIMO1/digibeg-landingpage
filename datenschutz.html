@@ -209,7 +209,7 @@
     <p>E-Mail-Adresse, verschlüsseltes Passwort, gewählte Sprache, Rolle (Nutzer / Begleiter), Abonnement-Plan und Guthaben (Coins).</p>
 
     <h2>2.2 Sprach- und Texteingaben</h2>
-    <p>Ihre Spracheingaben werden zunächst lokal aufgezeichnet, dann zur Transkription an Microsoft Azure übermittelt. Der resultierende Text wird zur KI-Verarbeitung an OpenAI weitergeleitet. Eingaben werden nicht dauerhaft bei Drittanbietern gespeichert (max. 30 Tage gemäß deren API-Richtlinien).</p>
+    <p>Ihre Spracheingaben werden zunächst lokal aufgezeichnet, dann zur Transkription an OpenAI (Whisper) übermittelt. Der resultierende Text wird – wie alle Chat-Anfragen – über das KI-Gateway OpenRouter an Anthropic (Claude) zur Verarbeitung weitergeleitet. Websuche-Anfragen werden über Perplexity verarbeitet. Microsoft Azure wird ausschließlich für die Sprachausgabe (Text-to-Speech) genutzt. Eingaben werden nicht dauerhaft bei Drittanbietern gespeichert (max. 30 Tage gemäß deren API-Richtlinien).</p>
 
     <h2>2.3 Gesprächsverlauf und Assistenten-Kontext</h2>
     <p>Konversationsverläufe sowie dauerhaft gespeicherte Kontextinformationen (z. B. von Ihnen erwähnte Personen, Gewohnheiten, Präferenzen) werden auf unseren Servern gespeichert. Diese Informationen werden verwendet, um den KI-Assistenten bei jedem Gespräch mit personalisiertem Kontext zu versorgen.</p>
@@ -219,7 +219,7 @@
     <p>Kommentare sind für verknüpfte Begleiter sichtbar (siehe Abschnitt 2.7).</p>
 
     <h2>2.5 Dokumente und Bilder</h2>
-    <p>Hochgeladene Dokumente und Fotos werden auf unseren Servern gespeichert. Zur KI-Analyse (OCR, Zusammenfassung) werden Inhalte temporär an OpenAI übermittelt. Das Analyseergebnis wird dauerhaft mit dem Dokument auf unseren Servern gespeichert.</p>
+    <p>Hochgeladene Dokumente und Fotos werden auf unseren Servern gespeichert. Zur KI-Analyse werden Inhalte temporär an Drittanbieter übermittelt: Die Dokument-/Bilderkennung (OCR, Vision) erfolgt über Google (Gemini), die Textanalyse und Zusammenfassung über OpenAI (GPT-4o). Das Analyseergebnis wird dauerhaft mit dem Dokument auf unseren Servern gespeichert.</p>
 
     <h2>2.6 Abonnement- und Zahlungsdaten</h2>
     <p>Zahlungsabwicklung erfolgt über:</p>
@@ -277,7 +277,7 @@
       <li><strong>Kalendereinträge, Erinnerungen, Kommentare:</strong> Bis zur Kontolöschung oder auf explizite Anfrage.</li>
       <li><strong>Dokumente:</strong> Bis zur manuellen Löschung in der App oder Kontolöschung.</li>
       <li><strong>Zahlungsdaten:</strong> Gemäß gesetzlicher Aufbewahrungspflichten (§ 147 AO: 10 Jahre für steuerrelevante Daten).</li>
-      <li><strong>Bei OpenAI/Azure:</strong> Max. 30 Tage für API-Verarbeitungsdaten.</li>
+      <li><strong>Bei KI-Anbietern (OpenAI, OpenRouter, Anthropic, Google, Perplexity, Azure):</strong> Max. 30 Tage für API-Verarbeitungsdaten.</li>
     </ul>
 
     <h2>6. Ihre Rechte (DSGVO Art. 15–21)</h2>
