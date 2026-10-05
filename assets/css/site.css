@@ -225,6 +225,7 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   gap: 0.5rem;
   min-height: 3rem;
   padding: 0.75rem 1.5rem;
@@ -345,7 +346,7 @@ ol {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .site-nav__list {
@@ -359,7 +360,7 @@ ol {
   align-items: center;
   white-space: nowrap;
   min-height: 2.75rem;
-  padding: 0.5rem 0.85rem;
+  padding: 0.5rem 0.7rem;
   border-radius: var(--radius-sm);
   font-size: 0.9375rem;
   font-weight: 500;
@@ -480,7 +481,7 @@ body.nav-open .nav-backdrop {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1199.98px) {
+@media (max-width: 1239.98px) {
   .site-nav {
     position: fixed;
     top: var(--header-h);
@@ -1321,4 +1322,321 @@ body.nav-open .nav-backdrop {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: clamp(2rem, 5vw, 5rem);
   }
+}
+
+/* ============================================================
+   8. Sektionen (Commit 4): Perspektivwechsel, Einrichtungen,
+      Entlastung, Vertrauen, Haltung
+   ============================================================ */
+
+/* Navy-Fläche als wiederverwendbare Variante */
+.section--panel {
+  background: var(--panel);
+  color: var(--panel-text);
+}
+
+.section--panel .eyebrow {
+  color: var(--orange-300);
+}
+
+.section--panel .section__lead,
+.section--panel .muted {
+  color: rgba(232, 236, 243, 0.74);
+}
+
+/* ---------- 8.1 Perspektivwechsel ---------- */
+
+.shift {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(6rem, 14vw, 12rem);
+}
+
+.shift__inner {
+  position: relative;
+  max-width: 50rem;
+}
+
+.shift__title {
+  font-size: clamp(2.5rem, 6.5vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 750;
+  text-wrap: balance;
+}
+
+.shift__text {
+  margin-top: 2rem;
+  max-width: 36rem;
+  font-size: clamp(1.125rem, 1.3vw + 0.6rem, 1.375rem);
+  line-height: 1.55;
+  color: rgba(232, 236, 243, 0.74);
+}
+
+.shift__mark {
+  position: absolute;
+  right: -0.08em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(14rem, 34vw, 30rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  color: rgba(255, 255, 255, 0.045);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 899.98px) {
+  .shift__mark {
+    top: auto;
+    bottom: -0.12em;
+    transform: none;
+    font-size: clamp(10rem, 48vw, 16rem);
+  }
+}
+
+/* ---------- 8.2 Einrichtungen ---------- */
+
+.org__lead + .org__lead {
+  margin-top: 0.75rem;
+}
+
+.fields {
+  border-top: 1px solid var(--border);
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+  padding-block: clamp(1.5rem, 3.5vw, 2.5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.field__name {
+  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+}
+
+.field__when {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 34rem;
+}
+
+@media (min-width: 760px) {
+  .field {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+}
+
+.stance {
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--accent);
+  max-width: 36rem;
+}
+
+.stance p {
+  font-size: clamp(1.375rem, 2vw + 0.5rem, 1.875rem);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.stance span {
+  display: block;
+}
+
+/* ---------- 8.3 Entlastung ---------- */
+
+.relief {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.relief__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.relief__if {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.relief__list li {
+  padding: 0.65rem 0 0.65rem 1.25rem;
+  border-left: 2px solid var(--border);
+  font-size: clamp(1.25rem, 1.6vw + 0.4rem, 1.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.relief__then {
+  font-size: clamp(1.25rem, 1.6vw + 0.4rem, 1.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.relief__then strong {
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.relief__note {
+  margin-top: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 30rem;
+}
+
+@media (min-width: 900px) {
+  .relief__grid {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: center;
+  }
+}
+
+.contact {
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-top: clamp(2.5rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact__text {
+  max-width: 36rem;
+  font-size: clamp(1.0625rem, 1.1vw + 0.6rem, 1.25rem);
+  line-height: 1.55;
+}
+
+.contact__action {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.contact__hint {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 900px) {
+  .contact {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .contact__action {
+    justify-items: end;
+    text-align: right;
+  }
+}
+
+/* ---------- 8.4 Vertrauen ---------- */
+
+.principles {
+  display: grid;
+  gap: 1.5rem 3rem;
+}
+
+.principle {
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--border);
+}
+
+.principle__name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.principle__text {
+  margin-top: 0.75rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .principles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.trust__foot {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.trust__note {
+  max-width: 34rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+@media (min-width: 900px) {
+  .trust__foot {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 3rem;
+  }
+}
+
+/* ---------- 8.5 Haltung ---------- */
+
+.manifesto {
+  text-align: center;
+  padding-block: clamp(5rem, 12vw, 10rem);
+}
+
+.manifesto__inner {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.manifesto .section__title {
+  font-size: clamp(2.125rem, 4.8vw, 3.5rem);
+}
+
+.manifesto__text {
+  margin: 1.5rem auto 0;
+  max-width: 38rem;
+  font-size: clamp(1.0625rem, 1.1vw + 0.6rem, 1.25rem);
+  line-height: 1.6;
+  color: rgba(232, 236, 243, 0.78);
+}
+
+.manifesto__text + .manifesto__text {
+  margin-top: 1rem;
+}
+
+.manifesto__text strong {
+  color: var(--panel-text);
+  font-weight: 600;
 }

@@ -68,7 +68,7 @@
       return;
     }
 
-    var mq = window.matchMedia('(min-width: 1200px)');
+    var mq = window.matchMedia('(min-width: 1240px)');
     var labelOpen = toggle.getAttribute('data-label-open') || 'Menü öffnen';
     var labelClose = toggle.getAttribute('data-label-close') || 'Menü schließen';
 
