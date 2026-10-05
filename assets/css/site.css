@@ -572,6 +572,11 @@ body.nav-open .nav-backdrop {
   display: block;
 }
 
+/* Englische Headline ist laenger: etwas kleiner, damit sie auf drei Zeilen bleibt */
+html[lang="en"] .hero__title {
+  font-size: clamp(2.375rem, 6.4vw, 4.125rem);
+}
+
 .hero__title-accent {
   color: var(--accent-ink);
 }
@@ -1913,5 +1918,191 @@ body.nav-open .nav-backdrop {
 
   .site-footer__copy {
     grid-column: 1 / -1;
+  }
+}
+
+/* ============================================================
+   11. Dokumentseiten (Impressum, Datenschutz, AGB)
+   ============================================================ */
+
+.page-legal .site-header__inner {
+  gap: 0.75rem;
+}
+
+.page-legal .lang-switch {
+  margin-left: auto;
+}
+
+.page-legal .site-logo {
+  margin-right: 0;
+}
+
+.legal {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5rem);
+}
+
+.legal__article {
+  max-width: 46rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.legal__head {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal__head h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.legal__meta {
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+}
+
+.legal h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.legal h2 + h2 {
+  margin-top: 1.25rem;
+}
+
+.legal p,
+.legal li {
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+.legal ul,
+.legal ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.legal ul {
+  list-style: disc;
+}
+
+.legal ol {
+  list-style: decimal;
+}
+
+.legal li {
+  margin-bottom: 0.45rem;
+}
+
+.legal a {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-color: var(--border-strong);
+}
+
+.legal a:hover {
+  text-decoration-color: currentColor;
+}
+
+.legal a.btn {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.legal strong {
+  color: var(--text);
+}
+
+.legal table {
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.legal th,
+.legal td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal th {
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.legal tr:last-child td {
+  border-bottom: none;
+}
+
+.legal .widerruf {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.legal .widerruf p {
+  margin-bottom: 0.6rem;
+}
+
+.legal .widerruf p:last-child {
+  margin-bottom: 0;
+}
+
+.legal__back {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.site-footer__inner--compact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1.5rem;
+}
+
+.site-footer__inner--compact .site-footer__copy {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.site-footer__inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.site-footer__inline a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--text-muted);
+  border-radius: 6px;
+}
+
+.site-footer__inline a:hover {
+  color: var(--accent-ink);
+}
+
+.site-footer__inline a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 1239.98px) {
+  .page-legal .nav-toggle {
+    display: none;
   }
 }

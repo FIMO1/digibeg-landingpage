@@ -1,9 +1,4 @@
 User-agent: *
-Disallow: /impressum.html
-Disallow: /impressum-en.html
-Disallow: /datenschutz.html
-Disallow: /datenschutz-en.html
-Disallow: /agb.html
-Disallow: /agb-en.html
+Allow: /
 
 Sitemap: https://digibeg.de/sitemap.xml
