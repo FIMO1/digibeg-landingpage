@@ -31,7 +31,7 @@
   --text-subtle: #6b7790;
   --accent: var(--orange-500);
   --accent-hover: var(--orange-600);
-  --accent-ink: var(--orange-700);     /* Orange als Textfarbe, kontrastsicher auf hellem Grund */
+  --accent-ink: var(--orange-500);     /* Orange als Textfarbe: CI-Orange in beiden Themes */
   --accent-display: var(--orange-500); /* CI-Orange für große Markenelemente (Hero-Akzent, Wortmarke) */
   --on-accent: var(--navy-900);
   --focus: var(--navy-900);
@@ -1244,7 +1244,8 @@ html[lang="en"] .hero__title {
 }
 
 .ability__name {
-  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  color: var(--accent-display);
+  font-size: clamp(1.5rem, 2vw, 2rem);
   line-height: 1;
   letter-spacing: -0.03em;
   font-weight: 750;
