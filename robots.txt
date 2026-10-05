@@ -6,3 +6,4 @@ Disallow: /datenschutz-en.html
 Disallow: /agb.html
 Disallow: /agb-en.html
 
+Sitemap: https://digibeg.de/sitemap.xml
