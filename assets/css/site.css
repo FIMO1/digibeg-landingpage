@@ -1541,7 +1541,7 @@ html[lang="en"] .hero__title {
   }
 
   .field:nth-child(5) {
-    grid-column: 1 / span 6;
+    grid-column: 4 / span 6;
   }
 }
 
