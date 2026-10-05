@@ -1,6 +1,7 @@
 /* ============================================================
    digibeg – Website V2
-   Gemeinsames JavaScript: Theme-Umschaltung, Navigation, Header.
+   Gemeinsames JavaScript: Theme-Umschaltung, Navigation, Header,
+   Produkt-Ablauf (Scroll-Zustand), Sprach-Sektion (ruhiger Wechsel).
    Vanilla JS, keine Abhängigkeiten. Wird mit `defer` geladen.
    ============================================================ */
 (function () {
@@ -9,6 +10,7 @@
   var root = document.documentElement;
   var STORAGE_KEY = 'digibeg-theme';
   var THEME_COLORS = { light: '#f7f8fb', dark: '#0b1220' };
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   /* ---------- Theme ---------- */
 
@@ -151,7 +153,131 @@
     update();
   }
 
+  /* ---------- Produkt-Ablauf: aktiver Schritt steuert das Gerät ---------- */
+
+  function initFlow() {
+    var flow = document.querySelector('.flow');
+    if (!flow || !('IntersectionObserver' in window)) {
+      return;
+    }
+    var steps = flow.querySelectorAll('.flow__step');
+    var shots = flow.querySelectorAll('.flow__stage .flow__shot');
+    if (!steps.length || !shots.length) {
+      return;
+    }
+
+    function activate(index) {
+      for (var i = 0; i < steps.length; i++) {
+        steps[i].classList.toggle('is-active', i === index);
+      }
+      for (var j = 0; j < shots.length; j++) {
+        shots[j].classList.toggle('is-active', j === index);
+      }
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          var index = parseInt(entries[i].target.getAttribute('data-step'), 10) - 1;
+          if (index >= 0) {
+            activate(index);
+          }
+        }
+      }
+    }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+
+    for (var k = 0; k < steps.length; k++) {
+      observer.observe(steps[k]);
+    }
+    activate(0);
+  }
+
+  /* ---------- Sprache: ruhiger Wechsel der Hervorhebung ---------- */
+
+  function initLanguages() {
+    var list = document.querySelector('.lang__list');
+    if (!list) {
+      return;
+    }
+    var items = list.querySelectorAll('.lang__item');
+    if (items.length < 2) {
+      return;
+    }
+
+    var index = 0;
+    var timer = null;
+    var visible = false;
+    var INTERVAL = 3600;
+
+    function highlight(i) {
+      for (var k = 0; k < items.length; k++) {
+        items[k].classList.toggle('is-active', k === i);
+      }
+    }
+
+    function tick() {
+      index = (index + 1) % items.length;
+      highlight(index);
+    }
+
+    function start() {
+      if (timer || reduceMotion.matches || !visible || document.hidden) {
+        return;
+      }
+      timer = window.setInterval(tick, INTERVAL);
+    }
+
+    function stop() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function onMotionChange() {
+      if (reduceMotion.matches) {
+        stop();
+        highlight(0);
+      } else {
+        start();
+      }
+    }
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        if (visible) {
+          start();
+        } else {
+          stop();
+        }
+      }, { threshold: 0.15 });
+      observer.observe(list);
+    } else {
+      visible = true;
+      start();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        stop();
+      } else {
+        start();
+      }
+    });
+
+    if (typeof reduceMotion.addEventListener === 'function') {
+      reduceMotion.addEventListener('change', onMotionChange);
+    } else if (typeof reduceMotion.addListener === 'function') {
+      reduceMotion.addListener(onMotionChange);
+    }
+
+    highlight(0);
+  }
+
   initTheme();
   initNav();
   initHeader();
+  initFlow();
+  initLanguages();
 })();

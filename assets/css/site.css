@@ -146,7 +146,8 @@ p {
   margin: 0;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -633,27 +634,12 @@ body.nav-open .nav-backdrop {
   box-shadow: var(--shadow-soft);
 }
 
-.hero-phone {
+.hero__stage .phone {
   position: absolute;
   left: 50%;
   top: 9%;
   width: min(62%, 300px);
   transform: translateX(-50%);
-  padding: 0.55rem;
-  border-radius: 2.6rem;
-  background: var(--navy-900);
-  border: 1px solid var(--navy-600);
-  box-shadow: var(--shadow-strong);
-}
-
-.hero-phone__screen {
-  overflow: hidden;
-  border-radius: 2.1rem;
-  background: var(--navy-900);
-}
-
-.hero-phone__screen img {
-  width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -661,7 +647,7 @@ body.nav-open .nav-backdrop {
     aspect-ratio: 16 / 11;
   }
 
-  .hero-phone {
+  .hero__stage .phone {
     width: min(42%, 300px);
   }
 }
@@ -676,7 +662,7 @@ body.nav-open .nav-backdrop {
     aspect-ratio: 4 / 4.4;
   }
 
-  .hero-phone {
+  .hero__stage .phone {
     width: min(66%, 320px);
   }
 }
@@ -711,4 +697,380 @@ body.nav-open .nav-backdrop {
 
 .hero__stage {
   animation: rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* ============================================================
+   6. Sektionen (Commit 2): Alltag, Produkt-Ablauf, Sprache
+   ============================================================ */
+
+.section {
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.section__head {
+  max-width: 44rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.section__head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.section__title {
+  font-size: clamp(2rem, 4.6vw, 3.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.section__title span {
+  display: block;
+}
+
+.section__lead {
+  margin-top: 1.25rem;
+  font-size: clamp(1.0625rem, 1.1vw + 0.6rem, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 36rem;
+}
+
+.section__head--center .section__lead {
+  margin-inline: auto;
+}
+
+/* Gerät: generischer Telefonrahmen (Hero und Produkt-Ablauf) */
+.phone {
+  padding: 0.55rem;
+  border-radius: 2.6rem;
+  background: var(--navy-900);
+  border: 1px solid var(--navy-600);
+  box-shadow: var(--shadow-strong);
+}
+
+.phone__screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2.1rem;
+  background: var(--navy-900);
+  aspect-ratio: 640 / 1328;
+}
+
+.phone__screen img,
+.phone__screen picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* ---------- 6.1 Alltag ---------- */
+
+.alltag {
+  border-top: 1px solid var(--border);
+}
+
+.situations {
+  counter-reset: situation;
+  border-top: 1px solid var(--border);
+}
+
+.situation {
+  position: relative;
+  padding-block: clamp(2rem, 4.5vw, 3.5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.situation__inner {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  column-gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: start;
+  max-width: 44rem;
+}
+
+.situation__num {
+  padding-top: 0.45em;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.situation__q {
+  font-size: clamp(1.5rem, 3.2vw, 2.375rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.situation__a {
+  margin-top: 0.85rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 30rem;
+}
+
+@media (min-width: 900px) {
+  .situation:nth-child(even) .situation__inner {
+    margin-left: 33.333%;
+  }
+
+  .situation__inner {
+    grid-template-columns: 4rem minmax(0, 1fr);
+  }
+}
+
+/* ---------- 6.2 Produkt-Ablauf ---------- */
+
+.flow {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.flow__layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.flow__stage {
+  display: none;
+}
+
+.flow__steps {
+  counter-reset: step;
+  display: grid;
+  gap: clamp(3rem, 7vw, 5rem);
+}
+
+.flow__step {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.flow__text {
+  max-width: 30rem;
+}
+
+.flow__label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.flow__title {
+  font-size: clamp(1.5rem, 2.6vw, 2.125rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+}
+
+.flow__desc {
+  margin-top: 0.85rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.flow__inline {
+  width: min(16.5rem, 70vw);
+}
+
+.flow__shot {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.flow__shot.is-active {
+  opacity: 1;
+}
+
+@media (min-width: 900px) {
+  .flow__layout {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .flow__stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: calc(var(--header-h) + 1.5rem);
+    height: calc(100vh - var(--header-h) - 3rem);
+  }
+
+  .flow__stage .phone {
+    width: min(100%, 300px, calc((100vh - var(--header-h) - 5rem) / 2.3));
+  }
+
+  .flow__steps {
+    gap: 0;
+  }
+
+  .flow__step {
+    min-height: 68vh;
+    align-content: center;
+    justify-items: start;
+    text-align: left;
+    opacity: 0.38;
+    transition: opacity 0.35s ease;
+  }
+
+  .flow__step:last-child {
+    min-height: 60vh;
+  }
+
+  .flow__step.is-active,
+  html:not(.js) .flow__step {
+    opacity: 1;
+  }
+
+  .flow__inline {
+    display: none;
+  }
+
+  /* Ohne JavaScript bleibt der Ablauf linear mit eigenen Bildern */
+  html:not(.js) .flow__stage {
+    display: none;
+  }
+
+  html:not(.js) .flow__inline {
+    display: block;
+  }
+
+  html:not(.js) .flow__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- 6.3 Sprache ---------- */
+
+.lang {
+  background: var(--panel);
+  color: var(--panel-text);
+}
+
+.lang .eyebrow {
+  color: var(--orange-300);
+}
+
+.lang__inner {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.lang__copy {
+  max-width: 34rem;
+}
+
+.lang__kern {
+  margin-top: 1.5rem;
+  font-size: clamp(1.25rem, 1.6vw + 0.5rem, 1.625rem);
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.lang__kern span {
+  display: block;
+}
+
+.lang__note {
+  margin-top: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgba(232, 236, 243, 0.72);
+}
+
+.lang__list {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.lang__item {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem 1rem;
+  border-inline-start: 2px solid transparent;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: rgba(232, 236, 243, 0.62);
+  transition: color 0.6s ease, border-color 0.6s ease, background-color 0.6s ease;
+}
+
+.lang__item[dir="rtl"] {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.lang__item.is-active {
+  color: var(--panel-text);
+  border-inline-start-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.lang__name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(253, 186, 116, 0.85);
+}
+
+.lang__q {
+  font-size: 1.0625rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 700px) {
+  .lang__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .lang__inner {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+
+  .lang__copy {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lang__item {
+    color: var(--panel-text);
+  }
+
+  .flow__step {
+    opacity: 1 !important;
+  }
 }
