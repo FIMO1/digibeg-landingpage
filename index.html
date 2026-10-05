@@ -4,15 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="favicon.jpg" />
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>digibeg — KI-Assistent für Pflege, Senioren und Menschen mit Sprachbarrieren</title>
-    <meta name="description" content="digibeg gibt Pflegekräften, Senioren und Menschen mit Sprachbarrieren ihre Stimme zurück — einfache KI-gestützte Sprachkommunikation die Dokumentation und Angehörigen-Updates in Sekunden erledigt." />
-    <meta name="keywords" content="Pflege App, Senioren App, Sprachbarriere, KI Assistent, Pflegeorganisation, Sprachkommunikation, Angehörige" />
+    <meta name="theme-color" content="#f7f8fb" />
+    <title>digibeg – Inklusionstechnologie für digitale Teilhabe</title>
+    <meta name="description" content="digibeg hilft Menschen, Dokumente und Informationen zu verstehen, Sprachbarrieren zu überwinden und ihren digitalen Alltag selbstständiger zu organisieren." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://digibeg.de/" />
     <link rel="alternate" hreflang="de" href="https://digibeg.de/" />
@@ -21,1014 +15,744 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="digibeg" />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:url" content="https://digibeg.de/" />
-    <meta property="og:title" content="digibeg — KI-Assistent für Pflege, Senioren und Menschen mit Sprachbarrieren" />
-    <meta property="og:description" content="digibeg gibt Pflegekräften, Senioren und Menschen mit Sprachbarrieren ihre Stimme zurück — einfache KI-gestützte Sprachkommunikation die Dokumentation und Angehörigen-Updates in Sekunden erledigt." />
-    <meta property="og:image" content="https://digibeg.de/og-image.png" />
+    <meta property="og:title" content="Digitale Teilhabe. Einfach für alle." />
+    <meta property="og:description" content="digibeg unterstützt Menschen dabei, digitale Informationen zu verstehen, Sprachbarrieren zu überwinden und ihren Alltag selbstständiger zu organisieren." />
+    <meta property="og:image" content="https://digibeg.de/assets/og/digibeg-og-1200x630.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="digibeg" />
+    <meta property="og:image:alt" content="digibeg-Signet und Schriftzug auf dunkelblauem Grund mit der Aussage „Digitale Teilhabe. Einfach für alle.“" />
 
-    <!-- Twitter Cards -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="digibeg — KI-Assistent für Pflege, Senioren und Menschen mit Sprachbarrieren" />
-    <meta name="twitter:description" content="digibeg gibt Pflegekräften, Senioren und Menschen mit Sprachbarrieren ihre Stimme zurück — einfache KI-gestützte Sprachkommunikation die Dokumentation und Angehörigen-Updates in Sekunden erledigt." />
-    <meta name="twitter:image" content="https://digibeg.de/og-image.png" />
-
-    <style>
-      :root {
-        --bg-main: #0b1220;
-        --bg-card: #121b2e;
-        --bg-elevated: #16213a;
-
-        --text-main: #e8ecf3;
-        --text-muted: #a6b0c3;
-
-        --brand: #fb923c;
-        --brand-soft: #fca458;
-
-        --radius: 18px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Ubuntu,
-          sans-serif;
-        background: var(--bg-main);
-        color: var(--text-main);
-        line-height: 1.6;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 2.5rem 1.5rem;
-      }
-
-      /* ================= HERO BANNER ================= */
-
-      .hero-banner {
-        position: relative;
-        margin: 2rem 1.5rem;
-        border-radius: var(--radius);
-        background:
-          linear-gradient(rgba(11, 18, 32, 0.5), rgba(11, 18, 32, 0.6)),
-          url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
-        background-size: cover;
-        background-position: center 20%;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-      }
-
-      .hero {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        padding: 4rem 1rem 3rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.2rem, 4vw, 3.2rem);
-        margin-bottom: 1rem;
-      }
-
-      .brand {
-        color: var(--brand);
-        font-weight: 700;
-      }
-
-      .hero-brand {
-        display: block;
-        font-size: 1.3em;
-        margin-top: 0.2rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        color: var(--text-muted);
-        max-width: 700px;
-        margin: 0 auto 2.5rem;
-      }
-
-      /* CTA BUTTON */
-
-      .cta {
-        display: inline-block;
-        padding: 1rem 2.6rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        border-radius: 999px;
-        background: var(--brand);
-        color: #1a1a1a;
-        box-shadow: 0 8px 24px rgba(251, 146, 60, 0.35);
-        transition:
-          transform 0.15s ease,
-          box-shadow 0.15s ease;
-        position: relative;
-        z-index: 10;
-        cursor: pointer;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-        touch-action: manipulation;
-      }
-
-      .cta:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
-      }
-
-      /* STORE BADGES */
-
-      .store-badges {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 2.5rem;
-      }
-
-      .store-badges img {
-        height: 58px;
-        width: auto;
-        display: block;
-      }
-
-      /* TRUST */
-
-      .trust {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-      }
-
-      .trust div {
-        background: var(--bg-elevated);
-        border: 1px solid #223055;
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        text-align: center;
-        font-size: 0.95rem;
-        font-weight: 500;
-      }
-
-      /* FEATURES */
-
-      .section-title {
-        text-align: center;
-        margin: 3rem 0 1.5rem;
-        font-size: 2rem;
-      }
-
-      .features-section {
-        padding-top: 1rem;
-      }
-
-      .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2rem;
-      }
-
-      .feature {
-        background: var(--bg-card);
-        padding: 2rem;
-        border-radius: var(--radius);
-      }
-
-      .feature h3 {
-        margin-top: 0;
-        margin-bottom: 0.6rem;
-        font-size: 1.25rem;
-        color: var(--brand);
-        font-weight: 600;
-      }
-
-      .feature p {
-        color: var(--text-muted);
-        font-size: 1rem;
-      }
-
-      /* STEPS */
-
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-      }
-
-      .step {
-        background: var(--bg-card);
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        text-align: center;
-        font-weight: 500;
-      }
-
-      /* CLOSING */
-
-      .closing {
-        text-align: center;
-        margin: 0 auto 0.5rem;
-        padding: 0 1rem 0.5rem;
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .closing p {
-        font-size: 1.2rem;
-        color: var(--text-muted);
-        margin-bottom: 2rem;
-        text-align: center;
-        width: 100%;
-      }
-
-      footer {
-        background: #0f172a;
-        color: #94a3b8;
-        padding: 2rem 1rem;
-        border-top: 1px solid #334155;
-      }
-
-      .footer-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.25rem;
-        text-align: center;
-      }
-
-      .footer-brand {
-        font-size: 1.3rem;
-        flex: 0 0 auto;
-      }
-
-      .footer-center {
-        flex: 1 1 auto;
-      }
-
-      .footer-logo {
-        flex: 0 0 auto;
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        display: block;
-      }
-
-      footer .footer-links {
-        font-size: 14px;
-        margin-bottom: 0.5rem;
-      }
-
-      footer .footer-links a {
-        color: #fb923c;
-        margin: 0 0.5rem;
-      }
-
-      footer .footer-links a:hover {
-        text-decoration: underline;
-      }
-
-      footer .footer-copy {
-        font-size: 12px;
-        color: #64748b;
-      }
-
-      .lang-switch {
-        position: fixed;
-        top: 0.75rem;
-        right: 1rem;
-        z-index: 9999;
-        display: flex;
-        gap: 0.25rem;
-        background: rgba(15, 23, 42, 0.85);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        padding: 0.35rem 0.5rem;
-        border-radius: 10px;
-        border: 1px solid rgba(51, 65, 85, 0.6);
-        font-size: 14px;
-      }
-
-      .lang-switch a {
-        color: #94a3b8;
-        padding: 0.3rem 0.6rem;
-        border-radius: 6px;
-        transition: color 0.15s, background 0.15s;
-      }
-
-      .lang-switch a:hover {
-        color: #fb923c;
-      }
-
-      .lang-switch a.active {
-        color: #fb923c;
-        font-weight: 600;
-        background: rgba(251, 146, 60, 0.1);
-      }
-
-      /* ================= DEMO SECTION ================= */
-
-      .demo-section {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      .section-title {
-        text-align: center;
-        margin: 0 0 2.5rem;
-        font-size: 2rem;
-      }
-
-      .demo-toggle {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        margin-bottom: 2.5rem;
-      }
-
-      .demo-toggle button {
-        padding: 0.55rem 1.6rem;
-        border-radius: 999px;
-        border: 2px solid #2a3a5c;
-        background: transparent;
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .demo-toggle button:hover {
-        border-color: var(--brand);
-        color: var(--brand);
-      }
-
-      .demo-toggle button.active {
-        background: var(--brand);
-        border-color: var(--brand);
-        color: #1a1a1a;
-      }
-
-      .demo-panel {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .demo-panel.active {
-        display: flex;
-      }
-
-      /* --- Phone mockup --- */
-      .phone-frame {
-        width: 240px;
-        height: 490px;
-        background: #0a0f1c;
-        border: 2px solid #2a3a5c;
-        border-radius: 38px;
-        box-shadow:
-          0 0 0 6px #111c30,
-          0 0 0 8px #1e2d4a,
-          0 25px 60px rgba(0,0,0,0.6);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 14px 10px 18px;
-        gap: 10px;
-        position: relative;
-      }
-
-      .phone-notch {
-        width: 70px;
-        height: 10px;
-        background: #1e2d4a;
-        border-radius: 999px;
-        flex-shrink: 0;
-      }
-
-      .phone-screen {
-        flex: 1;
-        width: 100%;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        background: #0f172a;
-      }
-
-      .phone-home {
-        width: 60px;
-        height: 4px;
-        background: #2a3a5c;
-        border-radius: 999px;
-        flex-shrink: 0;
-      }
-
-      /* --- Browser mockup --- */
-      .browser-frame {
-        width: min(860px, 100%);
-        background: #0a0f1c;
-        border: 2px solid #2a3a5c;
-        border-radius: 14px;
-        box-shadow:
-          0 0 0 4px #111c30,
-          0 25px 60px rgba(0,0,0,0.5);
-        overflow: hidden;
-      }
-
-      .browser-bar {
-        background: #111c30;
-        padding: 10px 14px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-bottom: 1px solid #1e2d4a;
-      }
-
-      .browser-dots {
-        display: flex;
-        gap: 5px;
-        flex-shrink: 0;
-      }
-
-      .browser-dots span {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #2a3a5c;
-        display: block;
-      }
-
-      .browser-dots span:nth-child(1) { background: #ef4444; }
-      .browser-dots span:nth-child(2) { background: #f59e0b; }
-      .browser-dots span:nth-child(3) { background: #22c55e; }
-
-      .browser-url {
-        flex: 1;
-        background: #0b1220;
-        border: 1px solid #1e2d4a;
-        border-radius: 6px;
-        padding: 4px 12px;
-        font-size: 0.78rem;
-        color: #64748b;
-        text-align: center;
-      }
-
-      .browser-screen {
-        width: 100%;
-        aspect-ratio: 16 / 7.5;
-        position: relative;
-        overflow: hidden;
-        background: #0b1220;
-      }
-
-      /* --- Shared slideshow --- */
-      .slideshow {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-
-      .slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: opacity 0.7s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0b1220;
-      }
-
-      .slide.active {
-        opacity: 1;
-      }
-
-      .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-      }
-
-      .slide-placeholder {
-        background: linear-gradient(135deg, #111c30 0%, #0f172a 100%);
-        border: 1px dashed #1e3a5f;
-        flex-direction: column;
-        gap: 0.5rem;
-        color: #2a3a5c;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.05em;
-      }
-
-      .slide-placeholder::before {
-        content: "📸";
-        font-size: 1.8rem;
-        opacity: 0.4;
-      }
-
-      /* slide dots */
-      .slide-dots {
-        display: flex;
-        gap: 6px;
-        justify-content: center;
-      }
-
-      .slide-dots span {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #2a3a5c;
-        display: block;
-        transition: background 0.3s;
-        cursor: pointer;
-      }
-
-      .slide-dots span.active {
-        background: var(--brand);
-      }
-
-      /* ================= MOBILE OPTIMIERUNG ================= */
-
-      @media (max-width: 600px) {
-        .hero-banner {
-          margin: 0;
-          border-radius: 0;
+    <meta name="twitter:title" content="Digitale Teilhabe. Einfach für alle." />
+    <meta name="twitter:description" content="digibeg unterstützt Menschen dabei, digitale Informationen zu verstehen, Sprachbarrieren zu überwinden und ihren Alltag selbstständiger zu organisieren." />
+    <meta name="twitter:image" content="https://digibeg.de/assets/og/digibeg-og-1200x630.png" />
+    <meta name="twitter:image:alt" content="digibeg-Signet und Schriftzug auf dunkelblauem Grund mit der Aussage „Digitale Teilhabe. Einfach für alle.“" />
+
+    <!-- Strukturierte Daten -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://digibeg.de/#organization",
+          "name": "digibeg",
+          "url": "https://digibeg.de/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://digibeg.de/favicon.jpg",
+            "width": 512,
+            "height": 512
+          },
+          "email": "info@digibeg.de",
+          "description": "Inklusionstechnologie für digitale Teilhabe: digibeg unterstützt Menschen dabei, ihren digitalen Alltag selbstständiger zu bewältigen."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://digibeg.de/#website",
+          "url": "https://digibeg.de/",
+          "name": "digibeg",
+          "inLanguage": [
+            "de",
+            "en"
+          ],
+          "publisher": {
+            "@id": "https://digibeg.de/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://digibeg.de/#app",
+          "name": "digibeg",
+          "description": "digibeg hilft Menschen, Dokumente und Informationen zu verstehen, Sprachbarrieren zu überwinden und ihren digitalen Alltag selbstständiger zu organisieren.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "iOS, Android, Web",
+          "url": "https://app.digibeg.de/",
+          "installUrl": [
+            "https://apps.apple.com/de/app/id6761900575",
+            "https://play.google.com/store/apps/details?id=de.digibeg.app"
+          ],
+          "inLanguage": [
+            "de",
+            "en",
+            "tr",
+            "uk",
+            "ru",
+            "pl",
+            "el",
+            "sq",
+            "it",
+            "hr",
+            "vi",
+            "ar",
+            "fr",
+            "es",
+            "ro"
+          ],
+          "publisher": {
+            "@id": "https://digibeg.de/#organization"
+          }
         }
+      ]
+    }
+    </script>
 
-        .hero {
-          padding: 2rem 1rem 1.5rem;
-        }
+    <!-- Theme vor dem ersten Rendern setzen (verhindert Flackern). Light ist Standard. -->
+    <script>
+      (function () {
+        var theme = 'light';
+        try {
+          var stored = localStorage.getItem('digibeg-theme');
+          if (stored === 'dark' || stored === 'light') { theme = stored; }
+        } catch (e) {}
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.className += ' js';
+      })();
+    </script>
 
-        .hero h1 {
-          font-size: 1.8rem;
-          margin-bottom: 0.75rem;
-        }
-
-        .hero p {
-          font-size: 1rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .cta {
-          padding: 0.85rem 2rem;
-          font-size: 1rem;
-        }
-
-        .store-badges img {
-          height: 48px;
-        }
-
-        .trust {
-          gap: 0.75rem;
-          margin-top: 1.5rem;
-        }
-
-        .trust div {
-          padding: 1rem;
-          font-size: 0.9rem;
-        }
-
-        .container {
-          padding: 1.5rem 1rem;
-        }
-
-        .section-title {
-          margin: 0 0 1.5rem;
-          font-size: 1.5rem;
-        }
-
-        .features {
-          gap: 1rem;
-        }
-
-        .feature {
-          padding: 1.25rem;
-          text-align: center;
-        }
-
-        .feature h3 {
-          font-size: 1.1rem;
-        }
-
-        .feature p {
-          font-size: 0.95rem;
-        }
-
-        .steps {
-          gap: 0.75rem;
-          margin-top: 1.5rem;
-        }
-
-        .step {
-          padding: 1rem;
-          font-size: 0.95rem;
-        }
-
-        .closing {
-          margin: 1rem 0 2rem;
-        }
-
-        .closing p {
-          font-size: 1rem;
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      /* ===== LIGHT MODE ===== */
-
-      [data-theme="light"] {
-        --bg-main: #f4f6fb;
-        --bg-card: #ffffff;
-        --bg-elevated: #edf0f7;
-        --text-main: #1a2744;
-        --text-muted: #5a6a85;
-      }
-
-      [data-theme="light"] .hero-banner {
-        background:
-          linear-gradient(rgba(244, 246, 251, 0.62), rgba(244, 246, 251, 0.66)),
-          url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
-        background-size: cover;
-        background-position: center 20%;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      }
-
-      [data-theme="light"] .trust div {
-        border-color: #d8dff0;
-      }
-
-      [data-theme="light"] .feature {
-        border: 1px solid #e4e9f5;
-      }
-
-      [data-theme="light"] .step {
-        border: 1px solid #e4e9f5;
-      }
-
-      [data-theme="light"] .demo-toggle button {
-        border-color: #d8dff0;
-      }
-
-      [data-theme="light"] .browser-bar {
-        background: #e4e9f5;
-        border-bottom-color: #d0d8ec;
-      }
-
-      [data-theme="light"] .browser-url {
-        background: #f4f6fb;
-        border-color: #d0d8ec;
-        color: #8899bb;
-      }
-
-      [data-theme="light"] footer {
-        background: #edf0f7;
-        border-top-color: #d8dff0;
-        color: #5a6a85;
-      }
-
-      [data-theme="light"] footer .footer-copy {
-        color: #8899bb;
-      }
-
-      [data-theme="light"] .lang-switch {
-        background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(210, 220, 240, 0.8);
-      }
-
-      [data-theme="light"] .lang-switch a {
-        color: #5a6a85;
-      }
-
-      [data-theme="light"] .lang-switch a.active {
-        color: #fb923c;
-        background: rgba(251, 146, 60, 0.08);
-      }
-
-      .theme-toggle {
-        background: none;
-        border: none;
-        border-left: 1px solid rgba(51, 65, 85, 0.4);
-        margin-left: 0.15rem;
-        padding: 0.3rem 0 0.3rem 0.55rem;
-        cursor: pointer;
-        color: #94a3b8;
-        display: flex;
-        align-items: center;
-        line-height: 1;
-        transition: color 0.15s;
-      }
-
-      .theme-toggle:hover {
-        color: #fb923c;
-      }
-
-      [data-theme="light"] .theme-toggle {
-        border-left-color: rgba(200, 210, 230, 0.6);
-        color: #5a6a85;
-      }
-
-      /* ================= SHOWCASE ================= */
-
-      .showcase-section {
-        text-align: center;
-        padding: 0 1.5rem 1.75rem;
-      }
-
-      .showcase-section > img {
-        display: block;
-        max-width: 560px;
-        width: 100%;
-        margin: 0 auto;
-        border-radius: var(--radius);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-      }
-
-      [data-theme="light"] .showcase-section > img {
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-      }
-
-      .showcase-section .cta {
-        margin-top: 2.5rem;
-      }
-
-      .showcase-section p {
-        margin: 1.75rem auto 0;
-        font-size: 1.05rem;
-        color: var(--text-muted);
-        max-width: 480px;
-      }
-
-      @media (max-width: 600px) {
-        .showcase-section {
-          padding: 0 1rem 1.75rem;
-        }
-      }
-    </style>
-  <script>(function(){var t=localStorage.getItem('digibeg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/site.js" defer></script>
   </head>
 
   <body>
-    <div class="lang-switch">
-      <a href="index.html" class="active">DE</a>
-      <a href="index-en.html">EN</a>
-      <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle-btn"></button>
-    </div>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-    <!-- HERO -->
-    <section class="hero-banner">
-      <div class="hero container">
-        <h1><span class="brand hero-brand">digibeg</span></h1>
-        <p>
-          Ihr digitaler Begleiter für den Alltag.<br />
-          Einfach. Verständlich. In Ihrer Sprache.
-        </p>
-        <a
-          href="https://app.digibeg.de/"
-          class="cta"
-          target="_blank"
-          rel="noopener"
-          >Jetzt starten</a
-        >
-      </div>
-    </section>
+    <header class="site-header" id="top">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="#top" aria-label="digibeg – zum Seitenanfang">
+          <img class="site-logo__mark" src="favicon.jpg" alt="" width="36" height="36" />
+          <span class="site-logo__word">digibeg</span>
+        </a>
 
-    <!-- FEATURES -->
-    <section class="container features-section">
-      <div class="features">
-        <div class="feature">
-          <h3>Briefe & Texte verstehen</h3>
-          <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach. Nie wieder Fristen verpassen oder Unsicherheiten bei Behördenschreiben.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Übersetzen & erklären</h3>
-          <p>Fremdsprache? Fragen, Inhalte und Dokumente werden übersetzt und verständlich erklärt. Sprachen verstehen war noch nie so einfach.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Termine & Erinnerungen</h3>
-          <p>digibeg merkt sich Termine und erinnert dich rechtzeitig. Mit Push-Nachrichten nie wieder etwas verpassen – digibeg weiß Bescheid.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Teilen, wenn du willst</h3>
-          <p>Inhalte freiwillig mit vertrauten Personen teilen. Entspannung für alle – ohne Überwachung.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Bedienung, die sich anpasst</h3>
-          <p>Easy Mode – einfach sprechen, vorlesen lassen oder lesen. Ob Rezepte, Rätsel oder ganz alltägliche Unterstützung – digibeg ist wie ein guter Freund.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Ihre Daten sind sicher</h3>
-          <p>DSGVO-konform. Hosting auf deutschen Servern. Ihre Daten gehören nur Ihnen.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHOWCASE -->
-    <section class="showcase-section">
-      <h2 class="section-title">digibeg in Aktion</h2>
-      <img src="assets/promo-showcase-de.jpg" alt="digibeg App im Einsatz: Chat mit dem KI-Assistenten, Vorlesen & Erklären, Termine im Blick, Fragen beantworten, mehr Selbstständigkeit" loading="lazy" />
-    </section>
-
-    <!-- DEMO -->
-    <section class="container demo-section">
-      <div class="demo-toggle">
-        <button id="btn-mobile" class="active" onclick="showDemo('mobile')">📱 Mobile</button>
-        <button id="btn-web" onclick="showDemo('web')">🖥️ Web</button>
-      </div>
-
-      <!-- Handy-Mockup -->
-      <div class="demo-panel active" id="panel-mobile">
-        <div class="phone-frame">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="slideshow" id="mobile-slides">
-              <div class="slide active"><img src="screenshots/mobile-1.jpg" alt="Sprache wählen" /></div>
-              <div class="slide"><img src="screenshots/mobile-2.jpg" alt="Nutzungsart wählen" /></div>
-              <div class="slide"><img src="screenshots/mobile-12.jpg" alt="Willkommen" /></div>
-              <div class="slide"><img src="screenshots/mobile-3.jpg" alt="Home" /></div>
-              <div class="slide"><img src="screenshots/mobile-4.jpg" alt="Einfach sprechen" /></div>
-
-              <div class="slide"><img src="screenshots/mobile-9.jpg" alt="Assistent" /></div>
-              <div class="slide"><img src="screenshots/mobile-6.jpg" alt="Kalender" /></div>
-              <div class="slide"><img src="screenshots/mobile-8.jpg" alt="Kalender Termine" /></div>
-              <div class="slide"><img src="screenshots/mobile-11.jpg" alt="Kalender Erinnerungen" /></div>
-              <div class="slide"><img src="screenshots/mobile-7.jpg" alt="Dokumente verwalten" /></div>
-              <div class="slide"><img src="screenshots/mobile-10.jpg" alt="Dokument einfach erklärt" /></div>
+        <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+          <ul class="site-nav__list">
+            <li><a href="#was-kann-digibeg">Was kann digibeg?</a></li>
+            <li><a href="#fuer-wen">Für Menschen</a></li>
+            <li><a href="#einrichtungen">Für Einrichtungen</a></li>
+            <li><a href="#sicherheit">Sicherheit</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <a class="btn btn--ghost btn--small" href="https://app.digibeg.de/" target="_blank" rel="noopener">Anmelden</a>
+            <a class="btn btn--primary btn--small" href="https://app.digibeg.de/" target="_blank" rel="noopener">Kostenlos testen</a>
+            <div class="lang-switch" role="group" aria-label="Sprache der Website">
+              <span aria-current="page" lang="de">DE</span>
+              <a href="index-en.html" lang="en" hreflang="en" aria-label="Zur englischen Version wechseln">EN</a>
             </div>
           </div>
-          <div class="phone-home"></div>
-        </div>
-        <div class="slide-dots" id="mobile-dots">
-          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
+        </nav>
 
-      <!-- Browser-Mockup -->
-      <div class="demo-panel" id="panel-web">
-        <div class="browser-frame">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">app.digibeg.de</div>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dunkles Design aktivieren" data-label-light="Helles Design aktivieren" data-label-dark="Dunkles Design aktivieren">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen" data-label-open="Menü öffnen" data-label-close="Menü schließen">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span>Digitale Teilhabe.</span>
+              <span class="hero__title-accent">Einfach für alle.</span>
+            </h1>
+            <p class="hero__lead">
+              digibeg unterstützt Menschen dabei, ihren digitalen Alltag selbstständig zu bewältigen – verständlich, mehrsprachig und auf Wunsch gemeinsam mit Angehörigen oder Begleitern.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--large" href="https://app.digibeg.de/" target="_blank" rel="noopener">Kostenlos ausprobieren</a>
+              <a class="btn btn--secondary btn--large" href="#einrichtungen">Für Einrichtungen</a>
+            </div>
+            <ul class="hero__points" aria-label="Das zeichnet digibeg aus">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                Einfach verständlich
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                Mehrsprachig
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                Selbstständig im Alltag
+              </li>
+            </ul>
           </div>
-          <div class="browser-screen">
-            <div class="slideshow" id="web-slides">
-              <div class="slide active"><img src="screenshots/web-1.jpg" alt="Easy Mode" /></div>
-              <div class="slide"><img src="screenshots/web-2.jpg" alt="Home" /></div>
-              <div class="slide"><img src="screenshots/web-3.jpg" alt="Assistent" /></div>
-              <div class="slide"><img src="screenshots/web-4.jpg" alt="Kalender" /></div>
-              <div class="slide"><img src="screenshots/web-5.jpg" alt="Dokumente" /></div>
-              <div class="slide"><img src="screenshots/web-6.jpg" alt="Dokument Analyse" /></div>
-              <div class="slide"><img src="screenshots/web-7.jpg" alt="Dashboard" /></div>
+
+          <div class="hero__stage" role="img" aria-label="Startbildschirm der digibeg-App mit dem großen Button „Einfach sprechen“ und einem Kamera-Symbol">
+            <div class="phone" aria-hidden="true">
+              <div class="phone__screen">
+                <picture>
+                  <source srcset="assets/screens/hero-easy-mode-640.webp" type="image/webp" />
+                  <img src="assets/screens/hero-easy-mode-640.jpg" alt="" width="640" height="1335" fetchpriority="high" />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
-        <div class="slide-dots" id="web-dots">
-          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
+      </section>
 
-    </section>
-
-    <!-- SHOWCASE CTA -->
-    <section class="showcase-section">
-      <a
-        href="https://app.digibeg.de/"
-        class="cta"
-        target="_blank"
-        rel="noopener"
-        >Kostenlos testen</a
-      >
-      <div class="store-badges">
-        <a href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener" aria-label="Im App Store laden">
-          <img src="assets/apple-app-store-badge-de.svg" alt="Im App Store laden" />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener" aria-label="Jetzt bei Google Play">
-          <img src="assets/google-play-badge-de.png" alt="Jetzt bei Google Play" />
-        </a>
-      </div>
-      <p>digibeg kennenlernen – einfach registrieren und los geht's</p>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div style="margin-top:0;padding:0 2rem;text-align:center;width:100%;box-sizing:border-box;">
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;align-items:center;">
-          <img src="https://flagcdn.com/w40/de.png" width="36" alt="Deutsch" title="Deutsch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/gb.png" width="36" alt="Englisch" title="Englisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/fr.png" width="36" alt="Französisch" title="Französisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/es.png" width="36" alt="Spanisch" title="Spanisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/tr.png" width="36" alt="Türkisch" title="Türkisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/ua.png" width="36" alt="Ukrainisch" title="Ukrainisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/ru.png" width="36" alt="Russisch" title="Russisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/pl.png" width="36" alt="Polnisch" title="Polnisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/gr.png" width="36" alt="Griechisch" title="Griechisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/al.png" width="36" alt="Albanisch" title="Albanisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/it.png" width="36" alt="Italienisch" title="Italienisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/hr.png" width="36" alt="Kroatisch" title="Kroatisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/vn.png" width="36" alt="Vietnamesisch" title="Vietnamesisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/sa.png" width="36" alt="Arabisch" title="Arabisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/ro.png" width="36" alt="Rumänisch" title="Rumänisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-inner">
-        <span class="footer-brand brand">digibeg</span>
-        <div class="footer-center">
-          <div class="footer-links">
-            <a href="impressum.html">Impressum</a> |
-            <a href="datenschutz.html">Datenschutz</a> |
-            <a href="agb.html">AGB</a>
+      <!-- ALLTAG -->
+      <section class="section alltag" id="was-kann-digibeg" aria-labelledby="alltag-title">
+        <div class="container">
+          <div class="section__head">
+            <p class="eyebrow">Alltag</p>
+            <h2 class="section__title" id="alltag-title">
+              <span>Eigentlich ganz einfach.</span>
+              <span>Wenn man weiß, wie.</span>
+            </h2>
+            <p class="section__lead">
+              Viele Dinge im digitalen Alltag erscheinen selbstverständlich. Bis Sprache, Unsicherheit oder fehlende digitale Erfahrung daraus eine Hürde machen.
+            </p>
           </div>
-          <div class="footer-copy">
-            © 2026 digibeg – Digital begleitet verbunden mit 🧡
+
+          <ol class="situations">
+            <li class="situation">
+              <div class="situation__inner">
+                <span class="situation__num" aria-hidden="true">01</span>
+                <div>
+                  <h3 class="situation__q">„Was wollen die eigentlich von mir?“</h3>
+                  <p class="situation__a">Brief oder Dokument fotografieren. digibeg erklärt verständlich, worum es geht.</p>
+                </div>
+              </div>
+            </li>
+            <li class="situation">
+              <div class="situation__inner">
+                <span class="situation__num" aria-hidden="true">02</span>
+                <div>
+                  <h3 class="situation__q">„Kannst du mir das übersetzen?“</h3>
+                  <p class="situation__a">Sprechen, schreiben oder fotografieren. digibeg hilft beim Übersetzen und Verstehen.</p>
+                </div>
+              </div>
+            </li>
+            <li class="situation">
+              <div class="situation__inner">
+                <span class="situation__num" aria-hidden="true">03</span>
+                <div>
+                  <h3 class="situation__q">„Erinnere mich am Dienstag daran.“</h3>
+                  <p class="situation__a">Termine und Erinnerungen einfach per Sprache oder Text organisieren.</p>
+                </div>
+              </div>
+            </li>
+            <li class="situation">
+              <div class="situation__inner">
+                <span class="situation__num" aria-hidden="true">04</span>
+                <div>
+                  <h3 class="situation__q">„Was muss ich jetzt tun?“</h3>
+                  <p class="situation__a">Fragen stellen und den nächsten Schritt besser verstehen.</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PRODUKT ERLEBEN -->
+      <section class="section flow" id="produkt" aria-labelledby="flow-title">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <p class="eyebrow">So funktioniert es</p>
+            <h2 class="section__title" id="flow-title">Von der Frage zur nächsten Handlung.</h2>
+            <p class="section__lead">Ein Beispiel: ein Brief von der Krankenkasse.</p>
+          </div>
+
+          <div class="flow__layout">
+            <div class="flow__stage">
+              <div class="phone">
+                <div class="phone__screen">
+                  <picture class="flow__shot is-active">
+                    <source srcset="assets/screens/flow-dokumente-640.webp" type="image/webp" />
+                    <img src="assets/screens/flow-dokumente-640.jpg" alt="Schritt 1 in der App: Bildschirm „Dokumente“ mit den Buttons zum Hochladen und Fotografieren sowie einem gespeicherten Versicherungsbescheid" width="640" height="1404" loading="lazy" decoding="async" />
+                  </picture>
+                  <picture class="flow__shot">
+                    <source srcset="assets/screens/flow-analyse-640.webp" type="image/webp" />
+                    <img src="assets/screens/flow-analyse-640.jpg" alt="Schritt 2 in der App: Der Versicherungsbescheid ist erklärt, mit Hinweis „Dringend zu beachten“, Zahlungsbetrag, Empfänger, nächsten Schritten und einem Vorlesen-Button" width="640" height="1409" loading="lazy" decoding="async" />
+                  </picture>
+                  <picture class="flow__shot">
+                    <source srcset="assets/screens/flow-assistent-640.webp" type="image/webp" />
+                    <img src="assets/screens/flow-assistent-640.jpg" alt="Schritt 3 in der App: Chat mit dem Assistenten, eine tägliche Erinnerung wurde per Nachricht angelegt, darunter Vorschläge wie „Wie funktioniert die Übersetzung?“" width="640" height="1328" loading="lazy" decoding="async" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <ol class="flow__steps">
+              <li class="flow__step is-active" data-step="1">
+                <div class="flow__text">
+                  <span class="flow__label">Schritt 1</span>
+                  <h3 class="flow__title">Dokument fotografieren oder hochladen.</h3>
+                  <p class="flow__desc">Ein Foto mit der Kamera genügt. Oder eine Datei, die schon auf dem Gerät liegt.</p>
+                </div>
+                <div class="flow__inline">
+                  <div class="phone">
+                    <div class="phone__screen">
+                      <picture>
+                        <source srcset="assets/screens/flow-dokumente-640.webp" type="image/webp" />
+                        <img src="assets/screens/flow-dokumente-640.jpg" alt="Bildschirm „Dokumente“ in der App mit den Buttons zum Hochladen und Fotografieren sowie einem gespeicherten Versicherungsbescheid" width="640" height="1404" loading="lazy" decoding="async" />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="flow__step" data-step="2">
+                <div class="flow__text">
+                  <span class="flow__label">Schritt 2</span>
+                  <h3 class="flow__title">digibeg erklärt, worum es geht und was wichtig ist.</h3>
+                  <p class="flow__desc">Verständlich zusammengefasst: Was steht drin, was ist zu zahlen, bis wann, und was sind die nächsten Schritte. Auf Wunsch wird alles vorgelesen.</p>
+                </div>
+                <div class="flow__inline">
+                  <div class="phone">
+                    <div class="phone__screen">
+                      <picture>
+                        <source srcset="assets/screens/flow-analyse-640.webp" type="image/webp" />
+                        <img src="assets/screens/flow-analyse-640.jpg" alt="Der Versicherungsbescheid ist in der App erklärt, mit Hinweis „Dringend zu beachten“, Zahlungsbetrag, Empfänger, nächsten Schritten und einem Vorlesen-Button" width="640" height="1409" loading="lazy" decoding="async" />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="flow__step" data-step="3">
+                <div class="flow__text">
+                  <span class="flow__label">Schritt 3</span>
+                  <h3 class="flow__title">Weiterfragen, vorlesen lassen, übersetzen, dranbleiben.</h3>
+                  <p class="flow__desc">Danach lassen sich Inhalte vorlesen oder übersetzen. Erkannte Termine und Fristen können geprüft und in die Terminplanung übernommen werden.</p>
+                </div>
+                <div class="flow__inline">
+                  <div class="phone">
+                    <div class="phone__screen">
+                      <picture>
+                        <source srcset="assets/screens/flow-assistent-640.webp" type="image/webp" />
+                        <img src="assets/screens/flow-assistent-640.jpg" alt="Chat mit dem Assistenten in der App: Eine tägliche Erinnerung wurde per Nachricht angelegt, darunter Vorschläge wie „Wie funktioniert die Übersetzung?“" width="640" height="1328" loading="lazy" decoding="async" />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
-        <img src="favicon.jpg" alt="digibeg Logo" class="footer-logo" />
+      </section>
+
+      <!-- MEHRSPRACHIGKEIT -->
+      <section class="section lang" id="sprache" aria-labelledby="lang-title">
+        <div class="container lang__inner">
+          <div class="lang__copy">
+            <p class="eyebrow">Sprache</p>
+            <h2 class="section__title" id="lang-title">Verstehen kennt keine Sprache.</h2>
+            <p class="lang__kern">
+              <span>digibeg übersetzt nicht nur Wörter.</span>
+              <span>Es hilft dabei, Inhalte zu verstehen.</span>
+            </p>
+            <p class="lang__note">
+              Die App gibt es in 15 Sprachen. Eine Frage, die überall gleich klingt – und überall eine verständliche Antwort bekommt.
+            </p>
+          </div>
+
+          <div class="lang__stage" aria-label="Dieselbe Frage in den 15 Sprachen der App" role="group">
+            <ul class="lang__list">
+            <li class="lang__item is-active" lang="de">
+              <span class="lang__name">Deutsch</span>
+              <span class="lang__q">Was bedeutet dieser Brief?</span>
+            </li>
+            <li class="lang__item" lang="en">
+              <span class="lang__name">English</span>
+              <span class="lang__q">What does this letter mean?</span>
+            </li>
+            <li class="lang__item" lang="tr">
+              <span class="lang__name">Türkçe</span>
+              <span class="lang__q">Bu mektup ne anlama geliyor?</span>
+            </li>
+            <li class="lang__item" lang="uk">
+              <span class="lang__name">Українська</span>
+              <span class="lang__q">Що означає цей лист?</span>
+            </li>
+            <li class="lang__item" lang="ar" dir="rtl">
+              <span class="lang__name">العربية</span>
+              <span class="lang__q">ماذا تعني هذه الرسالة؟</span>
+            </li>
+            <li class="lang__item" lang="ru">
+              <span class="lang__name">Русский</span>
+              <span class="lang__q">Что означает это письмо?</span>
+            </li>
+            </ul>
+            <details class="lang__more" open>
+              <summary>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                <span class="when-closed">9 weitere Sprachen</span><span class="when-open">Weniger Sprachen anzeigen</span>
+              </summary>
+              <ul class="lang__list">
+            <li class="lang__item" lang="pl">
+              <span class="lang__name">Polski</span>
+              <span class="lang__q">Co oznacza ten list?</span>
+            </li>
+            <li class="lang__item" lang="el">
+              <span class="lang__name">Ελληνικά</span>
+              <span class="lang__q">Τι σημαίνει αυτή η επιστολή;</span>
+            </li>
+            <li class="lang__item" lang="sq">
+              <span class="lang__name">Shqip</span>
+              <span class="lang__q">Çfarë do të thotë kjo letër?</span>
+            </li>
+            <li class="lang__item" lang="it">
+              <span class="lang__name">Italiano</span>
+              <span class="lang__q">Cosa significa questa lettera?</span>
+            </li>
+            <li class="lang__item" lang="hr">
+              <span class="lang__name">Hrvatski</span>
+              <span class="lang__q">Što znači ovo pismo?</span>
+            </li>
+            <li class="lang__item" lang="vi">
+              <span class="lang__name">Tiếng Việt</span>
+              <span class="lang__q">Lá thư này có nghĩa là gì?</span>
+            </li>
+            <li class="lang__item" lang="fr">
+              <span class="lang__name">Français</span>
+              <span class="lang__q">Que signifie cette lettre ?</span>
+            </li>
+            <li class="lang__item" lang="es">
+              <span class="lang__name">Español</span>
+              <span class="lang__q">¿Qué significa esta carta?</span>
+            </li>
+            <li class="lang__item" lang="ro">
+              <span class="lang__name">Română</span>
+              <span class="lang__q">Ce înseamnă această scrisoare?</span>
+            </li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- SELBSTSTÄNDIGKEIT -->
+      <section class="section calm" id="fuer-wen" aria-labelledby="calm-title">
+        <div class="container calm__inner">
+          <h2 class="section__title" id="calm-title">Unterstützung, ohne Selbstständigkeit zu nehmen.</h2>
+          <div class="calm__rule" aria-hidden="true"></div>
+          <p class="calm__kern">
+            <span>Manchmal braucht man Hilfe.</span>
+            <span>Aber nicht jedes Mal einen Menschen, den man anrufen muss.</span>
+          </p>
+          <p class="calm__text">digibeg hilft dort, wo eine kleine Unsicherheit sonst zu einer großen Hürde werden kann.</p>
+          <p class="calm__text">Damit Menschen Dinge selbst verstehen, organisieren und erledigen können – in ihrem eigenen Tempo.</p>
+        </div>
+      </section>
+
+      <!-- ANGEHÖRIGE & BEGLEITER -->
+      <section class="section care" id="angehoerige" aria-labelledby="care-title">
+        <div class="container care__inner">
+          <div class="care__copy">
+            <img class="care__mark" src="favicon.jpg" alt="" width="56" height="56" loading="lazy" />
+            <p class="eyebrow">Angehörige &amp; Begleiter</p>
+            <h2 class="section__title" id="care-title">Sicherheit ohne Überwachung.</h2>
+            <p class="care__kern">
+              <span>Angehörige wollen nicht überwachen.</span>
+              <span>Sie wollen wissen, dass wichtige Dinge erledigt sind.</span>
+            </p>
+            <p class="care__text">digibeg kann Angehörige und Begleiter dort einbeziehen, wo Unterstützung gewünscht ist. Nicht mehr, nicht weniger.</p>
+            <ul class="care__facts" aria-label="So funktioniert Begleitung in digibeg">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                <span>Jeder wählt beim Start selbst: <strong>Für mich selbst</strong> oder <strong>Ich begleite jemanden</strong>.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                <span>Wer begleitet wird, lädt selbst ein und kann die Verbindung jederzeit wieder trennen.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                <span>Begleiter sehen die Erinnerungen des Tages und können sie als erledigt markieren.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="care__visual">
+            <div class="phone">
+              <div class="phone__screen">
+                <picture>
+                  <source srcset="assets/screens/care-rollen-640.webp" type="image/webp" />
+                  <img src="assets/screens/care-rollen-640.jpg" alt="Rollenauswahl in der App: „Wie möchten Sie digibeg nutzen?“ mit den beiden Optionen „Für mich selbst“ und „Ich begleite jemanden“" width="640" height="1412" loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            </div>
+            <p class="care__caption">Zwei Wege, eine App: eigener Alltag oder Begleitung einer anderen Person.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUKTBREITE -->
+      <section class="section breadth" id="funktionen" aria-labelledby="breadth-title">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section__title" id="breadth-title">Ein Begleiter für den digitalen Alltag.</h2>
+            <p class="section__lead">Verstehen, organisieren, kommunizieren und verbunden bleiben – an einem Ort.</p>
+          </div>
+
+          <ul class="abilities">
+            <li class="ability">
+              <h3 class="ability__name">Verstehen</h3>
+              <p class="ability__sum">Briefe, Dokumente und Fragen – erklärt in Worten, die man versteht.</p>
+              <details>
+                <summary>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  <span class="when-closed">Beispiele anzeigen</span><span class="when-open">Beispiele ausblenden</span>
+                </summary>
+                <ul class="ability__list">
+                  <li>Briefe und Dokumente</li>
+                  <li>Fragen stellen</li>
+                  <li>Verständliche Erklärungen</li>
+                </ul>
+              </details>
+            </li>
+            <li class="ability">
+              <h3 class="ability__name">Organisieren</h3>
+              <p class="ability__sum">Termine, Erinnerungen und Aufgaben, die nicht untergehen.</p>
+              <details>
+                <summary>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  <span class="when-closed">Beispiele anzeigen</span><span class="when-open">Beispiele ausblenden</span>
+                </summary>
+                <ul class="ability__list">
+                  <li>Termine</li>
+                  <li>Erinnerungen, zum Beispiel an Medikamente</li>
+                  <li>Aufgaben</li>
+                </ul>
+              </details>
+            </li>
+            <li class="ability">
+              <h3 class="ability__name">Kommunizieren</h3>
+              <p class="ability__sum">Sprechen statt tippen, vorlesen lassen, übersetzen.</p>
+              <details>
+                <summary>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  <span class="when-closed">Beispiele anzeigen</span><span class="when-open">Beispiele ausblenden</span>
+                </summary>
+                <ul class="ability__list">
+                  <li>Spracheingabe</li>
+                  <li>Übersetzung</li>
+                  <li>Vorlesen</li>
+                </ul>
+              </details>
+            </li>
+            <li class="ability">
+              <h3 class="ability__name">Verbunden bleiben</h3>
+              <p class="ability__sum">Angehörige und Begleiter einbeziehen, wenn es gewünscht ist.</p>
+              <details>
+                <summary>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                  <span class="when-closed">Beispiele anzeigen</span><span class="when-open">Beispiele ausblenden</span>
+                </summary>
+                <ul class="ability__list">
+                  <li>Angehörige</li>
+                  <li>Begleiter</li>
+                  <li>Unterstützende Zusammenarbeit</li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+
+          <p class="breadth__outro">Für einen Menschen sind das viele kleine Hürden weniger.</p>
+        </div>
+      </section>
+
+      <!-- PERSPEKTIVWECHSEL -->
+      <section class="section section--panel shift" id="perspektive" aria-labelledby="shift-title">
+        <div class="container shift__inner">
+          <p class="eyebrow">Ein Gedankenexperiment</p>
+          <h2 class="shift__title" id="shift-title">Und wenn 500 Menschen dieselben Fragen haben?</h2>
+          <p class="shift__text">Was für einen einzelnen Menschen eine kleine Hürde ist, kann für Einrichtungen zu vielen Rückfragen, Missverständnissen und zusätzlichen Betreuungsschritten führen.</p>
+        </div>
+        <span class="shift__mark" aria-hidden="true">500</span>
+      </section>
+
+      <!-- EINRICHTUNGEN -->
+      <section class="section org" id="einrichtungen" aria-labelledby="org-title">
+        <div class="container">
+          <div class="section__head">
+            <p class="eyebrow">Für Einrichtungen</p>
+            <h2 class="section__title" id="org-title">Digitale Teilhabe gemeinsam ermöglichen.</h2>
+            <p class="section__lead org__lead">digibeg unterstützt Menschen dabei, Informationen zu verstehen, Sprachbarrieren zu überwinden und ihren digitalen Alltag selbstständiger zu organisieren.</p>
+            <p class="section__lead org__lead">Das kann auch Einrichtungen helfen, wenn dieselben Alltagshürden immer wieder Unterstützung erfordern.</p>
+          </div>
+
+          <ul class="fields" aria-label="Anwendungsfelder">
+            <li class="field">
+              <h3 class="field__name">Migration &amp; Integration</h3>
+              <p class="field__when">Wenn Sprache und komplexe Informationen den Alltag erschweren.</p>
+            </li>
+            <li class="field">
+              <h3 class="field__name">Pflege &amp; Betreuung</h3>
+              <p class="field__when">Wenn Menschen bei Terminen, Erinnerungen, Dokumenten und Alltagsorganisation Unterstützung benötigen.</p>
+            </li>
+            <li class="field">
+              <h3 class="field__name">Soziale Träger</h3>
+              <p class="field__when">Wenn digitale Teilhabe Teil der täglichen Begleitung von Menschen ist.</p>
+            </li>
+            <li class="field">
+              <h3 class="field__name">Kommunen &amp; öffentliche Einrichtungen</h3>
+              <p class="field__when">Wenn Informationen verständlich bei Menschen ankommen sollen und Sprachbarrieren zusätzliche Rückfragen verursachen können.</p>
+            </li>
+          </ul>
+
+          <div class="stance">
+            <p>
+              <span>digibeg ersetzt keine Betreuung.</span>
+              <span>Es hilft Menschen, mehr selbst zu erledigen.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENTLASTUNG + KONTAKT -->
+      <section class="section relief" id="entlastung" aria-labelledby="relief-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title" id="relief-title">Mehr Selbstständigkeit kann auch Entlastung bedeuten.</h2>
+          </div>
+
+          <p class="relief__statement">Wenn Menschen <strong>Schreiben besser verstehen</strong>, <strong>Sprachbarrieren leichter überwinden</strong>, <strong>Termine und Erinnerungen selbst organisieren</strong> und <strong>alltägliche Fragen selbst klären</strong> können, <em class="relief__kann">kann</em> wiederkehrender Unterstützungsbedarf reduziert werden.</p>
+
+          <div class="contact">
+            <p class="contact__text">Sie möchten prüfen, ob digibeg zu Ihrem Einsatzbereich passt? Lassen Sie uns gemeinsam einen konkreten Anwendungsfall betrachten.</p>
+            <div class="contact__action">
+              <a class="btn btn--primary btn--large" href="mailto:info@digibeg.de?subject=Interesse%20an%20digibeg%20f%C3%BCr%20Einrichtungen">digibeg für Einrichtungen kennenlernen<span class="visually-hidden">, per E-Mail an info@digibeg.de</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VERTRAUEN -->
+      <section class="section trust" id="sicherheit" aria-labelledby="trust-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title" id="trust-title">Vertrauen ist Teil des Produkts.</h2>
+          </div>
+
+          <div class="trust__grid">
+            <div class="trust__anchor">
+              <img class="trust__mark" src="favicon.jpg" alt="digibeg-Signet: eine offene Hand, darüber ein Herz mit Funkwellen" width="512" height="512" loading="lazy" decoding="async" />
+              <p class="trust__note">Welche Dienste digibeg einsetzt und wie Daten verarbeitet werden, steht offen in der Datenschutzerklärung.</p>
+              <a class="btn btn--secondary" href="datenschutz.html">Mehr über Datenschutz</a>
+            </div>
+
+          <ul class="principles" aria-label="Grundsätze">
+            <li class="principle">
+              <h3 class="principle__name">Datenschutz</h3>
+              <p class="principle__text">Datenschutz und Datensicherheit werden bei digibeg von Anfang an mitgedacht.</p>
+            </li>
+            <li class="principle">
+              <h3 class="principle__name">Kontrolle</h3>
+              <p class="principle__text">Menschen entscheiden selbst, welche Unterstützung sie nutzen und wen sie einbeziehen.</p>
+            </li>
+            <li class="principle">
+              <h3 class="principle__name">Transparenz</h3>
+              <p class="principle__text">KI soll unterstützen und erklären – nicht unsichtbar über Menschen entscheiden.</p>
+            </li>
+            <li class="principle">
+              <h3 class="principle__name">Sicherheit</h3>
+              <p class="principle__text">Zugriffe und Datenübertragungen werden technisch geschützt, unter anderem durch verschlüsselte Verbindungen.</p>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HALTUNG -->
+      <section class="section section--panel manifesto" id="haltung" aria-labelledby="manifesto-title">
+        <div class="container manifesto__inner">
+          <h2 class="section__title" id="manifesto-title">
+            <span>Technologie sollte sich dem Menschen anpassen.</span>
+            <span>Nicht umgekehrt.</span>
+          </h2>
+          <p class="manifesto__text">Digitalisierung sollte den Alltag einfacher machen – nicht neue Hürden schaffen.</p>
+          <p class="manifesto__text">digibeg unterstützt Menschen dabei, digitale Informationen zu verstehen, Dinge selbst zu erledigen und Unterstützung genau dort zu bekommen, wo sie gebraucht wird.</p>
+        </div>
+      </section>
+
+      <!-- FINALER CTA -->
+      <section class="section final" id="ausprobieren" aria-labelledby="final-title">
+        <div class="container final__inner">
+          <h2 class="section__title" id="final-title">Einfach ausprobieren.</h2>
+          <p class="final__text">digibeg in Ruhe kennenlernen und einfach ausprobieren.</p>
+          <div class="final__actions">
+            <a class="btn btn--primary btn--large" href="https://app.digibeg.de/" target="_blank" rel="noopener">Kostenlos ausprobieren</a>
+          </div>
+          <ul class="store-badges" aria-label="digibeg in den App-Stores">
+            <li>
+              <a class="store-badge" href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener">
+                <img src="assets/apple-app-store-badge-de.svg" alt="digibeg im App Store laden" width="120" height="40" loading="lazy" />
+              </a>
+            </li>
+            <li>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener">
+                <img src="assets/google-play-badge-de.png" alt="digibeg bei Google Play laden" width="646" height="192" loading="lazy" />
+              </a>
+            </li>
+          </ul>
+          <p class="final__secondary"><a href="#einrichtungen">Für Einrichtungen</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-logo" href="#top" aria-label="digibeg – zum Seitenanfang">
+            <img class="site-logo__mark" src="favicon.jpg" alt="" width="36" height="36" loading="lazy" />
+            <span class="site-logo__word">digibeg</span>
+          </a>
+          <p class="site-footer__tagline">Digital begleitet verbunden mit <span aria-label="Herz" role="img">🧡</span></p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Fußzeile">
+          <div class="site-footer__group">
+            <p class="site-footer__title" id="footer-produkt">Produkt</p>
+            <ul aria-labelledby="footer-produkt">
+              <li><a href="#was-kann-digibeg">Was kann digibeg?</a></li>
+              <li><a href="#fuer-wen">Für Menschen</a></li>
+              <li><a href="#einrichtungen">Für Einrichtungen</a></li>
+              <li><a href="#sicherheit">Sicherheit</a></li>
+            </ul>
+          </div>
+          <div class="site-footer__group">
+            <p class="site-footer__title" id="footer-app">App</p>
+            <ul aria-labelledby="footer-app">
+              <li><a href="https://app.digibeg.de/" target="_blank" rel="noopener">Im Browser nutzen</a></li>
+              <li><a href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener">App Store</a></li>
+              <li><a href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener">Google Play</a></li>
+            </ul>
+          </div>
+          <div class="site-footer__group">
+            <p class="site-footer__title" id="footer-sprache">Sprache</p>
+            <ul aria-labelledby="footer-sprache">
+              <li><a href="index.html" lang="de" hreflang="de" aria-current="page">Deutsch</a></li>
+              <li><a href="index-en.html" lang="en" hreflang="en">English</a></li>
+            </ul>
+          </div>
+          <div class="site-footer__group">
+            <p class="site-footer__title" id="footer-rechtliches">Rechtliches</p>
+            <ul aria-labelledby="footer-rechtliches">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+              <li><a href="agb.html">AGB</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <p class="site-footer__copy">© 2026 digibeg</p>
       </div>
     </footer>
-
-    <script>
-      function initSlideshow(slidesId, dotsId, interval) {
-        const slides = document.querySelectorAll('#' + slidesId + ' .slide');
-        const dots = document.querySelectorAll('#' + dotsId + ' span');
-        if (!slides.length) return;
-        let current = 0;
-
-        function goTo(n) {
-          slides[current].classList.remove('active');
-          dots[current].classList.remove('active');
-          current = (n + slides.length) % slides.length;
-          slides[current].classList.add('active');
-          dots[current].classList.add('active');
-        }
-
-        dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetTimer(); }));
-
-        let timer = setInterval(() => goTo(current + 1), interval);
-        function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), interval); }
-      }
-
-      initSlideshow('mobile-slides', 'mobile-dots', 3000);
-      initSlideshow('web-slides', 'web-dots', 4000);
-
-      function showDemo(which) {
-        document.getElementById('panel-mobile').classList.toggle('active', which === 'mobile');
-        document.getElementById('panel-web').classList.toggle('active', which === 'web');
-        document.getElementById('btn-mobile').classList.toggle('active', which === 'mobile');
-        document.getElementById('btn-web').classList.toggle('active', which === 'web');
-      }
-
-      var sunSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>';
-      var moonSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-
-      function updateThemeIcon() {
-        var btn = document.getElementById('theme-toggle-btn');
-        if (!btn) return;
-        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        btn.innerHTML = isDark ? sunSVG : moonSVG;
-        btn.title = isDark ? 'Helles Design' : 'Dunkles Design';
-      }
-
-      function toggleTheme() {
-        var current = document.documentElement.getAttribute('data-theme') || 'dark';
-        var next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('digibeg-theme', next);
-        updateThemeIcon();
-      }
-
-      updateThemeIcon();
-    </script>
   </body>
 </html>
