@@ -1536,10 +1536,15 @@ html[lang="en"] .hero__title {
   font-weight: 650;
 }
 
-.relief__kann {
-  font-style: normal;
-  font-weight: 700;
-  color: var(--accent-ink);
+.relief__close {
+  max-width: 40rem;
+  margin-top: 1.5rem;
+  font-size: clamp(1.1875rem, 1.2vw + 0.6rem, 1.5rem);
+  line-height: 1.4;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-wrap: pretty;
 }
 
 .contact {
