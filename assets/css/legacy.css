@@ -1,0 +1,493 @@
+/* ============================================================
+   digibeg – LEGACY-Styles der V1-Sektionen (Features, Showcase,
+   Demo-Slideshow, Closing, Footer). Unverändert aus der alten
+   Inline-Fassung übernommen. Wird mit den Commits 2–5 des
+   Relaunch schrittweise entfernt. Nichts Neues hier ergänzen.
+   ============================================================ */
+
+.brand {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* CTA BUTTON */
+
+.cta {
+  display: inline-block;
+  padding: 1rem 2.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #1a1a1a;
+  box-shadow: 0 8px 24px rgba(251, 146, 60, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
+}
+
+/* STORE BADGES */
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.store-badges img {
+  height: 58px;
+  width: auto;
+  display: block;
+}
+/* FEATURES */
+
+.section-title {
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+  font-size: 2rem;
+}
+
+.features-section {
+  padding-top: 1rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.feature h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.feature p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+/* CLOSING */
+
+.closing {
+  text-align: center;
+  margin: 0 auto 0.5rem;
+  padding: 0 1rem 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.closing p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 2rem 1rem;
+  border-top: 1px solid #334155;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 1.3rem;
+  flex: 0 0 auto;
+}
+
+.footer-center {
+  flex: 1 1 auto;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: block;
+}
+
+footer .footer-links {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+footer .footer-links a {
+  color: #fb923c;
+  margin: 0 0.5rem;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-copy {
+  font-size: 12px;
+  color: #64748b;
+}
+/* ================= DEMO SECTION ================= */
+
+.demo-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0 0 2.5rem;
+  font-size: 2rem;
+}
+
+.demo-toggle {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.demo-toggle button {
+  padding: 0.55rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid #2a3a5c;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-toggle button:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.demo-toggle button.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #1a1a1a;
+}
+
+.demo-panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.demo-panel.active {
+  display: flex;
+}
+
+/* --- Phone mockup --- */
+.phone-frame {
+  width: 240px;
+  height: 490px;
+  background: #0a0f1c;
+  border: 2px solid #2a3a5c;
+  border-radius: 38px;
+  box-shadow:
+    0 0 0 6px #111c30,
+    0 0 0 8px #1e2d4a,
+    0 25px 60px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 10px 18px;
+  gap: 10px;
+  position: relative;
+}
+
+.phone-notch {
+  width: 70px;
+  height: 10px;
+  background: #1e2d4a;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.phone-screen {
+  flex: 1;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+}
+
+.phone-home {
+  width: 60px;
+  height: 4px;
+  background: #2a3a5c;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* --- Browser mockup --- */
+.browser-frame {
+  width: min(860px, 100%);
+  background: #0a0f1c;
+  border: 2px solid #2a3a5c;
+  border-radius: 14px;
+  box-shadow:
+    0 0 0 4px #111c30,
+    0 25px 60px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.browser-bar {
+  background: #111c30;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #1e2d4a;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2a3a5c;
+  display: block;
+}
+
+.browser-dots span:nth-child(1) { background: #ef4444; }
+.browser-dots span:nth-child(2) { background: #f59e0b; }
+.browser-dots span:nth-child(3) { background: #22c55e; }
+
+.browser-url {
+  flex: 1;
+  background: #0b1220;
+  border: 1px solid #1e2d4a;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.browser-screen {
+  width: 100%;
+  aspect-ratio: 16 / 7.5;
+  position: relative;
+  overflow: hidden;
+  background: #0b1220;
+}
+
+/* --- Shared slideshow --- */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b1220;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.slide-placeholder {
+  background: linear-gradient(135deg, #111c30 0%, #0f172a 100%);
+  border: 1px dashed #1e3a5f;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #2a3a5c;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.slide-placeholder::before {
+  content: "📸";
+  font-size: 1.8rem;
+  opacity: 0.4;
+}
+
+/* slide dots */
+.slide-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.slide-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2a3a5c;
+  display: block;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.slide-dots span.active {
+  background: var(--brand);
+}
+
+/* ================= MOBILE (Legacy) ================= */
+
+@media (max-width: 600px) {
+  .store-badges img {
+    height: 48px;
+  }
+
+  .section-title {
+    margin: 0 0 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .features {
+    gap: 1rem;
+  }
+
+  .feature {
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .feature h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature p {
+    font-size: 0.95rem;
+  }
+
+  .closing {
+    margin: 1rem 0 2rem;
+  }
+
+  .closing p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ===== LIGHT MODE (Legacy) ===== */
+
+[data-theme="light"] .feature {
+  border: 1px solid #e4e9f5;
+}
+
+[data-theme="light"] .demo-toggle button {
+  border-color: #d8dff0;
+}
+
+[data-theme="light"] .browser-bar {
+  background: #e4e9f5;
+  border-bottom-color: #d0d8ec;
+}
+
+[data-theme="light"] .browser-url {
+  background: #f4f6fb;
+  border-color: #d0d8ec;
+  color: #8899bb;
+}
+
+[data-theme="light"] footer {
+  background: #edf0f7;
+  border-top-color: #d8dff0;
+  color: #5a6a85;
+}
+
+[data-theme="light"] footer .footer-copy {
+  color: #8899bb;
+}
+
+/* ================= SHOWCASE ================= */
+
+.showcase-section {
+  text-align: center;
+  padding: 0 1.5rem 1.75rem;
+}
+
+.showcase-section > img {
+  display: block;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="light"] .showcase-section > img {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.showcase-section .cta {
+  margin-top: 2.5rem;
+}
+
+.showcase-section p {
+  margin: 1.75rem auto 0;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+@media (max-width: 600px) {
+  .showcase-section {
+    padding: 0 1rem 1.75rem;
+  }
+}

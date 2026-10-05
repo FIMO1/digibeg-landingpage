@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="favicon.jpg" />
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta name="theme-color" content="#f7f8fb" />
     <title>digibeg — KI-Assistent für Pflege, Senioren und Menschen mit Sprachbarrieren</title>
     <meta name="description" content="digibeg gibt Pflegekräften, Senioren und Menschen mit Sprachbarrieren ihre Stimme zurück — einfache KI-gestützte Sprachkommunikation die Dokumentation und Angehörigen-Updates in Sekunden erledigt." />
     <meta name="keywords" content="Pflege App, Senioren App, Sprachbarriere, KI Assistent, Pflegeorganisation, Sprachkommunikation, Angehörige" />
@@ -36,931 +31,258 @@
     <meta name="twitter:description" content="digibeg gibt Pflegekräften, Senioren und Menschen mit Sprachbarrieren ihre Stimme zurück — einfache KI-gestützte Sprachkommunikation die Dokumentation und Angehörigen-Updates in Sekunden erledigt." />
     <meta name="twitter:image" content="https://digibeg.de/og-image.png" />
 
-    <style>
-      :root {
-        --bg-main: #0b1220;
-        --bg-card: #121b2e;
-        --bg-elevated: #16213a;
-
-        --text-main: #e8ecf3;
-        --text-muted: #a6b0c3;
-
-        --brand: #fb923c;
-        --brand-soft: #fca458;
-
-        --radius: 18px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Ubuntu,
-          sans-serif;
-        background: var(--bg-main);
-        color: var(--text-main);
-        line-height: 1.6;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 2.5rem 1.5rem;
-      }
-
-      /* ================= HERO BANNER ================= */
-
-      .hero-banner {
-        position: relative;
-        margin: 2rem 1.5rem;
-        border-radius: var(--radius);
-        background:
-          linear-gradient(rgba(11, 18, 32, 0.5), rgba(11, 18, 32, 0.6)),
-          url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
-        background-size: cover;
-        background-position: center 20%;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-      }
-
-      .hero {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        padding: 4rem 1rem 3rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.2rem, 4vw, 3.2rem);
-        margin-bottom: 1rem;
-      }
-
-      .brand {
-        color: var(--brand);
-        font-weight: 700;
-      }
-
-      .hero-brand {
-        display: block;
-        font-size: 1.3em;
-        margin-top: 0.2rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        color: var(--text-muted);
-        max-width: 700px;
-        margin: 0 auto 2.5rem;
-      }
-
-      /* CTA BUTTON */
-
-      .cta {
-        display: inline-block;
-        padding: 1rem 2.6rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        border-radius: 999px;
-        background: var(--brand);
-        color: #1a1a1a;
-        box-shadow: 0 8px 24px rgba(251, 146, 60, 0.35);
-        transition:
-          transform 0.15s ease,
-          box-shadow 0.15s ease;
-        position: relative;
-        z-index: 10;
-        cursor: pointer;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-        touch-action: manipulation;
-      }
-
-      .cta:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 12px 30px rgba(251, 146, 60, 0.45);
-      }
-
-      /* STORE BADGES */
-
-      .store-badges {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 2.5rem;
-      }
-
-      .store-badges img {
-        height: 58px;
-        width: auto;
-        display: block;
-      }
-
-      /* TRUST */
-
-      .trust {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-      }
-
-      .trust div {
-        background: var(--bg-elevated);
-        border: 1px solid #223055;
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        text-align: center;
-        font-size: 0.95rem;
-        font-weight: 500;
-      }
-
-      /* FEATURES */
-
-      .section-title {
-        text-align: center;
-        margin: 3rem 0 1.5rem;
-        font-size: 2rem;
-      }
-
-      .features-section {
-        padding-top: 1rem;
-      }
-
-      .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2rem;
-      }
-
-      .feature {
-        background: var(--bg-card);
-        padding: 2rem;
-        border-radius: var(--radius);
-      }
-
-      .feature h3 {
-        margin-top: 0;
-        margin-bottom: 0.6rem;
-        font-size: 1.25rem;
-        color: var(--brand);
-        font-weight: 600;
-      }
-
-      .feature p {
-        color: var(--text-muted);
-        font-size: 1rem;
-      }
-
-      /* STEPS */
-
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-      }
-
-      .step {
-        background: var(--bg-card);
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        text-align: center;
-        font-weight: 500;
-      }
-
-      /* CLOSING */
-
-      .closing {
-        text-align: center;
-        margin: 0 auto 0.5rem;
-        padding: 0 1rem 0.5rem;
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .closing p {
-        font-size: 1.2rem;
-        color: var(--text-muted);
-        margin-bottom: 2rem;
-        text-align: center;
-        width: 100%;
-      }
-
-      footer {
-        background: #0f172a;
-        color: #94a3b8;
-        padding: 2rem 1rem;
-        border-top: 1px solid #334155;
-      }
-
-      .footer-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.25rem;
-        text-align: center;
-      }
-
-      .footer-brand {
-        font-size: 1.3rem;
-        flex: 0 0 auto;
-      }
-
-      .footer-center {
-        flex: 1 1 auto;
-      }
-
-      .footer-logo {
-        flex: 0 0 auto;
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        display: block;
-      }
-
-      footer .footer-links {
-        font-size: 14px;
-        margin-bottom: 0.5rem;
-      }
-
-      footer .footer-links a {
-        color: #fb923c;
-        margin: 0 0.5rem;
-      }
-
-      footer .footer-links a:hover {
-        text-decoration: underline;
-      }
-
-      footer .footer-copy {
-        font-size: 12px;
-        color: #64748b;
-      }
-
-      .lang-switch {
-        position: fixed;
-        top: 0.75rem;
-        right: 1rem;
-        z-index: 9999;
-        display: flex;
-        gap: 0.25rem;
-        background: rgba(15, 23, 42, 0.85);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        padding: 0.35rem 0.5rem;
-        border-radius: 10px;
-        border: 1px solid rgba(51, 65, 85, 0.6);
-        font-size: 14px;
-      }
-
-      .lang-switch a {
-        color: #94a3b8;
-        padding: 0.3rem 0.6rem;
-        border-radius: 6px;
-        transition: color 0.15s, background 0.15s;
-      }
-
-      .lang-switch a:hover {
-        color: #fb923c;
-      }
-
-      .lang-switch a.active {
-        color: #fb923c;
-        font-weight: 600;
-        background: rgba(251, 146, 60, 0.1);
-      }
-
-      /* ================= DEMO SECTION ================= */
-
-      .demo-section {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      .section-title {
-        text-align: center;
-        margin: 0 0 2.5rem;
-        font-size: 2rem;
-      }
-
-      .demo-toggle {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        margin-bottom: 2.5rem;
-      }
-
-      .demo-toggle button {
-        padding: 0.55rem 1.6rem;
-        border-radius: 999px;
-        border: 2px solid #2a3a5c;
-        background: transparent;
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .demo-toggle button:hover {
-        border-color: var(--brand);
-        color: var(--brand);
-      }
-
-      .demo-toggle button.active {
-        background: var(--brand);
-        border-color: var(--brand);
-        color: #1a1a1a;
-      }
-
-      .demo-panel {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .demo-panel.active {
-        display: flex;
-      }
-
-      /* --- Phone mockup --- */
-      .phone-frame {
-        width: 240px;
-        height: 490px;
-        background: #0a0f1c;
-        border: 2px solid #2a3a5c;
-        border-radius: 38px;
-        box-shadow:
-          0 0 0 6px #111c30,
-          0 0 0 8px #1e2d4a,
-          0 25px 60px rgba(0,0,0,0.6);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 14px 10px 18px;
-        gap: 10px;
-        position: relative;
-      }
-
-      .phone-notch {
-        width: 70px;
-        height: 10px;
-        background: #1e2d4a;
-        border-radius: 999px;
-        flex-shrink: 0;
-      }
-
-      .phone-screen {
-        flex: 1;
-        width: 100%;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        background: #0f172a;
-      }
-
-      .phone-home {
-        width: 60px;
-        height: 4px;
-        background: #2a3a5c;
-        border-radius: 999px;
-        flex-shrink: 0;
-      }
-
-      /* --- Browser mockup --- */
-      .browser-frame {
-        width: min(860px, 100%);
-        background: #0a0f1c;
-        border: 2px solid #2a3a5c;
-        border-radius: 14px;
-        box-shadow:
-          0 0 0 4px #111c30,
-          0 25px 60px rgba(0,0,0,0.5);
-        overflow: hidden;
-      }
-
-      .browser-bar {
-        background: #111c30;
-        padding: 10px 14px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-bottom: 1px solid #1e2d4a;
-      }
-
-      .browser-dots {
-        display: flex;
-        gap: 5px;
-        flex-shrink: 0;
-      }
-
-      .browser-dots span {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #2a3a5c;
-        display: block;
-      }
-
-      .browser-dots span:nth-child(1) { background: #ef4444; }
-      .browser-dots span:nth-child(2) { background: #f59e0b; }
-      .browser-dots span:nth-child(3) { background: #22c55e; }
-
-      .browser-url {
-        flex: 1;
-        background: #0b1220;
-        border: 1px solid #1e2d4a;
-        border-radius: 6px;
-        padding: 4px 12px;
-        font-size: 0.78rem;
-        color: #64748b;
-        text-align: center;
-      }
-
-      .browser-screen {
-        width: 100%;
-        aspect-ratio: 16 / 7.5;
-        position: relative;
-        overflow: hidden;
-        background: #0b1220;
-      }
-
-      /* --- Shared slideshow --- */
-      .slideshow {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-
-      .slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: opacity 0.7s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0b1220;
-      }
-
-      .slide.active {
-        opacity: 1;
-      }
-
-      .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-      }
-
-      .slide-placeholder {
-        background: linear-gradient(135deg, #111c30 0%, #0f172a 100%);
-        border: 1px dashed #1e3a5f;
-        flex-direction: column;
-        gap: 0.5rem;
-        color: #2a3a5c;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.05em;
-      }
-
-      .slide-placeholder::before {
-        content: "📸";
-        font-size: 1.8rem;
-        opacity: 0.4;
-      }
-
-      /* slide dots */
-      .slide-dots {
-        display: flex;
-        gap: 6px;
-        justify-content: center;
-      }
-
-      .slide-dots span {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #2a3a5c;
-        display: block;
-        transition: background 0.3s;
-        cursor: pointer;
-      }
-
-      .slide-dots span.active {
-        background: var(--brand);
-      }
-
-      /* ================= MOBILE OPTIMIERUNG ================= */
-
-      @media (max-width: 600px) {
-        .hero-banner {
-          margin: 0;
-          border-radius: 0;
-        }
-
-        .hero {
-          padding: 2rem 1rem 1.5rem;
-        }
-
-        .hero h1 {
-          font-size: 1.8rem;
-          margin-bottom: 0.75rem;
-        }
-
-        .hero p {
-          font-size: 1rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .cta {
-          padding: 0.85rem 2rem;
-          font-size: 1rem;
-        }
-
-        .store-badges img {
-          height: 48px;
-        }
-
-        .trust {
-          gap: 0.75rem;
-          margin-top: 1.5rem;
-        }
-
-        .trust div {
-          padding: 1rem;
-          font-size: 0.9rem;
-        }
-
-        .container {
-          padding: 1.5rem 1rem;
-        }
-
-        .section-title {
-          margin: 0 0 1.5rem;
-          font-size: 1.5rem;
-        }
-
-        .features {
-          gap: 1rem;
-        }
-
-        .feature {
-          padding: 1.25rem;
-          text-align: center;
-        }
-
-        .feature h3 {
-          font-size: 1.1rem;
-        }
-
-        .feature p {
-          font-size: 0.95rem;
-        }
-
-        .steps {
-          gap: 0.75rem;
-          margin-top: 1.5rem;
-        }
-
-        .step {
-          padding: 1rem;
-          font-size: 0.95rem;
-        }
-
-        .closing {
-          margin: 1rem 0 2rem;
-        }
-
-        .closing p {
-          font-size: 1rem;
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      /* ===== LIGHT MODE ===== */
-
-      [data-theme="light"] {
-        --bg-main: #f4f6fb;
-        --bg-card: #ffffff;
-        --bg-elevated: #edf0f7;
-        --text-main: #1a2744;
-        --text-muted: #5a6a85;
-      }
-
-      [data-theme="light"] .hero-banner {
-        background:
-          linear-gradient(rgba(244, 246, 251, 0.62), rgba(244, 246, 251, 0.66)),
-          url("https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1600");
-        background-size: cover;
-        background-position: center 20%;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      }
-
-      [data-theme="light"] .trust div {
-        border-color: #d8dff0;
-      }
-
-      [data-theme="light"] .feature {
-        border: 1px solid #e4e9f5;
-      }
-
-      [data-theme="light"] .step {
-        border: 1px solid #e4e9f5;
-      }
-
-      [data-theme="light"] .demo-toggle button {
-        border-color: #d8dff0;
-      }
-
-      [data-theme="light"] .browser-bar {
-        background: #e4e9f5;
-        border-bottom-color: #d0d8ec;
-      }
-
-      [data-theme="light"] .browser-url {
-        background: #f4f6fb;
-        border-color: #d0d8ec;
-        color: #8899bb;
-      }
-
-      [data-theme="light"] footer {
-        background: #edf0f7;
-        border-top-color: #d8dff0;
-        color: #5a6a85;
-      }
-
-      [data-theme="light"] footer .footer-copy {
-        color: #8899bb;
-      }
-
-      [data-theme="light"] .lang-switch {
-        background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(210, 220, 240, 0.8);
-      }
-
-      [data-theme="light"] .lang-switch a {
-        color: #5a6a85;
-      }
-
-      [data-theme="light"] .lang-switch a.active {
-        color: #fb923c;
-        background: rgba(251, 146, 60, 0.08);
-      }
-
-      .theme-toggle {
-        background: none;
-        border: none;
-        border-left: 1px solid rgba(51, 65, 85, 0.4);
-        margin-left: 0.15rem;
-        padding: 0.3rem 0 0.3rem 0.55rem;
-        cursor: pointer;
-        color: #94a3b8;
-        display: flex;
-        align-items: center;
-        line-height: 1;
-        transition: color 0.15s;
-      }
-
-      .theme-toggle:hover {
-        color: #fb923c;
-      }
-
-      [data-theme="light"] .theme-toggle {
-        border-left-color: rgba(200, 210, 230, 0.6);
-        color: #5a6a85;
-      }
-
-      /* ================= SHOWCASE ================= */
-
-      .showcase-section {
-        text-align: center;
-        padding: 0 1.5rem 1.75rem;
-      }
-
-      .showcase-section > img {
-        display: block;
-        max-width: 560px;
-        width: 100%;
-        margin: 0 auto;
-        border-radius: var(--radius);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-      }
-
-      [data-theme="light"] .showcase-section > img {
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-      }
-
-      .showcase-section .cta {
-        margin-top: 2.5rem;
-      }
-
-      .showcase-section p {
-        margin: 1.75rem auto 0;
-        font-size: 1.05rem;
-        color: var(--text-muted);
-        max-width: 480px;
-      }
-
-      @media (max-width: 600px) {
-        .showcase-section {
-          padding: 0 1rem 1.75rem;
-        }
-      }
-    </style>
-  <script>(function(){var t=localStorage.getItem('digibeg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+    <!-- Theme vor dem ersten Rendern setzen (verhindert Flackern). Light ist Standard. -->
+    <script>
+      (function () {
+        var theme = 'light';
+        try {
+          var stored = localStorage.getItem('digibeg-theme');
+          if (stored === 'dark' || stored === 'light') { theme = stored; }
+        } catch (e) {}
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <!-- LEGACY (V1): Styles der alten Sektionen unterhalb des Heros. Entfällt mit Commit 2–5. -->
+    <link rel="stylesheet" href="assets/css/legacy.css" />
+    <script src="assets/js/site.js" defer></script>
   </head>
 
   <body>
-    <div class="lang-switch">
-      <a href="index.html" class="active">DE</a>
-      <a href="index-en.html">EN</a>
-      <button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle-btn"></button>
-    </div>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-    <!-- HERO -->
-    <section class="hero-banner">
-      <div class="hero container">
-        <h1><span class="brand hero-brand">digibeg</span></h1>
-        <p>
-          Ihr digitaler Begleiter für den Alltag.<br />
-          Einfach. Verständlich. In Ihrer Sprache.
-        </p>
+    <header class="site-header" id="top">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="#top" aria-label="digibeg – zum Seitenanfang">
+          <img class="site-logo__mark" src="favicon.jpg" alt="" width="36" height="36" />
+          <span class="site-logo__word">digibeg</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+          <ul class="site-nav__list">
+            <li><a href="#was-kann-digibeg">Was kann digibeg?</a></li>
+            <li><a href="#fuer-wen">Für wen?</a></li>
+            <li><a href="#einrichtungen">Für Einrichtungen</a></li>
+            <li><a href="#sicherheit">Sicherheit</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <a class="btn btn--ghost btn--small" href="https://app.digibeg.de/" target="_blank" rel="noopener">Anmelden</a>
+            <a class="btn btn--primary btn--small" href="https://app.digibeg.de/" target="_blank" rel="noopener">Kostenlos testen</a>
+            <div class="lang-switch" role="group" aria-label="Sprache der Website">
+              <span aria-current="page" lang="de">DE</span>
+              <a href="index-en.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+            </div>
+          </div>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dunkles Design aktivieren" data-label-light="Helles Design aktivieren" data-label-dark="Dunkles Design aktivieren">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen" data-label-open="Menü öffnen" data-label-close="Menü schließen">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span>Digitale Teilhabe.</span>
+              <span class="hero__title-accent">Einfach für alle.</span>
+            </h1>
+            <p class="hero__lead">
+              digibeg unterstützt Menschen dabei, ihren digitalen Alltag selbstständig zu bewältigen – verständlich, mehrsprachig und auf Wunsch gemeinsam mit Angehörigen oder Begleitern.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--large" href="https://app.digibeg.de/" target="_blank" rel="noopener">Kostenlos ausprobieren</a>
+              <a class="btn btn--secondary btn--large" href="#einrichtungen">Für Einrichtungen</a>
+            </div>
+            <ul class="hero__points" aria-label="Das zeichnet digibeg aus">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                Einfach verständlich
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                Mehrsprachig
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                Selbstständig im Alltag
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__stage" role="img" aria-label="Startbildschirm der digibeg-App mit dem großen Button „Einfach sprechen“ und einem Kamera-Symbol">
+            <div class="hero-phone" aria-hidden="true">
+              <div class="hero-phone__screen">
+                <img src="screenshots/mobile-4.jpg" alt="" width="1079" height="2250" fetchpriority="high" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           LEGACY (V1) – Die folgenden Sektionen stammen aus der alten
+           Website und werden in den Commits 2–5 des Relaunch durch die
+           neuen V2-Sektionen ersetzt. Hier nichts Neues ergänzen.
+           ============================================================ -->
+
+      <!-- FEATURES (Legacy) -->
+      <section class="container features-section">
+        <div class="features">
+          <div class="feature">
+            <h3>Briefe & Texte verstehen</h3>
+            <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach. Nie wieder Fristen verpassen oder Unsicherheiten bei Behördenschreiben.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Übersetzen & erklären</h3>
+            <p>Fremdsprache? Fragen, Inhalte und Dokumente werden übersetzt und verständlich erklärt. Sprachen verstehen war noch nie so einfach.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Termine & Erinnerungen</h3>
+            <p>digibeg merkt sich Termine und erinnert dich rechtzeitig. Mit Push-Nachrichten nie wieder etwas verpassen – digibeg weiß Bescheid.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Teilen, wenn du willst</h3>
+            <p>Inhalte freiwillig mit vertrauten Personen teilen. Entspannung für alle – ohne Überwachung.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Bedienung, die sich anpasst</h3>
+            <p>Easy Mode – einfach sprechen, vorlesen lassen oder lesen. Ob Rezepte, Rätsel oder ganz alltägliche Unterstützung – digibeg ist wie ein guter Freund.</p>
+          </div>
+
+          <div class="feature">
+            <h3>Ihre Daten sind sicher</h3>
+            <p>DSGVO-konform. Hosting auf deutschen Servern. Ihre Daten gehören nur Ihnen.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE (Legacy) -->
+      <section class="showcase-section">
+        <h2 class="section-title">digibeg in Aktion</h2>
+        <img src="assets/promo-showcase-de.jpg" alt="digibeg App im Einsatz: Chat mit dem KI-Assistenten, Vorlesen & Erklären, Termine im Blick, Fragen beantworten, mehr Selbstständigkeit" loading="lazy" />
+      </section>
+
+      <!-- DEMO (Legacy) -->
+      <section class="container demo-section">
+        <div class="demo-toggle">
+          <button id="btn-mobile" class="active" onclick="showDemo('mobile')">📱 Mobile</button>
+          <button id="btn-web" onclick="showDemo('web')">🖥️ Web</button>
+        </div>
+
+        <!-- Handy-Mockup -->
+        <div class="demo-panel active" id="panel-mobile">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="slideshow" id="mobile-slides">
+                <div class="slide active"><img src="screenshots/mobile-1.jpg" alt="Sprache wählen" /></div>
+                <div class="slide"><img src="screenshots/mobile-2.jpg" alt="Nutzungsart wählen" /></div>
+                <div class="slide"><img src="screenshots/mobile-12.jpg" alt="Willkommen" /></div>
+                <div class="slide"><img src="screenshots/mobile-3.jpg" alt="Home" /></div>
+                <div class="slide"><img src="screenshots/mobile-4.jpg" alt="Einfach sprechen" /></div>
+
+                <div class="slide"><img src="screenshots/mobile-9.jpg" alt="Assistent" /></div>
+                <div class="slide"><img src="screenshots/mobile-6.jpg" alt="Kalender" /></div>
+                <div class="slide"><img src="screenshots/mobile-8.jpg" alt="Kalender Termine" /></div>
+                <div class="slide"><img src="screenshots/mobile-11.jpg" alt="Kalender Erinnerungen" /></div>
+                <div class="slide"><img src="screenshots/mobile-7.jpg" alt="Dokumente verwalten" /></div>
+                <div class="slide"><img src="screenshots/mobile-10.jpg" alt="Dokument einfach erklärt" /></div>
+              </div>
+            </div>
+            <div class="phone-home"></div>
+          </div>
+          <div class="slide-dots" id="mobile-dots">
+            <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Browser-Mockup -->
+        <div class="demo-panel" id="panel-web">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">app.digibeg.de</div>
+            </div>
+            <div class="browser-screen">
+              <div class="slideshow" id="web-slides">
+                <div class="slide active"><img src="screenshots/web-1.jpg" alt="Easy Mode" /></div>
+                <div class="slide"><img src="screenshots/web-2.jpg" alt="Home" /></div>
+                <div class="slide"><img src="screenshots/web-3.jpg" alt="Assistent" /></div>
+                <div class="slide"><img src="screenshots/web-4.jpg" alt="Kalender" /></div>
+                <div class="slide"><img src="screenshots/web-5.jpg" alt="Dokumente" /></div>
+                <div class="slide"><img src="screenshots/web-6.jpg" alt="Dokument Analyse" /></div>
+                <div class="slide"><img src="screenshots/web-7.jpg" alt="Dashboard" /></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-dots" id="web-dots">
+            <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SHOWCASE CTA (Legacy) -->
+      <section class="showcase-section">
         <a
           href="https://app.digibeg.de/"
           class="cta"
           target="_blank"
           rel="noopener"
-          >Jetzt starten</a
+          >Kostenlos testen</a
         >
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="container features-section">
-      <div class="features">
-        <div class="feature">
-          <h3>Briefe & Texte verstehen</h3>
-          <p>Fotografiere einen Brief – digibeg erklärt ihn dir einfach. Nie wieder Fristen verpassen oder Unsicherheiten bei Behördenschreiben.</p>
+        <div class="store-badges">
+          <a href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener" aria-label="Im App Store laden">
+            <img src="assets/apple-app-store-badge-de.svg" alt="Im App Store laden" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener" aria-label="Jetzt bei Google Play">
+            <img src="assets/google-play-badge-de.png" alt="Jetzt bei Google Play" />
+          </a>
         </div>
+        <p>digibeg kennenlernen – einfach registrieren und los geht's</p>
+      </section>
 
-        <div class="feature">
-          <h3>Übersetzen & erklären</h3>
-          <p>Fremdsprache? Fragen, Inhalte und Dokumente werden übersetzt und verständlich erklärt. Sprachen verstehen war noch nie so einfach.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Termine & Erinnerungen</h3>
-          <p>digibeg merkt sich Termine und erinnert dich rechtzeitig. Mit Push-Nachrichten nie wieder etwas verpassen – digibeg weiß Bescheid.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Teilen, wenn du willst</h3>
-          <p>Inhalte freiwillig mit vertrauten Personen teilen. Entspannung für alle – ohne Überwachung.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Bedienung, die sich anpasst</h3>
-          <p>Easy Mode – einfach sprechen, vorlesen lassen oder lesen. Ob Rezepte, Rätsel oder ganz alltägliche Unterstützung – digibeg ist wie ein guter Freund.</p>
-        </div>
-
-        <div class="feature">
-          <h3>Ihre Daten sind sicher</h3>
-          <p>DSGVO-konform. Hosting auf deutschen Servern. Ihre Daten gehören nur Ihnen.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHOWCASE -->
-    <section class="showcase-section">
-      <h2 class="section-title">digibeg in Aktion</h2>
-      <img src="assets/promo-showcase-de.jpg" alt="digibeg App im Einsatz: Chat mit dem KI-Assistenten, Vorlesen & Erklären, Termine im Blick, Fragen beantworten, mehr Selbstständigkeit" loading="lazy" />
-    </section>
-
-    <!-- DEMO -->
-    <section class="container demo-section">
-      <div class="demo-toggle">
-        <button id="btn-mobile" class="active" onclick="showDemo('mobile')">📱 Mobile</button>
-        <button id="btn-web" onclick="showDemo('web')">🖥️ Web</button>
-      </div>
-
-      <!-- Handy-Mockup -->
-      <div class="demo-panel active" id="panel-mobile">
-        <div class="phone-frame">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="slideshow" id="mobile-slides">
-              <div class="slide active"><img src="screenshots/mobile-1.jpg" alt="Sprache wählen" /></div>
-              <div class="slide"><img src="screenshots/mobile-2.jpg" alt="Nutzungsart wählen" /></div>
-              <div class="slide"><img src="screenshots/mobile-12.jpg" alt="Willkommen" /></div>
-              <div class="slide"><img src="screenshots/mobile-3.jpg" alt="Home" /></div>
-              <div class="slide"><img src="screenshots/mobile-4.jpg" alt="Einfach sprechen" /></div>
-
-              <div class="slide"><img src="screenshots/mobile-9.jpg" alt="Assistent" /></div>
-              <div class="slide"><img src="screenshots/mobile-6.jpg" alt="Kalender" /></div>
-              <div class="slide"><img src="screenshots/mobile-8.jpg" alt="Kalender Termine" /></div>
-              <div class="slide"><img src="screenshots/mobile-11.jpg" alt="Kalender Erinnerungen" /></div>
-              <div class="slide"><img src="screenshots/mobile-7.jpg" alt="Dokumente verwalten" /></div>
-              <div class="slide"><img src="screenshots/mobile-10.jpg" alt="Dokument einfach erklärt" /></div>
-            </div>
-          </div>
-          <div class="phone-home"></div>
-        </div>
-        <div class="slide-dots" id="mobile-dots">
-          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-
-      <!-- Browser-Mockup -->
-      <div class="demo-panel" id="panel-web">
-        <div class="browser-frame">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">app.digibeg.de</div>
-          </div>
-          <div class="browser-screen">
-            <div class="slideshow" id="web-slides">
-              <div class="slide active"><img src="screenshots/web-1.jpg" alt="Easy Mode" /></div>
-              <div class="slide"><img src="screenshots/web-2.jpg" alt="Home" /></div>
-              <div class="slide"><img src="screenshots/web-3.jpg" alt="Assistent" /></div>
-              <div class="slide"><img src="screenshots/web-4.jpg" alt="Kalender" /></div>
-              <div class="slide"><img src="screenshots/web-5.jpg" alt="Dokumente" /></div>
-              <div class="slide"><img src="screenshots/web-6.jpg" alt="Dokument Analyse" /></div>
-              <div class="slide"><img src="screenshots/web-7.jpg" alt="Dashboard" /></div>
-            </div>
+      <!-- CLOSING (Legacy) -->
+      <section class="closing">
+        <div style="margin-top:0;padding:0 2rem;text-align:center;width:100%;box-sizing:border-box;">
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;align-items:center;">
+            <img src="https://flagcdn.com/w40/de.png" width="36" alt="Deutsch" title="Deutsch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/gb.png" width="36" alt="Englisch" title="Englisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/fr.png" width="36" alt="Französisch" title="Französisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/es.png" width="36" alt="Spanisch" title="Spanisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/tr.png" width="36" alt="Türkisch" title="Türkisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/ua.png" width="36" alt="Ukrainisch" title="Ukrainisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/ru.png" width="36" alt="Russisch" title="Russisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/pl.png" width="36" alt="Polnisch" title="Polnisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/gr.png" width="36" alt="Griechisch" title="Griechisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/al.png" width="36" alt="Albanisch" title="Albanisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/it.png" width="36" alt="Italienisch" title="Italienisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/hr.png" width="36" alt="Kroatisch" title="Kroatisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/vn.png" width="36" alt="Vietnamesisch" title="Vietnamesisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/sa.png" width="36" alt="Arabisch" title="Arabisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
+            <img src="https://flagcdn.com/w40/ro.png" width="36" alt="Rumänisch" title="Rumänisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
           </div>
         </div>
-        <div class="slide-dots" id="web-dots">
-          <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-      </div>
+      </section>
+    </main>
 
-    </section>
-
-    <!-- SHOWCASE CTA -->
-    <section class="showcase-section">
-      <a
-        href="https://app.digibeg.de/"
-        class="cta"
-        target="_blank"
-        rel="noopener"
-        >Kostenlos testen</a
-      >
-      <div class="store-badges">
-        <a href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener" aria-label="Im App Store laden">
-          <img src="assets/apple-app-store-badge-de.svg" alt="Im App Store laden" />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener" aria-label="Jetzt bei Google Play">
-          <img src="assets/google-play-badge-de.png" alt="Jetzt bei Google Play" />
-        </a>
-      </div>
-      <p>digibeg kennenlernen – einfach registrieren und los geht's</p>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div style="margin-top:0;padding:0 2rem;text-align:center;width:100%;box-sizing:border-box;">
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;align-items:center;">
-          <img src="https://flagcdn.com/w40/de.png" width="36" alt="Deutsch" title="Deutsch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/gb.png" width="36" alt="Englisch" title="Englisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/fr.png" width="36" alt="Französisch" title="Französisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/es.png" width="36" alt="Spanisch" title="Spanisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/tr.png" width="36" alt="Türkisch" title="Türkisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/ua.png" width="36" alt="Ukrainisch" title="Ukrainisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/ru.png" width="36" alt="Russisch" title="Russisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/pl.png" width="36" alt="Polnisch" title="Polnisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/gr.png" width="36" alt="Griechisch" title="Griechisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/al.png" width="36" alt="Albanisch" title="Albanisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/it.png" width="36" alt="Italienisch" title="Italienisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/hr.png" width="36" alt="Kroatisch" title="Kroatisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/vn.png" width="36" alt="Vietnamesisch" title="Vietnamesisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/sa.png" width="36" alt="Arabisch" title="Arabisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-          <img src="https://flagcdn.com/w40/ro.png" width="36" alt="Rumänisch" title="Rumänisch" style="border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.4);">
-        </div>
-      </div>
-    </section>
-
+    <!-- FOOTER (Legacy) -->
     <footer>
       <div class="footer-inner">
         <span class="footer-brand brand">digibeg</span>
@@ -978,57 +300,7 @@
       </div>
     </footer>
 
-    <script>
-      function initSlideshow(slidesId, dotsId, interval) {
-        const slides = document.querySelectorAll('#' + slidesId + ' .slide');
-        const dots = document.querySelectorAll('#' + dotsId + ' span');
-        if (!slides.length) return;
-        let current = 0;
-
-        function goTo(n) {
-          slides[current].classList.remove('active');
-          dots[current].classList.remove('active');
-          current = (n + slides.length) % slides.length;
-          slides[current].classList.add('active');
-          dots[current].classList.add('active');
-        }
-
-        dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetTimer(); }));
-
-        let timer = setInterval(() => goTo(current + 1), interval);
-        function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), interval); }
-      }
-
-      initSlideshow('mobile-slides', 'mobile-dots', 3000);
-      initSlideshow('web-slides', 'web-dots', 4000);
-
-      function showDemo(which) {
-        document.getElementById('panel-mobile').classList.toggle('active', which === 'mobile');
-        document.getElementById('panel-web').classList.toggle('active', which === 'web');
-        document.getElementById('btn-mobile').classList.toggle('active', which === 'mobile');
-        document.getElementById('btn-web').classList.toggle('active', which === 'web');
-      }
-
-      var sunSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>';
-      var moonSVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-
-      function updateThemeIcon() {
-        var btn = document.getElementById('theme-toggle-btn');
-        if (!btn) return;
-        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        btn.innerHTML = isDark ? sunSVG : moonSVG;
-        btn.title = isDark ? 'Helles Design' : 'Dunkles Design';
-      }
-
-      function toggleTheme() {
-        var current = document.documentElement.getAttribute('data-theme') || 'dark';
-        var next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('digibeg-theme', next);
-        updateThemeIcon();
-      }
-
-      updateThemeIcon();
-    </script>
+    <!-- LEGACY (V1): Slideshow-Script der alten Demo-Sektion. Entfällt mit Commit 2. -->
+    <script src="assets/js/legacy.js"></script>
   </body>
 </html>
