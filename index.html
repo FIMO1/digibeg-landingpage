@@ -291,7 +291,8 @@
             </p>
           </div>
 
-          <ul class="lang__list" aria-label="Dieselbe Frage in den 15 Sprachen der App">
+          <div class="lang__stage" aria-label="Dieselbe Frage in den 15 Sprachen der App" role="group">
+            <ul class="lang__list">
             <li class="lang__item is-active" lang="de">
               <span class="lang__name">Deutsch</span>
               <span class="lang__q">Was bedeutet dieser Brief?</span>
@@ -308,10 +309,21 @@
               <span class="lang__name">Українська</span>
               <span class="lang__q">Що означає цей лист?</span>
             </li>
+            <li class="lang__item" lang="ar" dir="rtl">
+              <span class="lang__name">العربية</span>
+              <span class="lang__q">ماذا تعني هذه الرسالة؟</span>
+            </li>
             <li class="lang__item" lang="ru">
               <span class="lang__name">Русский</span>
               <span class="lang__q">Что означает это письмо?</span>
             </li>
+            </ul>
+            <details class="lang__more" open>
+              <summary>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                <span class="when-closed">9 weitere Sprachen</span><span class="when-open">Weniger Sprachen anzeigen</span>
+              </summary>
+              <ul class="lang__list">
             <li class="lang__item" lang="pl">
               <span class="lang__name">Polski</span>
               <span class="lang__q">Co oznacza ten list?</span>
@@ -336,10 +348,6 @@
               <span class="lang__name">Tiếng Việt</span>
               <span class="lang__q">Lá thư này có nghĩa là gì?</span>
             </li>
-            <li class="lang__item" lang="ar" dir="rtl">
-              <span class="lang__name">العربية</span>
-              <span class="lang__q">ماذا تعني هذه الرسالة؟</span>
-            </li>
             <li class="lang__item" lang="fr">
               <span class="lang__name">Français</span>
               <span class="lang__q">Que signifie cette lettre ?</span>
@@ -352,14 +360,15 @@
               <span class="lang__name">Română</span>
               <span class="lang__q">Ce înseamnă această scrisoare?</span>
             </li>
-          </ul>
+              </ul>
+            </details>
+          </div>
         </div>
       </section>
 
       <!-- SELBSTSTÄNDIGKEIT -->
       <section class="section calm" id="fuer-wen" aria-labelledby="calm-title">
         <div class="container calm__inner">
-          <p class="eyebrow">Selbstständigkeit</p>
           <h2 class="section__title" id="calm-title">Unterstützung, ohne Selbstständigkeit zu nehmen.</h2>
           <div class="calm__rule" aria-hidden="true"></div>
           <p class="calm__kern">
@@ -417,7 +426,6 @@
       <section class="section breadth" id="funktionen" aria-labelledby="breadth-title">
         <div class="container">
           <div class="section__head section__head--center">
-            <p class="eyebrow">Was digibeg kann</p>
             <h2 class="section__title" id="breadth-title">Ein Begleiter für den digitalen Alltag.</h2>
             <p class="section__lead">Verstehen, organisieren, kommunizieren und verbunden bleiben – an einem Ort.</p>
           </div>
@@ -469,7 +477,7 @@
               </details>
             </li>
             <li class="ability">
-              <h3 class="ability__name">Verbinden</h3>
+              <h3 class="ability__name">Verbunden bleiben</h3>
               <p class="ability__sum">Angehörige und Begleiter einbeziehen, wenn es gewünscht ist.</p>
               <details>
                 <summary>
@@ -541,31 +549,15 @@
       <section class="section relief" id="entlastung" aria-labelledby="relief-title">
         <div class="container">
           <div class="section__head">
-            <p class="eyebrow">Entlastung</p>
             <h2 class="section__title" id="relief-title">Mehr Selbstständigkeit kann auch Entlastung bedeuten.</h2>
           </div>
 
-          <div class="relief__grid">
-            <div>
-              <p class="relief__if" id="relief-if">Wenn Menschen …</p>
-              <ul class="relief__list" aria-labelledby="relief-if">
-                <li>Schreiben besser verstehen,</li>
-                <li>Sprachbarrieren leichter überwinden,</li>
-                <li>Termine und Erinnerungen selbst organisieren,</li>
-                <li>alltägliche Fragen selbst klären können,</li>
-              </ul>
-            </div>
-            <div>
-              <p class="relief__then">… <strong>kann</strong> wiederkehrender Unterstützungsbedarf reduziert werden.</p>
-              <p class="relief__note">Bewusst „kann“: Das ist kein Versprechen, sondern eine Möglichkeit, die wir gemeinsam mit Einrichtungen an konkreten Fällen prüfen wollen.</p>
-            </div>
-          </div>
+          <p class="relief__statement">Wenn Menschen <strong>Schreiben besser verstehen</strong>, <strong>Sprachbarrieren leichter überwinden</strong>, <strong>Termine und Erinnerungen selbst organisieren</strong> und <strong>alltägliche Fragen selbst klären</strong> können, <em class="relief__kann">kann</em> wiederkehrender Unterstützungsbedarf reduziert werden.</p>
 
           <div class="contact">
             <p class="contact__text">Sie möchten prüfen, ob digibeg zu Ihrem Einsatzbereich passt? Lassen Sie uns gemeinsam einen konkreten Anwendungsfall betrachten.</p>
             <div class="contact__action">
-              <a class="btn btn--primary btn--large" href="mailto:info@digibeg.de?subject=Interesse%20an%20digibeg%20f%C3%BCr%20Einrichtungen">digibeg für Einrichtungen kennenlernen</a>
-              <p class="contact__hint">Öffnet eine E-Mail an info@digibeg.de</p>
+              <a class="btn btn--primary btn--large" href="mailto:info@digibeg.de?subject=Interesse%20an%20digibeg%20f%C3%BCr%20Einrichtungen">digibeg für Einrichtungen kennenlernen<span class="visually-hidden">, per E-Mail an info@digibeg.de</span></a>
             </div>
           </div>
         </div>
@@ -575,10 +567,15 @@
       <section class="section trust" id="sicherheit" aria-labelledby="trust-title">
         <div class="container">
           <div class="section__head">
-            <p class="eyebrow">Vertrauen</p>
             <h2 class="section__title" id="trust-title">Vertrauen ist Teil des Produkts.</h2>
-            <p class="section__lead">Vier Grundsätze, nach denen digibeg gebaut wird.</p>
           </div>
+
+          <div class="trust__grid">
+            <div class="trust__anchor">
+              <img class="trust__mark" src="favicon.jpg" alt="digibeg-Signet: eine offene Hand, darüber ein Herz mit Funkwellen" width="512" height="512" loading="lazy" decoding="async" />
+              <p class="trust__note">Welche Dienste digibeg einsetzt und wie Daten verarbeitet werden, steht offen in der Datenschutzerklärung.</p>
+              <a class="btn btn--secondary" href="datenschutz.html">Mehr über Datenschutz</a>
+            </div>
 
           <ul class="principles" aria-label="Grundsätze">
             <li class="principle">
@@ -598,10 +595,6 @@
               <p class="principle__text">Zugriffe und Datenübertragungen werden technisch geschützt, unter anderem durch verschlüsselte Verbindungen.</p>
             </li>
           </ul>
-
-          <div class="trust__foot">
-            <p class="trust__note">Welche Dienste digibeg einsetzt und wie Daten verarbeitet werden, steht offen in der Datenschutzerklärung.</p>
-            <a class="btn btn--secondary" href="datenschutz.html">Mehr über Datenschutz</a>
           </div>
         </div>
       </section>
@@ -609,7 +602,6 @@
       <!-- HALTUNG -->
       <section class="section section--panel manifesto" id="haltung" aria-labelledby="manifesto-title">
         <div class="container manifesto__inner">
-          <p class="eyebrow">Haltung</p>
           <h2 class="section__title" id="manifesto-title">
             <span>Technologie sollte sich dem Menschen anpassen.</span>
             <span>Nicht umgekehrt.</span>

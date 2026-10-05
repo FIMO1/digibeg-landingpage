@@ -195,13 +195,49 @@
   /* ---------- Sprache: ruhiger Wechsel der Hervorhebung ---------- */
 
   function initLanguages() {
-    var list = document.querySelector('.lang__list');
-    if (!list) {
+    var stage = document.querySelector('.lang__stage');
+    if (!stage) {
       return;
     }
-    var items = list.querySelectorAll('.lang__item');
+    var items = stage.querySelectorAll('.lang__item');
     if (items.length < 2) {
       return;
+    }
+    var list = stage;
+
+    /* Auf schmalen Screens sind nur die ersten Sprachen offen, der Rest
+       steckt in einem nativen <details>. Ohne JavaScript bleibt alles offen. */
+    var more = stage.querySelector('.lang__more');
+    var narrow = window.matchMedia('(max-width: 699.98px)');
+    function syncMore() {
+      if (!more) {
+        return;
+      }
+      if (narrow.matches) {
+        if (!more.hasAttribute('data-user-toggled')) {
+          more.open = false;
+        }
+      } else {
+        more.open = true;
+      }
+    }
+    if (more) {
+      more.addEventListener('toggle', function () {
+        if (narrow.matches) {
+          more.setAttribute('data-user-toggled', '');
+        }
+      });
+      syncMore();
+      if (typeof narrow.addEventListener === 'function') {
+        narrow.addEventListener('change', syncMore);
+      } else if (typeof narrow.addListener === 'function') {
+        narrow.addListener(syncMore);
+      }
+    }
+
+    function isVisible(el) {
+      /* Inhalte eines geschlossenen <details> gelten als unsichtbar */
+      return el.offsetParent !== null && !el.closest('details:not([open])');
     }
 
     var index = 0;
@@ -216,7 +252,11 @@
     }
 
     function tick() {
-      index = (index + 1) % items.length;
+      var guard = 0;
+      do {
+        index = (index + 1) % items.length;
+        guard++;
+      } while (!isVisible(items[index]) && guard <= items.length);
       highlight(index);
     }
 

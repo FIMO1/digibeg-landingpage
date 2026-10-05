@@ -857,12 +857,12 @@ body.nav-open .nav-backdrop {
 .flow__steps {
   counter-reset: step;
   display: grid;
-  gap: clamp(3rem, 7vw, 5rem);
+  gap: clamp(2.25rem, 5vw, 4rem);
 }
 
 .flow__step {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-items: center;
   text-align: center;
 }
@@ -896,7 +896,7 @@ body.nav-open .nav-backdrop {
 }
 
 .flow__inline {
-  width: min(16.5rem, 70vw);
+  width: min(13.5rem, 60vw);
 }
 
 .flow__shot {
@@ -1221,17 +1221,31 @@ body.nav-open .nav-backdrop {
 /* ---------- 7.3 Produktbreite: vier Fähigkeiten ---------- */
 
 .abilities {
+  position: relative;
   display: grid;
-  border-top: 1px solid var(--border);
+  gap: 2rem;
+  padding-left: 1.75rem;
+  border-left: 2px solid var(--border);
 }
 
 .ability {
-  padding-block: clamp(2rem, 4vw, 3rem);
-  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.ability::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.75rem - 6px);
+  top: 0.55em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg);
 }
 
 .ability__name {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
   line-height: 1;
   letter-spacing: -0.03em;
   font-weight: 750;
@@ -1258,9 +1272,9 @@ body.nav-open .nav-backdrop {
   border-radius: var(--radius-sm);
   list-style: none;
   cursor: pointer;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent-ink);
+  color: var(--text-subtle);
 }
 
 .ability summary::-webkit-details-marker {
@@ -1268,7 +1282,7 @@ body.nav-open .nav-backdrop {
 }
 
 .ability summary:hover {
-  color: var(--text);
+  color: var(--accent-ink);
 }
 
 .ability summary svg {
@@ -1317,10 +1331,45 @@ body.nav-open .nav-backdrop {
   text-wrap: balance;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 900px) {
   .abilities {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(2rem, 5vw, 5rem);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 clamp(1.5rem, 3vw, 2.5rem);
+    padding-left: 0;
+    padding-top: 2.5rem;
+    border-left: 0;
+  }
+
+  .abilities::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background: var(--border);
+  }
+
+  .ability {
+    --stair: 0rem;
+    margin-top: var(--stair);
+  }
+
+  .ability:nth-child(2) {
+    --stair: 2.5rem;
+  }
+
+  .ability:nth-child(3) {
+    --stair: 5rem;
+  }
+
+  .ability:nth-child(4) {
+    --stair: 7.5rem;
+  }
+
+  .ability::before {
+    left: 0;
+    top: calc(-2.5rem - var(--stair) - 4px);
   }
 }
 
@@ -1403,35 +1452,48 @@ body.nav-open .nav-backdrop {
 }
 
 .fields {
-  border-top: 1px solid var(--border);
-}
-
-.field {
   display: grid;
-  gap: 0.5rem;
-  padding-block: clamp(1.5rem, 3.5vw, 2.5rem);
-  border-bottom: 1px solid var(--border);
+  gap: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .field__name {
-  font-size: clamp(1.375rem, 2.2vw, 1.875rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  font-weight: 650;
+  font-size: clamp(1.875rem, 3.4vw, 3.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 750;
+  text-wrap: balance;
 }
 
 .field__when {
+  margin-top: 0.85rem;
+  max-width: 24rem;
   font-size: 1.0625rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: var(--text-muted);
-  max-width: 34rem;
 }
 
-@media (min-width: 760px) {
-  .field {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    column-gap: clamp(2rem, 5vw, 5rem);
-    align-items: start;
+@media (min-width: 900px) {
+  .fields {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    row-gap: clamp(3rem, 6vw, 5rem);
+  }
+
+  .field:nth-child(1) {
+    grid-column: 1 / span 6;
+  }
+
+  .field:nth-child(2) {
+    grid-column: 7 / span 6;
+    margin-top: clamp(3rem, 6vw, 5.5rem);
+  }
+
+  .field:nth-child(3) {
+    grid-column: 2 / span 6;
+  }
+
+  .field:nth-child(4) {
+    grid-column: 8 / span 5;
+    margin-top: clamp(3rem, 6vw, 5.5rem);
   }
 }
 
@@ -1461,54 +1523,24 @@ body.nav-open .nav-backdrop {
   border-bottom: 1px solid var(--border);
 }
 
-.relief__grid {
-  display: grid;
-  gap: 2.5rem;
-}
-
-.relief__if {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-size: 1.0625rem;
-  font-weight: 600;
+.relief__statement {
+  max-width: 46rem;
+  font-size: clamp(1.375rem, 1.9vw + 0.5rem, 2.125rem);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
   color: var(--text-muted);
+  text-wrap: pretty;
 }
 
-.relief__list li {
-  padding: 0.65rem 0 0.65rem 1.25rem;
-  border-left: 2px solid var(--border);
-  font-size: clamp(1.25rem, 1.6vw + 0.4rem, 1.75rem);
-  line-height: 1.3;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+.relief__statement strong {
+  color: var(--text);
+  font-weight: 650;
 }
 
-.relief__then {
-  font-size: clamp(1.25rem, 1.6vw + 0.4rem, 1.75rem);
-  line-height: 1.3;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-}
-
-.relief__then strong {
-  color: var(--accent-ink);
+.relief__kann {
+  font-style: normal;
   font-weight: 700;
-}
-
-.relief__note {
-  margin-top: 1.25rem;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 30rem;
-}
-
-@media (min-width: 900px) {
-  .relief__grid {
-    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
-    gap: clamp(3rem, 7vw, 7rem);
-    align-items: center;
-  }
+  color: var(--accent-ink);
 }
 
 .contact {
@@ -1529,11 +1561,6 @@ body.nav-open .nav-backdrop {
   display: grid;
   gap: 0.75rem;
   justify-items: start;
-}
-
-.contact__hint {
-  font-size: 0.9375rem;
-  color: var(--text-muted);
 }
 
 @media (min-width: 900px) {
@@ -1557,8 +1584,7 @@ body.nav-open .nav-backdrop {
 }
 
 .principle {
-  padding-top: 1.25rem;
-  border-top: 2px solid var(--border);
+  padding-top: 0;
 }
 
 .principle__name {
@@ -1581,30 +1607,42 @@ body.nav-open .nav-backdrop {
   }
 }
 
-@media (min-width: 1100px) {
-  .principles {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+.trust__grid {
+  display: grid;
+  gap: 3rem;
 }
 
-.trust__foot {
-  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+.trust__anchor {
   display: grid;
-  gap: 1.25rem;
-  align-items: center;
+  gap: 1.5rem;
+  justify-items: start;
+  align-content: start;
+}
+
+.trust__mark {
+  width: clamp(8rem, 14vw, 12rem);
+  height: auto;
+  border-radius: 24%;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-strong);
 }
 
 .trust__note {
-  max-width: 34rem;
+  max-width: 26rem;
   font-size: 1.0625rem;
   line-height: 1.6;
   color: var(--text-muted);
 }
 
 @media (min-width: 900px) {
-  .trust__foot {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 3rem;
+  .trust__grid {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+  }
+
+  .principles {
+    gap: 2.5rem 3rem;
   }
 }
 
@@ -1639,4 +1677,79 @@ body.nav-open .nav-backdrop {
 .manifesto__text strong {
   color: var(--panel-text);
   font-weight: 600;
+}
+
+/* ============================================================
+   9. Polish (Commit 4.5): Sprache mobil verdichtet
+   ============================================================ */
+
+.lang__stage {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.lang__more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(232, 236, 243, 0.25);
+  border-radius: var(--radius-pill);
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--panel-text);
+}
+
+.lang__more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang__more > summary:hover {
+  border-color: var(--orange-300);
+}
+
+.lang__more > summary svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.lang__more[open] > summary svg {
+  transform: rotate(45deg);
+}
+
+.lang__more .when-open {
+  display: none;
+}
+
+.lang__more[open] .when-open {
+  display: inline;
+}
+
+.lang__more[open] .when-closed {
+  display: none;
+}
+
+.lang__more[open] > summary {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 699.98px) {
+  .lang__item {
+    padding: 0.6rem 0.85rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .lang__more > summary {
+    display: none;
+  }
+
+  .lang__more > .lang__list {
+    margin-top: 0.25rem;
+  }
 }
