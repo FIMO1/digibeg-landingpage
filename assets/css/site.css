@@ -1539,6 +1539,10 @@ html[lang="en"] .hero__title {
     grid-column: 8 / span 5;
     margin-top: clamp(3rem, 6vw, 5.5rem);
   }
+
+  .field:nth-child(5) {
+    grid-column: 1 / span 6;
+  }
 }
 
 .stance {
