@@ -52,14 +52,6 @@
 
   /* Schrift */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
-
-  /* Aliase für Legacy-Sektionen (V1) – entfallen mit legacy.css */
-  --bg-main: var(--bg);
-  --bg-card: var(--surface);
-  --bg-elevated: var(--surface-2);
-  --text-main: var(--text);
-  --brand: var(--accent);
-  --brand-soft: var(--orange-400);
 }
 
 [data-theme="dark"] {
@@ -225,7 +217,6 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
   gap: 0.5rem;
   min-height: 3rem;
   padding: 0.75rem 1.5rem;
@@ -377,6 +368,10 @@ ol {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.site-nav__actions .btn {
+  white-space: nowrap;
 }
 
 .lang-switch {
@@ -1561,6 +1556,11 @@ body.nav-open .nav-backdrop {
   display: grid;
   gap: 0.75rem;
   justify-items: start;
+  min-width: 0;
+}
+
+.contact__action .btn {
+  max-width: 100%;
 }
 
 @media (min-width: 900px) {
@@ -1751,5 +1751,167 @@ body.nav-open .nav-backdrop {
 
   .lang__more > .lang__list {
     margin-top: 0.25rem;
+  }
+}
+
+/* ============================================================
+   10. Abschluss (Commit 5): finaler CTA und Footer
+   ============================================================ */
+
+.final {
+  text-align: center;
+  padding-block: clamp(4.5rem, 10vw, 8rem) clamp(3.5rem, 8vw, 6rem);
+}
+
+.final__inner {
+  max-width: 40rem;
+  margin-inline: auto;
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+
+.final .section__title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.final__text {
+  font-size: clamp(1.0625rem, 1.2vw + 0.6rem, 1.3125rem);
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.final__actions {
+  margin-top: 0.5rem;
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin-top: 0.25rem;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.25rem;
+  border-radius: 10px;
+}
+
+.store-badge img {
+  height: 2.75rem;
+  width: auto;
+}
+
+.final__secondary {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+.final__secondary a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.final__secondary a:hover {
+  color: var(--accent-ink);
+  text-decoration-color: currentColor;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 2rem;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem) 1.5rem;
+}
+
+.site-footer__brand {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.site-footer__brand .site-logo {
+  margin-right: 0;
+}
+
+.site-footer__tagline {
+  color: var(--text-muted);
+}
+
+.site-footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+}
+
+.site-footer__title {
+  margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.site-footer__group ul {
+  display: grid;
+}
+
+.site-footer__group a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--text-muted);
+  border-radius: 6px;
+}
+
+.site-footer__group a:hover {
+  color: var(--accent-ink);
+}
+
+.site-footer__group a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.site-footer__copy {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-subtle);
+}
+
+@media (min-width: 760px) {
+  .site-footer__nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    column-gap: clamp(2rem, 6vw, 6rem);
+  }
+
+  .site-footer__copy {
+    grid-column: 1 / -1;
   }
 }

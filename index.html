@@ -45,8 +45,6 @@
     </script>
 
     <link rel="stylesheet" href="assets/css/site.css" />
-    <!-- LEGACY (V1): Styles für CTA-Block und Footer. Entfällt mit Commit 5. -->
-    <link rel="stylesheet" href="assets/css/legacy.css" />
     <script src="assets/js/site.js" defer></script>
   </head>
 
@@ -611,45 +609,77 @@
         </div>
       </section>
 
-      <!-- ============================================================
-           LEGACY (V1) – CTA-Block mit Store-Badges. Wird mit Commit 5
-           durch den finalen CTA ersetzt. Hier nichts Neues ergänzen.
-           ============================================================ -->
-      <section class="showcase-section">
-        <a
-          href="https://app.digibeg.de/"
-          class="cta"
-          target="_blank"
-          rel="noopener"
-          >Kostenlos testen</a
-        >
-        <div class="store-badges">
-          <a href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener" aria-label="Im App Store laden">
-            <img src="assets/apple-app-store-badge-de.svg" alt="Im App Store laden" />
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener" aria-label="Jetzt bei Google Play">
-            <img src="assets/google-play-badge-de.png" alt="Jetzt bei Google Play" />
-          </a>
+      <!-- FINALER CTA -->
+      <section class="section final" id="ausprobieren" aria-labelledby="final-title">
+        <div class="container final__inner">
+          <h2 class="section__title" id="final-title">Einfach ausprobieren.</h2>
+          <p class="final__text">Lernen Sie digibeg in Ihrem eigenen Tempo kennen.</p>
+          <div class="final__actions">
+            <a class="btn btn--primary btn--large" href="https://app.digibeg.de/" target="_blank" rel="noopener">Kostenlos ausprobieren</a>
+          </div>
+          <ul class="store-badges" aria-label="digibeg in den App-Stores">
+            <li>
+              <a class="store-badge" href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener">
+                <img src="assets/apple-app-store-badge-de.svg" alt="digibeg im App Store laden" width="120" height="40" loading="lazy" />
+              </a>
+            </li>
+            <li>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener">
+                <img src="assets/google-play-badge-de.png" alt="digibeg bei Google Play laden" width="646" height="192" loading="lazy" />
+              </a>
+            </li>
+          </ul>
+          <p class="final__secondary"><a href="#einrichtungen">Für Einrichtungen</a></p>
         </div>
-        <p>digibeg kennenlernen – einfach registrieren und los geht's</p>
       </section>
     </main>
 
-    <!-- FOOTER (Legacy) -->
-    <footer>
-      <div class="footer-inner">
-        <span class="footer-brand brand">digibeg</span>
-        <div class="footer-center">
-          <div class="footer-links">
-            <a href="impressum.html">Impressum</a> |
-            <a href="datenschutz.html">Datenschutz</a> |
-            <a href="agb.html">AGB</a>
-          </div>
-          <div class="footer-copy">
-            © 2026 digibeg – Digital begleitet verbunden mit 🧡
-          </div>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-logo" href="#top" aria-label="digibeg – zum Seitenanfang">
+            <img class="site-logo__mark" src="favicon.jpg" alt="" width="36" height="36" loading="lazy" />
+            <span class="site-logo__word">digibeg</span>
+          </a>
+          <p class="site-footer__tagline">Digital begleitet verbunden mit <span aria-label="Herz" role="img">🧡</span></p>
         </div>
-        <img src="favicon.jpg" alt="digibeg Logo" class="footer-logo" />
+
+        <nav class="site-footer__nav" aria-label="Fußzeile">
+          <div class="site-footer__group">
+            <h2 class="site-footer__title" id="footer-produkt">Produkt</h2>
+            <ul aria-labelledby="footer-produkt">
+              <li><a href="#was-kann-digibeg">Was kann digibeg?</a></li>
+              <li><a href="#fuer-wen">Für Menschen</a></li>
+              <li><a href="#einrichtungen">Für Einrichtungen</a></li>
+              <li><a href="#sicherheit">Sicherheit</a></li>
+            </ul>
+          </div>
+          <div class="site-footer__group">
+            <h2 class="site-footer__title" id="footer-app">App</h2>
+            <ul aria-labelledby="footer-app">
+              <li><a href="https://app.digibeg.de/" target="_blank" rel="noopener">Im Browser nutzen</a></li>
+              <li><a href="https://apps.apple.com/de/app/id6761900575" target="_blank" rel="noopener">App Store</a></li>
+              <li><a href="https://play.google.com/store/apps/details?id=de.digibeg.app" target="_blank" rel="noopener">Google Play</a></li>
+            </ul>
+          </div>
+          <div class="site-footer__group">
+            <h2 class="site-footer__title" id="footer-sprache">Sprache</h2>
+            <ul aria-labelledby="footer-sprache">
+              <li><a href="index.html" lang="de" hreflang="de" aria-current="page">Deutsch</a></li>
+              <li><a href="index-en.html" lang="en" hreflang="en">English</a></li>
+            </ul>
+          </div>
+          <div class="site-footer__group">
+            <h2 class="site-footer__title" id="footer-rechtliches">Rechtliches</h2>
+            <ul aria-labelledby="footer-rechtliches">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+              <li><a href="agb.html">AGB</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <p class="site-footer__copy">© 2026 digibeg</p>
       </div>
     </footer>
   </body>
