@@ -27,6 +27,7 @@
   --border: #dde3ee;
   --border-strong: #b9c3d6;
   --text: var(--navy-900);
+  --heading: #1a2744;                  /* CI-Dunkelblau fuer Ueberschriften im Light Mode */
   --text-muted: #4a5872;
   --text-subtle: #6b7790;
   --accent: var(--orange-500);
@@ -63,6 +64,7 @@
   --border: var(--navy-600);
   --border-strong: #35466b;
   --text: #e8ecf3;
+  --heading: var(--text);
   --text-muted: #a6b0c3;
   --text-subtle: #7f8ca6;
   --accent-hover: var(--orange-400);
@@ -128,6 +130,7 @@ button {
 h1,
 h2,
 h3 {
+  color: var(--heading);
   margin: 0;
   font-weight: 700;
   line-height: 1.15;
@@ -810,12 +813,16 @@ html[lang="en"] .hero__title {
   font-variant-numeric: tabular-nums;
 }
 
+.section--panel :is(h1, h2, h3) {
+  color: var(--panel-text);
+}
+
 .situation__q {
   font-size: clamp(1.5rem, 3.2vw, 2.375rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
   font-weight: 650;
-  color: var(--text);
+  color: var(--heading);
 }
 
 .situation__a {
