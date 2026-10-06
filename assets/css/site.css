@@ -2167,3 +2167,54 @@ html[lang="en"] .hero__title {
     display: none;
   }
 }
+
+/* ============================================================
+   12. Foto-Hintergruende (Test): Selbststaendigkeit und Haltung
+   Fotos: Pexels (frei nutzbar), lokal gehostet, entsaettigt
+   und mit Farbschleier, damit der Text lesbar bleibt.
+   ============================================================ */
+
+.has-photo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.has-photo::before,
+.has-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.has-photo::before {
+  background-image: var(--photo);
+  background-size: cover;
+  background-position: var(--photo-pos, center);
+  filter: grayscale(1) contrast(1.05);
+}
+
+/* Light Mode: heller Schleier */
+.has-photo::after {
+  background: linear-gradient(rgba(247, 248, 251, 0.86), rgba(247, 248, 251, 0.9));
+}
+
+/* Dark Mode und Navy-Bloecke: dunkler Schleier mit leichtem Orange-Schimmer */
+[data-theme="dark"] .has-photo::after,
+.section--panel.has-photo::after {
+  background:
+    radial-gradient(120% 80% at 50% 110%, rgba(251, 146, 60, 0.14), transparent 60%),
+    linear-gradient(rgba(11, 18, 32, 0.84), rgba(11, 18, 32, 0.9));
+}
+
+.calm.has-photo {
+  --photo: url("../photos/support-together-1600.jpg");
+  --photo-pos: 50% 35%;
+}
+
+.manifesto.has-photo {
+  --photo: url("../photos/family-together-1600.jpg");
+  --photo-pos: 55% 40%;
+}
