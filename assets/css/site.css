@@ -1868,7 +1868,7 @@ html[lang="en"] .hero__title {
 }
 
 .store-badge img {
-  height: 2.75rem;
+  height: clamp(2.875rem, 1.5rem + 3vw, 3.5rem);
   width: auto;
 }
 
