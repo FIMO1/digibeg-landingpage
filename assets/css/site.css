@@ -26,15 +26,16 @@
   --surface-2: #eef1f7;
   --border: #dde3ee;
   --border-strong: #b9c3d6;
-  --text: var(--navy-900);
-  --heading: #1a2744;                  /* CI-Dunkelblau fuer Ueberschriften im Light Mode */
+  --navy-ink: #1a2744;                 /* CI-Dunkelblau fuer Text im Light Mode */
+  --text: var(--navy-ink);
+  --heading: var(--navy-ink);
   --text-muted: #4a5872;
   --text-subtle: #6b7790;
   --accent: var(--orange-500);
   --accent-hover: var(--orange-600);
   --accent-ink: var(--orange-500);     /* Orange als Textfarbe: CI-Orange in beiden Themes */
   --accent-display: var(--orange-500); /* CI-Orange für große Markenelemente (Hero-Akzent, Wortmarke) */
-  --on-accent: var(--navy-900);
+  --on-accent: var(--navy-ink);
   --focus: var(--navy-900);
   --panel: var(--navy-900);            /* große kontrastierende Navy-Flächen */
   --panel-2: var(--navy-700);
