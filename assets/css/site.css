@@ -1944,7 +1944,7 @@ html[lang="en"] .hero__title {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--orange-500);
 }
 
 .site-footer__group ul {
