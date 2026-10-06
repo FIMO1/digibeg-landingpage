@@ -2198,7 +2198,7 @@ html[lang="en"] .hero__title {
 
 /* Light Mode: heller Schleier */
 .has-photo::after {
-  background: linear-gradient(rgba(247, 248, 251, 0.86), rgba(247, 248, 251, 0.9));
+  background: linear-gradient(rgba(247, 248, 251, 0.74), rgba(247, 248, 251, 0.8));
 }
 
 /* Dark Mode und Navy-Bloecke: dunkler Schleier mit leichtem Orange-Schimmer */
@@ -2206,7 +2206,7 @@ html[lang="en"] .hero__title {
 .section--panel.has-photo::after {
   background:
     radial-gradient(120% 80% at 50% 110%, rgba(251, 146, 60, 0.14), transparent 60%),
-    linear-gradient(rgba(11, 18, 32, 0.84), rgba(11, 18, 32, 0.9));
+    linear-gradient(rgba(11, 18, 32, 0.68), rgba(11, 18, 32, 0.78));
 }
 
 .calm.has-photo {
