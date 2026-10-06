@@ -814,7 +814,8 @@ html[lang="en"] .hero__title {
   font-variant-numeric: tabular-nums;
 }
 
-.section--panel :is(h1, h2, h3) {
+.section--panel :is(h1, h2, h3),
+.lang :is(h1, h2, h3) {
   color: var(--panel-text);
 }
 
@@ -985,7 +986,7 @@ html[lang="en"] .hero__title {
 }
 
 .lang .eyebrow {
-  color: var(--orange-300);
+  color: var(--orange-500);
 }
 
 .lang__inner {
@@ -1046,7 +1047,7 @@ html[lang="en"] .hero__title {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(253, 186, 116, 0.85);
+  color: var(--orange-500);
 }
 
 .lang__q {
