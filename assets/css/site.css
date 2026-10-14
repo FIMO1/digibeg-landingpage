@@ -772,7 +772,8 @@ html[lang="en"] .hero__title {
 }
 
 .phone__screen img,
-.phone__screen picture {
+.phone__screen picture,
+.phone__screen video {
   display: block;
   width: 100%;
   height: 100%;

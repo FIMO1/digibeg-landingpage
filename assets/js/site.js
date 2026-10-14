@@ -313,9 +313,37 @@
     }
 
     highlight(0);
+  }  /* ---------- Hero-Video: bei reduzierter Bewegung nur Standbild ---------- */
+
+  function initHeroVideo() {
+    var video = document.querySelector('.hero-video');
+    if (!video) {
+      return;
+    }
+    function apply() {
+      if (reduceMotion.matches) {
+        video.removeAttribute('autoplay');
+        video.pause();
+        try { video.currentTime = 0; } catch (e) {}
+      } else {
+        var p = video.play();
+        if (p && typeof p.catch === 'function') {
+          p.catch(function () {});
+        }
+      }
+    }
+    apply();
+    if (typeof reduceMotion.addEventListener === 'function') {
+      reduceMotion.addEventListener('change', apply);
+    } else if (typeof reduceMotion.addListener === 'function') {
+      reduceMotion.addListener(apply);
+    }
   }
 
+
+
   initTheme();
+  initHeroVideo();
   initNav();
   initHeader();
   initFlow();
