@@ -2241,6 +2241,10 @@ html[lang="en"] .hero__title {
   border-bottom: 1px solid var(--border);
 }
 
+[data-theme="dark"] .seal {
+  background: var(--navy-900);
+}
+
 .seal__inner {
   display: grid;
   gap: 1.5rem;
