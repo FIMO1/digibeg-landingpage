@@ -2228,3 +2228,79 @@ html[lang="en"] .hero__title {
   --photo: url("../photos/family-together-1600.jpg");
   --photo-pos: 50% 35%;
 }
+
+/* ============================================================
+   13. BSFZ-Siegel: dezenter Vertrauensnachweis nach "Alltag"
+   Original-Siegel unveraendert auf weissem Grund.
+   ============================================================ */
+
+.seal {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.seal__inner {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+  max-width: 52rem;
+}
+
+.seal__badge {
+  width: clamp(7.5rem, 14vw, 9.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  flex-shrink: 0;
+}
+
+.seal__badge img,
+.seal__badge picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.seal__badge img {
+  transform: scale(1.45);
+}
+
+.seal__title {
+  font-size: clamp(1.375rem, 1.8vw + 0.6rem, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.seal__text {
+  margin-top: 0.6rem;
+  max-width: 34rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.seal__meta {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-subtle);
+}
+
+.seal .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 760px) {
+  .seal__inner {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(1.75rem, 4vw, 3rem);
+    justify-items: start;
+    align-items: center;
+    text-align: left;
+  }
+}
