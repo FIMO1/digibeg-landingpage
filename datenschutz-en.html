@@ -51,7 +51,7 @@
       <article class="container legal__article">
         <header class="legal__head">
           <h1>Privacy Policy</h1>
-          <p class="legal__meta">Last updated: 16 July 2026</p>
+          <p class="legal__meta">Last updated: 23 November 2026</p>
         </header>
 
 
@@ -67,78 +67,85 @@
     <h2>2. Data Collected and Processed</h2>
 
     <h2>2.1 Account Data (stored server-side)</h2>
-    <p>Email address, encrypted password, selected language, role (user / companion), subscription plan and credit balance (coins).</p>
+    <p>Email address, encrypted password, selected language, role (user / companion), subscription plan and credit balance (coins). This data is stored on our servers in Germany.</p>
 
     <h2>2.2 Voice and Text Input</h2>
-    <p>Your voice input is first recorded locally, then transmitted to OpenAI (Whisper) for transcription. The resulting text – like all chat requests – is forwarded via the AI gateway OpenRouter to Anthropic (Claude) for processing. Web search queries are processed via Perplexity. Microsoft Azure is used exclusively for voice output (text-to-speech). Inputs are not permanently stored by third-party providers (max. 30 days as per their API policies).</p>
+    <p>Your voice input is first recorded locally and then transmitted via our servers to Mistral AI (Voxtral) for transcription. The resulting text – like all chat requests – is forwarded to AI models for processing, mainly to Anthropic (Claude). AI requests run via the EU endpoint of the AI intermediary OpenRouter, with the requirement that content is not stored by the model providers (zero data retention). Voice output (text-to-speech) is provided by Microsoft Azure Speech in Germany.</p>
 
-    <h2>2.3 Conversation History and Assistant Context</h2>
-    <p>Conversation histories and permanently stored context information (e.g. people you have mentioned, habits, preferences) are stored on our servers. This information is used to provide the AI assistant with personalised context in each conversation.</p>
+    <h2>2.3 Conversation History and AI Memory</h2>
+    <p>Your chat histories are stored only locally on your device or in your browser and are not synchronised between devices. To generate a response, the required content is temporarily transmitted via our servers to the AI services.</p>
+    <p>The AI memory is stored on our servers in Germany: information the assistant is meant to remember (e.g. people you have mentioned, habits, preferences). It is stored in encrypted form and provided to the assistant as personal context.</p>
 
     <h2>2.4 Calendar Entries, Reminders and Comments (stored server-side)</h2>
-    <p>Appointments, reminder templates, daily reminder entries and comments on calendar days are stored on our servers. Uninstalling the app does not automatically delete this data — complete deletion only occurs upon explicit request (see Section 7).</p>
+    <p>Appointments, reminder templates, daily reminder entries and comments on calendar days are stored on our servers in Germany. Uninstalling the app does not automatically delete this data (see Section 7).</p>
     <p>Comments are visible to linked companions (see Section 2.7).</p>
 
     <h2>2.5 Documents and Images</h2>
-    <p>Uploaded documents and photos are stored on our servers. For AI analysis, content is temporarily transmitted to third-party providers: document/image recognition (OCR, vision) is performed via Google (Gemini), while text analysis and summarisation are performed via OpenAI (GPT-4o). The analysis result is permanently stored alongside the document on our servers.</p>
+    <p>Document photos, images and the results of document analysis are stored only locally on your device or in your browser. For analysis, the content is temporarily transmitted via our servers to AI services; text recognition and document analysis are mainly performed via Google (Gemini).</p>
 
     <h2>2.6 Subscription and Payment Data</h2>
     <p>Payment processing is handled by:</p>
     <ul>
-      <li><strong>Stripe Inc. (Web):</strong> Stripe processes payment data in accordance with its own privacy policy. We only receive confirmation of subscription status.</li>
-      <li><strong>RevenueCat Inc. (iOS/Android):</strong> In-app purchases are processed via the Apple App Store or Google Play Store. RevenueCat synchronises the plan status with our backend.</li>
+      <li><strong>Stripe (Web):</strong> Stripe processes payment data in accordance with its own privacy policy. We only receive confirmation of subscription status.</li>
+      <li><strong>Apple, Google and RevenueCat (iOS/Android):</strong> In-app purchases are processed via the Apple App Store or Google Play. RevenueCat synchronises the plan status with our backend.</li>
     </ul>
     <p>Full payment details (card numbers etc.) are not stored by us.</p>
 
     <h2>2.7 Companion Functionality</h2>
-    <p>When you as a user invite a companion, that person is granted read access to your reminders and calendar comments, as well as the ability to mark reminders as completed on your behalf. This access remains until the connection is removed. You can disconnect the companion at any time within the app.</p>
+    <p>When you as a user invite a companion, that person can see the status of your reminders and your calendar comments while the connection exists. Titles of medication and health reminders are only shown if the corresponding health consent has been given. Companions can delete comments but cannot mark reminders as completed. You can disconnect the companion at any time within the app.</p>
 
     <h2>2.8 Technical Data</h2>
     <p>Authentication tokens (JWT) are stored locally on your device and transmitted with every API call. IP address and basic device information are processed as part of normal server logs.</p>
+    <p>When you visit this website (digibeg.de), our hosting provider Netlify processes technically necessary access data such as your IP address. The website does not set cookies; only your choice between the light and dark design is stored locally in your browser.</p>
+
+    <h2>2.9 Health Data</h2>
+    <p>digibeg may process health data, for example medication reminders, health information in messages or information from doctors' letters. We obtain separate consent for health information in the AI memory and for health reminders. Health information in chats, voice input and documents is transmitted to the AI service providers when you use the corresponding AI features (see Section 4).</p>
 
     <h2>3. Purpose and Legal Basis</h2>
     <ul>
-      <li><strong>Performance of contract</strong> (Art. 6(1)(b) GDPR): Account management, calendar, reminders, document storage.</li>
-      <li><strong>Consent</strong> (Art. 6(1)(a) GDPR): AI features, voice processing, assistant relationship memory.</li>
+      <li><strong>Performance of contract</strong> (Art. 6(1)(b) GDPR): Account management, calendar, reminders.</li>
+      <li><strong>Consent</strong> (Art. 6(1)(a) GDPR): AI features, voice processing, the assistant's AI memory.</li>
+      <li><strong>Explicit consent</strong> (Art. 9(2)(a) GDPR): Health information in the AI memory and health reminders.</li>
+      <li><strong>Legal obligation</strong> (Art. 6(1)(c) GDPR): Retention of tax-relevant data.</li>
       <li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR): Security, abuse prevention, technical operation.</li>
     </ul>
 
     <h2>4. Data Sharing with Third Parties</h2>
-    <p>We only share data with the following providers:</p>
+    <p>We only share data with the following service providers, insofar as this is necessary for the respective feature:</p>
     <p><strong>AI processing:</strong></p>
     <ul>
-      <li><strong>OpenRouter, Inc. (USA):</strong> AI gateway, routing of AI requests to the respective models. Transfer based on Standard Contractual Clauses (SCC).</li>
-      <li><strong>Anthropic (USA):</strong> Chat processing. Transfer based on SCC. API data is not used for model training.</li>
-      <li><strong>Google (USA):</strong> Document/image analysis (OCR/Vision). Transfer based on SCC.</li>
-      <li><strong>OpenAI LLC (USA):</strong> Document text analysis and speech transcription. Transfer based on SCC. API data is stored for a maximum of 30 days and is not used for model training.</li>
-      <li><strong>Perplexity (USA):</strong> Web search queries. Transfer based on SCC.</li>
+      <li><strong>OpenRouter, Inc. (USA):</strong> AI intermediary. We use its EU endpoint and route AI requests through it to the model providers, with the requirement that content is not stored there (zero data retention).</li>
+      <li><strong>AI model providers:</strong> Anthropic (Claude) for chat responses, Google (Gemini) for documents, text recognition and sub-tasks, OpenAI (GPT) for certain sub-tasks and as a fallback, Mistral AI (Voxtral) for speech recognition.</li>
+      <li><strong>Model infrastructure:</strong> Depending on the model, requests are processed on infrastructure operated by Amazon Web Services (Amazon Bedrock), Google Cloud or Microsoft Azure, which may also be located outside the EU depending on the provider.</li>
     </ul>
     <p><strong>Voice output:</strong></p>
     <ul>
-      <li><strong>Microsoft Azure (Germany, region Germany West Central):</strong> Voice output (text-to-speech). Processing in Germany.</li>
+      <li><strong>Microsoft Azure Speech (Germany, region Germany West Central):</strong> Voice output (text-to-speech).</li>
     </ul>
     <p><strong>Payments:</strong></p>
     <ul>
-      <li><strong>Stripe Inc. (USA/EU):</strong> Payment processing for web subscriptions. SCC basis.</li>
-      <li><strong>RevenueCat Inc. (USA):</strong> Subscription management for iOS/Android (App Store/Play Store). SCC basis.</li>
+      <li><strong>Stripe:</strong> Payment processing for web subscriptions.</li>
+      <li><strong>Apple, Google and RevenueCat, Inc. (USA):</strong> In-app purchases and subscription management for iOS/Android.</li>
     </ul>
     <p><strong>Operations/infrastructure:</strong></p>
     <ul>
-      <li><strong>Hetzner Online GmbH (Germany):</strong> Hosting and server operation. Processing in Germany.</li>
-      <li><strong>IONOS SE (Germany):</strong> Email delivery (SMTP) and DNS. Processing in Germany.</li>
-      <li><strong>Sentry (Functional Software Inc., USA):</strong> Error and crash monitoring. Transfer based on SCC.</li>
-      <li><strong>Expo (650 Industries, Inc., USA):</strong> Push notifications. Transfer based on SCC.</li>
+      <li><strong>Hetzner Online GmbH (Germany):</strong> Hosting, server operation and encrypted backups.</li>
+      <li><strong>IONOS SE (Germany):</strong> Email and DNS.</li>
+      <li><strong>Netlify, Inc. (USA):</strong> Hosting of this website.</li>
+      <li><strong>Expo (650 Industries, Inc., USA):</strong> Generation of push tokens. Push notifications are delivered via the services of Apple or Google.</li>
     </ul>
-    <p>All third-party providers are contractually obligated to maintain GDPR-equivalent protection standards.</p>
+    <p>Some service providers are based in the USA or process data there. Data is only transferred to countries outside the EU on the basis of Art. 44 et seq. GDPR, in particular an adequacy decision (EU-US Data Privacy Framework) or EU Standard Contractual Clauses.</p>
 
     <h2>5. Data Retention</h2>
     <ul>
-      <li><strong>Account data:</strong> Until account deletion.</li>
-      <li><strong>Conversation history and context:</strong> Until account deletion or upon request.</li>
-      <li><strong>Calendar entries, reminders, comments:</strong> Until account deletion or upon explicit request.</li>
-      <li><strong>Documents:</strong> Until manually deleted in the app or account deletion.</li>
+      <li><strong>Account data, appointments, reminders, comments and AI memory:</strong> Generally until deleted in the app or until account deletion.</li>
+      <li><strong>Chat histories, documents and analysis results:</strong> Locally on your device or in your browser until you delete them there.</li>
+      <li><strong>Server and application logs:</strong> 30 days.</li>
+      <li><strong>Security and audit logs:</strong> 12 months.</li>
+      <li><strong>AI usage logs (without content):</strong> 90 days.</li>
+      <li><strong>AI responses reported by you:</strong> 30 days.</li>
+      <li><strong>Encrypted database backups:</strong> 14 days.</li>
       <li><strong>Payment data:</strong> In accordance with statutory retention obligations (§ 147 AO: 10 years for tax-relevant data).</li>
-      <li><strong>At AI providers (OpenAI, OpenRouter, Anthropic, Google, Perplexity, Azure):</strong> Max. 30 days for API processing data.</li>
     </ul>
 
     <h2>6. Your Rights (GDPR Art. 15–21)</h2>
@@ -155,13 +162,14 @@
     <p>Right to lodge a complaint with: State Commissioner for Data Protection and Freedom of Information Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
 
     <h2>7. Data Deletion and Account Deletion</h2>
-    <p>To fully delete your account and all stored data:</p>
+    <p>To delete your account:</p>
     <ol>
       <li>In the app: <strong>Settings → Account → Delete Account</strong></li>
       <li>By email to <a href="mailto:info@digibeg.de">info@digibeg.de</a> with the subject line "Data Deletion – [your email address]"</li>
     </ol>
-    <p>We will confirm the deletion within 30 days. Tax-relevant data will be retained in accordance with statutory retention obligations and then deleted.</p>
-    <p><strong>Note:</strong> Uninstalling the app alone does not delete any server-side stored data (appointments, reminders, comments, documents, conversation history).</p>
+    <p>This deletes your data stored on our servers. Logs remain until the periods stated in Section 5 have expired; an account deletion log may contain your email address. Deleted data remains in encrypted backups for up to 14 days. We will confirm the deletion within 30 days. Tax-relevant data will be retained in accordance with statutory retention obligations and then deleted.</p>
+    <p>Chat histories, documents and analysis results are stored only on your device or in your browser and remain there after a normal sign-out. In the web app, locally stored document images are currently not completely removed when an account is deleted; you can delete them by clearing the site data for app.digibeg.de in your browser settings.</p>
+    <p><strong>Note:</strong> Uninstalling the app alone does not delete any server-side stored data (appointments, reminders, comments, AI memory).</p>
 
     <h2>8. Permissions</h2>
     <ul>
@@ -173,7 +181,7 @@
     <p>All permissions can be revoked at any time in your device's system settings.</p>
 
     <h2>9. Data Security</h2>
-    <p>All data transmissions are encrypted via HTTPS/TLS. Authentication is handled via short-lived JWT access tokens in combination with refresh tokens.</p>
+    <p>All data transmissions are encrypted via HTTPS/TLS. Authentication is handled via short-lived JWT access tokens in combination with refresh tokens. In particular, the AI memory as well as medication dosages and intake instructions are additionally stored in encrypted form. Database backups are encrypted.</p>
 
     <h2>10. Changes to This Policy</h2>
     <p>For material changes, we will notify you by email or in-app notice. The current version is always available in the app and at <a href="https://digibeg.de/datenschutz" target="_blank" rel="noopener">digibeg.de/datenschutz</a>.</p>

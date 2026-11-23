@@ -51,7 +51,7 @@
       <article class="container legal__article">
         <header class="legal__head">
           <h1>Datenschutzerklärung</h1>
-          <p class="legal__meta">Stand: 16. Juli 2026</p>
+          <p class="legal__meta">Stand: 23. November 2026</p>
         </header>
 
 
@@ -67,78 +67,85 @@
     <h2>2. Erhobene und verarbeitete Daten</h2>
 
     <h2>2.1 Kontodaten (serverseitig gespeichert)</h2>
-    <p>E-Mail-Adresse, verschlüsseltes Passwort, gewählte Sprache, Rolle (Nutzer / Begleiter), Abonnement-Plan und Guthaben (Coins).</p>
+    <p>E-Mail-Adresse, verschlüsseltes Passwort, gewählte Sprache, Rolle (Nutzer / Begleiter), Abonnement-Plan und Guthaben (Coins). Diese Daten werden auf unseren Servern in Deutschland gespeichert.</p>
 
     <h2>2.2 Sprach- und Texteingaben</h2>
-    <p>Ihre Spracheingaben werden zunächst lokal aufgezeichnet, dann zur Transkription an OpenAI (Whisper) übermittelt. Der resultierende Text wird – wie alle Chat-Anfragen – über das KI-Gateway OpenRouter an Anthropic (Claude) zur Verarbeitung weitergeleitet. Websuche-Anfragen werden über Perplexity verarbeitet. Microsoft Azure wird ausschließlich für die Sprachausgabe (Text-to-Speech) genutzt. Eingaben werden nicht dauerhaft bei Drittanbietern gespeichert (max. 30 Tage gemäß deren API-Richtlinien).</p>
+    <p>Ihre Spracheingaben werden zunächst lokal aufgezeichnet und zur Transkription über unsere Server an Mistral AI (Voxtral) übermittelt. Der resultierende Text wird – wie alle Chat-Anfragen – zur Verarbeitung an KI-Modelle weitergeleitet, überwiegend an Anthropic (Claude). KI-Anfragen laufen über den EU-Endpunkt des KI-Vermittlers OpenRouter, mit der Vorgabe, dass Inhalte bei den Modellanbietern nicht gespeichert werden (Zero Data Retention). Die Sprachausgabe (Text-to-Speech) erfolgt über Microsoft Azure Speech in Deutschland.</p>
 
-    <h2>2.3 Gesprächsverlauf und Assistenten-Kontext</h2>
-    <p>Konversationsverläufe sowie dauerhaft gespeicherte Kontextinformationen (z. B. von Ihnen erwähnte Personen, Gewohnheiten, Präferenzen) werden auf unseren Servern gespeichert. Diese Informationen werden verwendet, um den KI-Assistenten bei jedem Gespräch mit personalisiertem Kontext zu versorgen.</p>
+    <h2>2.3 Gesprächsverlauf und KI-Gedächtnis</h2>
+    <p>Ihre Chatverläufe werden nur lokal auf Ihrem Gerät bzw. in Ihrem Browser gespeichert und nicht zwischen Geräten synchronisiert. Für eine Antwort werden die erforderlichen Inhalte vorübergehend über unsere Server an die KI-Dienste übertragen.</p>
+    <p>Auf unseren Servern in Deutschland gespeichert wird das KI-Gedächtnis: Informationen, die sich der Assistent merken soll (z. B. von Ihnen erwähnte Personen, Gewohnheiten, Präferenzen). Es wird verschlüsselt gespeichert und dem Assistenten als persönlicher Kontext bereitgestellt.</p>
 
     <h2>2.4 Kalendereinträge, Erinnerungen und Kommentare (serverseitig gespeichert)</h2>
-    <p>Termine, Erinnerungsvorlagen, tägliche Erinnerungseinträge sowie Kommentare zu Kalendertagen werden auf unseren Servern gespeichert. Eine Deinstallation der App löscht diese Daten nicht automatisch — eine vollständige Löschung erfolgt nur auf explizite Anfrage (siehe Abschnitt 7).</p>
+    <p>Termine, Erinnerungsvorlagen, tägliche Erinnerungseinträge sowie Kommentare zu Kalendertagen werden auf unseren Servern in Deutschland gespeichert. Eine Deinstallation der App löscht diese Daten nicht automatisch (siehe Abschnitt 7).</p>
     <p>Kommentare sind für verknüpfte Begleiter sichtbar (siehe Abschnitt 2.7).</p>
 
     <h2>2.5 Dokumente und Bilder</h2>
-    <p>Hochgeladene Dokumente und Fotos werden auf unseren Servern gespeichert. Zur KI-Analyse werden Inhalte temporär an Drittanbieter übermittelt: Die Dokument-/Bilderkennung (OCR, Vision) erfolgt über Google (Gemini), die Textanalyse und Zusammenfassung über OpenAI (GPT-4o). Das Analyseergebnis wird dauerhaft mit dem Dokument auf unseren Servern gespeichert.</p>
+    <p>Dokumentfotos, Bilder und die Ergebnisse der Dokumentanalyse werden nur lokal auf Ihrem Gerät bzw. in Ihrem Browser gespeichert. Zur Analyse werden die Inhalte vorübergehend über unsere Server an KI-Dienste übertragen; Texterkennung und Dokumentanalyse erfolgen überwiegend über Google (Gemini).</p>
 
     <h2>2.6 Abonnement- und Zahlungsdaten</h2>
     <p>Zahlungsabwicklung erfolgt über:</p>
     <ul>
-      <li><strong>Stripe Inc. (Web):</strong> Stripe verarbeitet Zahlungsdaten gemäß eigener Datenschutzerklärung. Wir erhalten ausschließlich eine Bestätigung des Abonnementstatus.</li>
-      <li><strong>RevenueCat Inc. (iOS/Android):</strong> In-App-Käufe werden über Apple App Store bzw. Google Play Store abgewickelt. RevenueCat synchronisiert den Plan-Status mit unserem Backend.</li>
+      <li><strong>Stripe (Web):</strong> Stripe verarbeitet Zahlungsdaten gemäß eigener Datenschutzerklärung. Wir erhalten ausschließlich eine Bestätigung des Abonnementstatus.</li>
+      <li><strong>Apple, Google und RevenueCat (iOS/Android):</strong> In-App-Käufe werden über den Apple App Store bzw. Google Play abgewickelt. RevenueCat synchronisiert den Plan-Status mit unserem Backend.</li>
     </ul>
     <p>Vollständige Zahlungsdaten (Kartennummern etc.) werden von uns nicht gespeichert.</p>
 
     <h2>2.7 Begleiter-Funktionalität</h2>
-    <p>Wenn Sie als Nutzer einen Begleiter einladen, erhält diese Person lesenden Zugriff auf Ihre Erinnerungen und Kalenderkommentare sowie die Möglichkeit, Erinnerungen in Ihrem Namen als erledigt zu markieren. Dieser Zugriff besteht bis zur Trennung der Verknüpfung. Sie können die Verknüpfung jederzeit in der App trennen.</p>
+    <p>Wenn Sie als Nutzer einen Begleiter einladen, sieht diese Person während der Verknüpfung den Status Ihrer Erinnerungen und Ihre Kalenderkommentare. Titel von Medikamenten- und Gesundheitserinnerungen werden nur bei entsprechender Gesundheits-Einwilligung angezeigt. Begleiter können Kommentare löschen, Erinnerungen aber nicht als erledigt markieren. Sie können die Verknüpfung jederzeit in der App trennen.</p>
 
     <h2>2.8 Technische Daten</h2>
     <p>Authentifizierungs-Tokens (JWT) werden lokal auf Ihrem Gerät gespeichert und bei jedem API-Aufruf übermittelt. IP-Adresse und grundlegende Geräteinformationen werden im Rahmen normaler Server-Logs verarbeitet.</p>
+    <p>Beim Besuch dieser Website (digibeg.de) verarbeitet unser Hosting-Anbieter Netlify technisch notwendige Zugriffsdaten wie die IP-Adresse. Die Website setzt keine Cookies; lediglich Ihre Wahl zwischen hellem und dunklem Design wird lokal in Ihrem Browser gespeichert.</p>
+
+    <h2>2.9 Gesundheitsdaten</h2>
+    <p>digibeg kann Gesundheitsdaten verarbeiten, zum Beispiel Medikamentenerinnerungen, Gesundheitsangaben in Nachrichten oder Informationen aus Arztbriefen. Für Gesundheitsinformationen im KI-Gedächtnis und für Gesundheitserinnerungen holen wir eine gesonderte Einwilligung ein. Gesundheitsinformationen in Chats, Spracheingaben und Dokumenten werden bei Nutzung der entsprechenden KI-Funktionen an die KI-Dienstleister übertragen (siehe Abschnitt 4).</p>
 
     <h2>3. Zweck und Rechtsgrundlage</h2>
     <ul>
-      <li><strong>Vertragserfüllung</strong> (Art. 6 Abs. 1 lit. b DSGVO): Kontoverwaltung, Kalender, Erinnerungen, Dokumentenspeicherung.</li>
-      <li><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): KI-Funktionen, Sprachverarbeitung, Beziehungsgedächtnis des Assistenten.</li>
+      <li><strong>Vertragserfüllung</strong> (Art. 6 Abs. 1 lit. b DSGVO): Kontoverwaltung, Kalender, Erinnerungen.</li>
+      <li><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): KI-Funktionen, Sprachverarbeitung, KI-Gedächtnis des Assistenten.</li>
+      <li><strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO): Gesundheitsinformationen im KI-Gedächtnis und Gesundheitserinnerungen.</li>
+      <li><strong>Rechtliche Verpflichtung</strong> (Art. 6 Abs. 1 lit. c DSGVO): Aufbewahrung steuerrelevanter Daten.</li>
       <li><strong>Berechtigte Interessen</strong> (Art. 6 Abs. 1 lit. f DSGVO): Sicherheit, Missbrauchsprävention, technischer Betrieb.</li>
     </ul>
 
     <h2>4. Datenweitergabe an Dritte</h2>
-    <p>Wir geben Daten ausschließlich an folgende Anbieter weiter:</p>
+    <p>Wir geben Daten nur an folgende Dienstleister weiter, soweit dies für die jeweilige Funktion erforderlich ist:</p>
     <p><strong>KI-Verarbeitung:</strong></p>
     <ul>
-      <li><strong>OpenRouter, Inc. (USA):</strong> KI-Gateway, Routing der KI-Anfragen an die jeweiligen Modelle. Übermittlung auf Basis von Standardvertragsklauseln (SCC).</li>
-      <li><strong>Anthropic (USA):</strong> Chat-Verarbeitung. Übermittlung auf Basis von SCC. API-Daten werden nicht zum Modelltraining verwendet.</li>
-      <li><strong>Google (USA):</strong> Dokument-/Bildanalyse (OCR/Vision). Übermittlung auf Basis von SCC.</li>
-      <li><strong>OpenAI LLC (USA):</strong> Dokument-Textanalyse und Sprachtranskription. Übermittlung auf Basis von SCC. API-Daten werden max. 30 Tage gespeichert und nicht zum Modelltraining verwendet.</li>
-      <li><strong>Perplexity (USA):</strong> Websuche-Anfragen. Übermittlung auf Basis von SCC.</li>
+      <li><strong>OpenRouter, Inc. (USA):</strong> KI-Vermittler. Wir nutzen den EU-Endpunkt und leiten KI-Anfragen darüber an die Modellanbieter weiter, mit der Vorgabe, dass Inhalte dort nicht gespeichert werden (Zero Data Retention).</li>
+      <li><strong>KI-Modellanbieter:</strong> Anthropic (Claude) für Chat-Antworten, Google (Gemini) für Dokumente, Texterkennung und Teilaufgaben, OpenAI (GPT) für bestimmte Teilaufgaben und als Ausweichlösung, Mistral AI (Voxtral) für die Spracherkennung.</li>
+      <li><strong>Infrastruktur der Modelle:</strong> Je nach Modell werden Anfragen auf Infrastruktur von Amazon Web Services (Amazon Bedrock), Google Cloud oder Microsoft Azure verarbeitet, je nach Anbieter auch außerhalb der EU.</li>
     </ul>
     <p><strong>Sprachausgabe:</strong></p>
     <ul>
-      <li><strong>Microsoft Azure (Deutschland, Region Germany West Central):</strong> Sprachausgabe (Text-to-Speech). Verarbeitung in Deutschland.</li>
+      <li><strong>Microsoft Azure Speech (Deutschland, Region Germany West Central):</strong> Sprachausgabe (Text-to-Speech).</li>
     </ul>
     <p><strong>Zahlungen:</strong></p>
     <ul>
-      <li><strong>Stripe Inc. (USA/EU):</strong> Zahlungsabwicklung für Web-Abonnements. SCC-Basis.</li>
-      <li><strong>RevenueCat Inc. (USA):</strong> Abonnement-Verwaltung für iOS/Android (App Store/Play Store). SCC-Basis.</li>
+      <li><strong>Stripe:</strong> Zahlungsabwicklung für Web-Abonnements.</li>
+      <li><strong>Apple, Google und RevenueCat, Inc. (USA):</strong> In-App-Käufe und Abonnement-Verwaltung für iOS/Android.</li>
     </ul>
     <p><strong>Betrieb/Infrastruktur:</strong></p>
     <ul>
-      <li><strong>Hetzner Online GmbH (Deutschland):</strong> Hosting und Serverbetrieb. Verarbeitung in Deutschland.</li>
-      <li><strong>IONOS SE (Deutschland):</strong> E-Mail-Versand (SMTP) und DNS. Verarbeitung in Deutschland.</li>
-      <li><strong>Sentry (Functional Software Inc., USA):</strong> Fehler- und Crash-Monitoring. Übermittlung auf Basis von SCC.</li>
-      <li><strong>Expo (650 Industries, Inc., USA):</strong> Push-Benachrichtigungen. Übermittlung auf Basis von SCC.</li>
+      <li><strong>Hetzner Online GmbH (Deutschland):</strong> Hosting, Serverbetrieb und verschlüsselte Backups.</li>
+      <li><strong>IONOS SE (Deutschland):</strong> E-Mail und DNS.</li>
+      <li><strong>Netlify, Inc. (USA):</strong> Hosting dieser Website.</li>
+      <li><strong>Expo (650 Industries, Inc., USA):</strong> Erzeugung von Push-Kennungen. Die Zustellung der Push-Benachrichtigungen erfolgt über die Dienste von Apple bzw. Google.</li>
     </ul>
-    <p>Alle Drittanbieter sind vertraglich zur Einhaltung des DSGVO-Schutzniveaus verpflichtet.</p>
+    <p>Einige Dienstleister haben ihren Sitz in den USA oder verarbeiten Daten dort. Eine Übermittlung in Länder außerhalb der EU erfolgt nur auf Grundlage der Art. 44 ff. DSGVO, insbesondere eines Angemessenheitsbeschlusses (EU-US Data Privacy Framework) oder von EU-Standardvertragsklauseln.</p>
 
     <h2>5. Speicherdauer</h2>
     <ul>
-      <li><strong>Kontodaten:</strong> Bis zur Kontolöschung.</li>
-      <li><strong>Gesprächsverlauf und Kontext:</strong> Bis zur Kontolöschung oder auf Anfrage.</li>
-      <li><strong>Kalendereinträge, Erinnerungen, Kommentare:</strong> Bis zur Kontolöschung oder auf explizite Anfrage.</li>
-      <li><strong>Dokumente:</strong> Bis zur manuellen Löschung in der App oder Kontolöschung.</li>
+      <li><strong>Kontodaten, Termine, Erinnerungen, Kommentare und KI-Gedächtnis:</strong> Grundsätzlich bis zur Löschung in der App oder zur Kontolöschung.</li>
+      <li><strong>Chatverläufe, Dokumente und Analyseergebnisse:</strong> Lokal auf Ihrem Gerät bzw. in Ihrem Browser, bis Sie sie dort löschen.</li>
+      <li><strong>Server- und Anwendungslogs:</strong> 30 Tage.</li>
+      <li><strong>Sicherheits- und Audit-Logs:</strong> 12 Monate.</li>
+      <li><strong>KI-Nutzungsprotokolle (ohne Inhalte):</strong> 90 Tage.</li>
+      <li><strong>Von Ihnen gemeldete KI-Antworten:</strong> 30 Tage.</li>
+      <li><strong>Verschlüsselte Datenbank-Backups:</strong> 14 Tage.</li>
       <li><strong>Zahlungsdaten:</strong> Gemäß gesetzlicher Aufbewahrungspflichten (§ 147 AO: 10 Jahre für steuerrelevante Daten).</li>
-      <li><strong>Bei KI-Anbietern (OpenAI, OpenRouter, Anthropic, Google, Perplexity, Azure):</strong> Max. 30 Tage für API-Verarbeitungsdaten.</li>
     </ul>
 
     <h2>6. Ihre Rechte (DSGVO Art. 15–21)</h2>
@@ -155,13 +162,14 @@
     <p>Beschwerderecht bei: Landesbeauftragter für Datenschutz und Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
 
     <h2>7. Datenlöschung und Kontolöschung</h2>
-    <p>Zur vollständigen Löschung Ihres Kontos und aller gespeicherten Daten:</p>
+    <p>Zur Löschung Ihres Kontos:</p>
     <ol>
       <li>In der App: <strong>Einstellungen → Konto → Konto löschen</strong></li>
       <li>Per E-Mail an <a href="mailto:info@digibeg.de">info@digibeg.de</a> mit dem Betreff „Datenlöschung – [Ihre E-Mail-Adresse]"</li>
     </ol>
-    <p>Wir bestätigen die Löschung innerhalb von 30 Tagen. Steuerrelevante Daten werden gemäß gesetzlicher Aufbewahrungspflicht aufbewahrt und danach gelöscht.</p>
-    <p><strong>Hinweis:</strong> Eine Deinstallation der App allein löscht keine serverseitig gespeicherten Daten (Termine, Erinnerungen, Kommentare, Dokumente, Gesprächsverlauf).</p>
+    <p>Dabei werden Ihre auf unseren Servern gespeicherten Daten gelöscht. Protokolle bleiben bis zum Ablauf der in Abschnitt 5 genannten Fristen bestehen; ein Protokoll der Kontolöschung kann Ihre E-Mail-Adresse enthalten. In verschlüsselten Backups sind gelöschte Daten noch bis zu 14 Tage enthalten. Wir bestätigen die Löschung innerhalb von 30 Tagen. Steuerrelevante Daten werden gemäß gesetzlicher Aufbewahrungspflicht aufbewahrt und danach gelöscht.</p>
+    <p>Chatverläufe, Dokumente und Analyseergebnisse liegen nur auf Ihrem Gerät bzw. in Ihrem Browser und bleiben bei einer normalen Abmeldung dort erhalten. In der Web-App werden lokal gespeicherte Dokumentbilder bei einer Kontolöschung derzeit nicht vollständig entfernt; Sie können sie löschen, indem Sie die Websitedaten von app.digibeg.de in Ihren Browsereinstellungen entfernen.</p>
+    <p><strong>Hinweis:</strong> Eine Deinstallation der App allein löscht keine serverseitig gespeicherten Daten (Termine, Erinnerungen, Kommentare, KI-Gedächtnis).</p>
 
     <h2>8. Berechtigungen</h2>
     <ul>
@@ -173,7 +181,7 @@
     <p>Alle Berechtigungen können jederzeit in den Systemeinstellungen widerrufen werden.</p>
 
     <h2>9. Datensicherheit</h2>
-    <p>Alle Datenübertragungen erfolgen verschlüsselt über HTTPS/TLS. Authentifizierung erfolgt über kurzlebige JWT Access Tokens in Kombination mit Refresh Tokens.</p>
+    <p>Alle Datenübertragungen erfolgen verschlüsselt über HTTPS/TLS. Authentifizierung erfolgt über kurzlebige JWT Access Tokens in Kombination mit Refresh Tokens. Zusätzlich verschlüsselt gespeichert werden insbesondere das KI-Gedächtnis sowie Dosierungen und Einnahmehinweise von Medikamenten. Datenbank-Backups werden verschlüsselt.</p>
 
     <h2>10. Änderungen dieser Erklärung</h2>
     <p>Bei wesentlichen Änderungen informieren wir Sie per E-Mail oder In-App-Hinweis. Die aktuelle Version ist stets in der App und unter <a href="https://digibeg.de/datenschutz" target="_blank" rel="noopener">digibeg.de/datenschutz</a> abrufbar.</p>
